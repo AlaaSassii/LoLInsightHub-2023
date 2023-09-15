@@ -3,6 +3,7 @@
 .app__logo{
     @include flex-container ;
     width: fit-content;
+    cursor: pointer;
     .logo__svg{
         >svg{
           width: 90px;
@@ -20,6 +21,10 @@
     
 }
 .logo__name{
-  @include text-gradient($blue__logo, $purpole__logo)
+  @include text-gradient($blue__logo, $purpole__logo);
+  @media screen and (max-width: 768px){
+    display:none;
+  }
+
   }
 }

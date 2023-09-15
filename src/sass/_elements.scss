@@ -1,0 +1,60 @@
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 22px;
+      font-weight: bold;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    h3 {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    h4 {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    h5 {
+      font-size: 14px;
+      font-weight: bold;
+    }
+    h6 {
+      font-size: 12px;
+      font-weight: bold;
+    }
+    p ,span ,b ,dd ,td {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    h1 {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    h3 {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    h4 {
+      font-size: 14px;
+      font-weight: bold;
+    }
+    h5 {
+      font-size: 12px;
+      font-weight: bold;
+    }
+    h6 {
+      font-size: 10px;
+      font-weight: bold;
+    }
+    p ,span ,b ,dd ,dt {
+      font-size: 12px;
+    }
+  }
+  
