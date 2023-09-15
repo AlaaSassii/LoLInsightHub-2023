@@ -1,0 +1,22 @@
+@import './../../../../sass/mixins';
+
+body {
+    &.dark { 
+        .toggle__theme__btn{
+            background-color: #252525;
+            color: white;
+        }
+    }
+}
+
+.toggle__theme__btn{
+    @include centerElement ; 
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #cecece;
+    border-radius: 4px;
+    background-color: white;
+    color: #252525;
+}

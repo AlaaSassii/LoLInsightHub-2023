@@ -10,3 +10,9 @@
   background-clip: text;
   color: transparent;
 }
+
+@mixin centerElement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -2,11 +2,16 @@ import Logo from './components/common/logo'
 import Container from './components/common/container'
 import Tooltip from './components/common/tooltip'
 import Alert from './components/common/alert'
+import useThemeToggle from './hooks/useToggleTheme'
+import Toggle from './components/specefic/navbar/toggle/toggle'
 
 function App() {
   return (
     <Container>
       <Logo />
+      <Tooltip text="toggle theme">
+        <Toggle />
+      </Tooltip>
       <>
         <Tooltip text="This is a tooltip">
           <button>Hover me</button>
@@ -38,6 +43,12 @@ function App() {
         <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nulla quas officia! Unde saepe necessitatibus sequi quas rerum aliquid natus distinctio alias placeat? Deleniti rerum explicabo aliquam, illum iste nesciunt.</dd>
         <b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsam magni velit.</b>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt deleniti magni tenetur placeat necessitatibus. Eius deserunt dignissimos odit magnam provident sunt fuga consequuntur iure. Accusantium dicta earum tenetur sunt modi. </p>
+
+      </>
+      <>
+        <textarea></textarea>
+
+        <input type="text" placeholder='input' />
       </>
     </Container>
   )
