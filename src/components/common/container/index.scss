@@ -1,0 +1,28 @@
+$container-max-width-sm: 576px;
+$container-max-width-md: 768px;
+$container-max-width-lg: 992px;
+$container-max-width-xl: 1200px;
+
+@mixin container($max-width) {
+  max-width: $max-width;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.container-sm {
+  @include container($container-max-width-sm);
+}
+
+.container-md {
+  @include container($container-max-width-md);
+}
+
+.container-lg {
+  @include container($container-max-width-lg);
+}
+
+.container-xl {
+  @include container($container-max-width-xl);
+}
