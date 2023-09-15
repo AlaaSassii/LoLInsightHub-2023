@@ -1,6 +1,7 @@
 import Logo from './components/common/logo'
 import Container from './components/common/container'
 import Tooltip from './components/common/tooltip'
+import Alert from './components/common/alert'
 
 function App() {
   return (
@@ -14,6 +15,13 @@ function App() {
           <div>Hover me</div>
         </Tooltip>
       </>
+      <div>
+        <h1>Alert Example</h1>
+        <Alert type="error" message="This is an error message." icon="FaExclamationCircle" />
+        <Alert type="warning" message="This is a warning message." icon="FaExclamationTriangle" />
+        <Alert type="info" message="This is an info message." icon="FaInfoCircle" />
+        <Alert type="success" message="This is a success message." icon="FaCheckCircle" />
+      </div>
       <>
         <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h1>
         <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h2>

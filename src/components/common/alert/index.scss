@@ -1,0 +1,54 @@
+$color-error: #ff6b6b;
+$color-warning: #ffa500;
+$color-info: #3498db;
+$color-success: #2ecc71;
+
+.alert {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.icon-error {
+  background-color: $color-error;
+  color: white;
+  margin-right: 10px;
+}
+
+.icon-warning {
+  background-color: $color-warning;
+  color: white;
+  margin-right: 10px;
+}
+
+.icon-info {
+  background-color: $color-info;
+  color: white;
+  margin-right: 10px;
+}
+
+.icon-success {
+  background-color: $color-success;
+  color: white;
+  margin-right: 10px;
+}
+
+.error {
+  background-color: $color-error;
+}
+
+.warning {
+  background-color: $color-warning;
+}
+
+.info {
+  background-color: $color-info;
+}
+
+.success {
+  background-color: $color-success;
+}

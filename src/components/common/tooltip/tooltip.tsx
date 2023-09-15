@@ -1,4 +1,4 @@
-import { FC, useState, ReactNode } from 'react';
+import { FC, ReactNode } from 'react';
 // hooks
 import useHover from '../../../hooks/useHover';
 
@@ -11,6 +11,7 @@ type tooltipProps = {
 };
 
 const Tooltip: FC<tooltipProps> = ({ text, children }) => {
+
     const { isHovered, handleMouseEnter, handleMouseLeave } = useHover();
 
     return (
