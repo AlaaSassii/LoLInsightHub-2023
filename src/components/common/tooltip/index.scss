@@ -1,0 +1,47 @@
+$tooltipBackgroundColor: #333;
+$tooltipTextColor: #fff;
+$tooltipPadding: 8px;
+$tooltipBorderRadius: 4px;
+$tooltipArrowSize: 6px;
+
+.tooltipContainer {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+
+  .tooltipText {
+    position: absolute;
+    background-color: $tooltipBackgroundColor;
+    color: $tooltipTextColor;
+    border-radius: $tooltipBorderRadius;
+    padding: $tooltipPadding;
+    font-size: 14px;
+    z-index: 1000;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.2s;
+  }
+
+  &:hover {
+    .tooltipText {
+      opacity: 1;
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: $tooltipArrowSize $tooltipArrowSize 0;
+    border-color: $tooltipBackgroundColor transparent transparent transparent;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

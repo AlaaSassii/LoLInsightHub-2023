@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap');
+
+  $Poopins:'Poppins', sans-serif;
+
+    body{
+    font-family: $Poopins;
+}
+
   @media (max-width: 768px) {
     h1 {
       font-size: 22px;

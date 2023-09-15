@@ -1,10 +1,19 @@
 import Logo from './components/common/logo'
 import Container from './components/common/container'
+import Tooltip from './components/common/tooltip'
 
 function App() {
   return (
     <Container>
       <Logo />
+      <>
+        <Tooltip text="This is a tooltip">
+          <button>Hover me</button>
+        </Tooltip>
+        <Tooltip text="This is a tooltip">
+          <div>Hover me</div>
+        </Tooltip>
+      </>
       <>
         <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h1>
         <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h2>
