@@ -2,7 +2,7 @@
 import { logoName } from '../../../assets/logoName'
 import { logo } from '../../../assets/logo'
 // styles
-import './index.scss'
+import './logo.scss'
 const Logo = () => {
     return (
         <div className='app__logo'>

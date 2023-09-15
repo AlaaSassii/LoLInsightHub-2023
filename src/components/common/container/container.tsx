@@ -2,7 +2,7 @@
 import React, { FC, ReactNode } from 'react'
 
 // styles
-import './index.scss'
+import './container.scss'
 type containerProps = {
     children: ReactNode
 }

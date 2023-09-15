@@ -1,12 +1,12 @@
 // react
 import React, { FC } from 'react'
 // enums 
-import { buttonType } from '../../../enums'
+import { buttonTypes } from '../../../enums/buttonEnums';
 // styles
 import './index.scss'
 
 type buttonProps = {
-    type: buttonType;
+    type: buttonTypes;
     onClick: () => void;
     label: string;
 };

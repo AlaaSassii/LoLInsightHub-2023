@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import './index.scss';
+import './alert.scss';
 
 import { FaExclamationCircle, FaExclamationTriangle, FaInfoCircle, FaCheckCircle } from 'react-icons/fa';
 

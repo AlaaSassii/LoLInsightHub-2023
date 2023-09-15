@@ -2,7 +2,7 @@ import { FC, ReactNode } from 'react';
 // hooks
 import useHover from '../../../hooks/useHover';
 
-import './index.scss';
+import './tooltip.scss';
 
 
 type tooltipProps = {
