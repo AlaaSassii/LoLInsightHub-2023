@@ -11,18 +11,22 @@ $container-max-width-xl: 1200px;
   padding-left: 15px;
 }
 
-.container-sm {
-  @include container($container-max-width-sm);
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.container-md {
-  @include container($container-max-width-md);
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
 }
 
-.container-lg {
-  @include container($container-max-width-lg);
-}
-
-.container-xl {
-  @include container($container-max-width-xl);
+@media (max-width: 576px) {
+  .container {
+    max-width: 100%;
+    padding: 0 5px;
+  }
 }
