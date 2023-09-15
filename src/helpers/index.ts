@@ -10,7 +10,7 @@ export const classNameButton = (type:string): string => {
 
 export const iconButton = (type:string) :ReactNode => {
     switch(type){
-        case 'navigate' : return <BsArrowRight />
+        case 'navigate' : return null
         case 'signIn' : return 'button_signin'
     default: return ''        
     }

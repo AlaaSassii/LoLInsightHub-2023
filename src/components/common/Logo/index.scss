@@ -1,0 +1,18 @@
+@import '../../../sass/mixins';
+
+.app__logo{
+    @include flex-container ;
+    width: fit-content;
+    .logo__svg{
+        width: 100px; 
+        @media screen and (max-width: 768px) {
+          width: 80px; 
+        @media screen and (max-width: 480px) {
+          width: 60px;  
+        }
+        @media screen and (max-width: 320px) {
+          width: 40px;  
+        }
+    }
+}
+}

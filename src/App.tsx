@@ -1,9 +1,9 @@
 import './App.css'
+import Logo from './components/common/Logo'
 
 function App() {
-
   return (
-    null
+    <Logo />
   )
 }
 

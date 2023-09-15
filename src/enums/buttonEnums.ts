@@ -10,8 +10,6 @@ export enum buttonClasses {
     default = 'button__default'
   }; 
 
-export enum buttonIcons {
-    Navigate = <BsArrowRight />
-}
+ 
 
 
