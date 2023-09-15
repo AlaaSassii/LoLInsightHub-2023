@@ -30,34 +30,11 @@ function App() {
       <>
         <AnimatedWrapper animationType='from-bottom'>
           <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h1>
-
         </AnimatedWrapper>
         <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h2>
         <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h3>
         <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h4>
         <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h5>
-        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
-        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
-        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
-        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
-        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
-        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
-        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
-        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
-        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
-        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
-        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
-        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
-        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
-        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
-        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
-        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
-        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
-        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
-        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
-        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
-        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
-        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
         <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
       </>
       <>
