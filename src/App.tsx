@@ -2,7 +2,6 @@ import Logo from './components/common/logo'
 import Container from './components/common/container'
 import Tooltip from './components/common/tooltip'
 import Alert from './components/common/alert'
-import useThemeToggle from './hooks/useToggleTheme'
 import Toggle from './components/specefic/navbar/toggle/toggle'
 
 function App() {

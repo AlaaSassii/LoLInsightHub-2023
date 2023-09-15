@@ -1,7 +1,8 @@
 @import './elements';
+@import './variables';
 body{
     &.dark{
-        background-color: #252525;
+        background-color: $main__black;
         color: white;
     }
 }

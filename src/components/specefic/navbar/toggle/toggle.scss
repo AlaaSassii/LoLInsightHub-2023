@@ -1,9 +1,9 @@
 @import './../../../../sass/mixins';
-
+@import './../../../../sass/variables';
 body {
     &.dark { 
         .toggle__theme__btn{
-            background-color: #252525;
+            background-color: $main__black;
             color: white;
         }
     }
