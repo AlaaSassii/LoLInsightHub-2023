@@ -1,0 +1,58 @@
+.animated-wrapper {
+        opacity: 0;
+        transform: translateX(0); // Initial position
+        &.visible {
+          opacity: 1;
+          transform: translateX(0); // Final position (no translation)  
+          transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+    &.from-right {
+      animation: slideFromRight 0.5s ease-in-out both;
+    }
+  
+    &.from-left {
+      animation: slideFromLeft 0.5s ease-in-out both;
+    }
+  
+    &.from-bottom {
+      animation: slideFromBottom 0.5s ease-in-out both;
+    }
+  
+    // Add more animations as needed
+  }
+  
+  @keyframes slideFromRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideFromBottom {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+ 
+  

@@ -3,6 +3,7 @@ import Container from './components/common/container'
 import Tooltip from './components/common/tooltip'
 import Alert from './components/common/alert'
 import Toggle from './components/specefic/navbar/toggle/toggle'
+import AnimatedWrapper from './components/common/animationWrapper'
 
 function App() {
   return (
@@ -27,11 +28,36 @@ function App() {
         <Alert type="success" message="This is a success message." icon="FaCheckCircle" />
       </div>
       <>
-        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h1>
+        <AnimatedWrapper animationType='from-bottom'>
+          <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h1>
+
+        </AnimatedWrapper>
         <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h2>
         <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h3>
         <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h4>
         <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h5>
+        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
+        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
+        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
+        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
+        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
+        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
+        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
+        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
+        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
+        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
+        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
+        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
+        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
+        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
+        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
+        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
+        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
+        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
+        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
+        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
+        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
+        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
         <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
       </>
       <>
