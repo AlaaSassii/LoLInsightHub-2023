@@ -34,11 +34,21 @@
   cursor: pointer;
   transition: .3s;
 }
+@mixin boxShadow1 {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+@mixin boxShaodw2 {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
 
 @mixin flexWithImage($direction,$alignItems,$justifyContent){
   display: flex;
   align-items: $alignItems;
   justify-content: $justifyContent;
   flex-direction: $direction;
-  
+  @media (max-width:768px){
+      img{
+        display:none
+      }
+  }
 }
