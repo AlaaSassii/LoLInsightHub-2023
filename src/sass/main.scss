@@ -4,5 +4,8 @@ body{
     &.dark{
         background-color: $main__black;
         color: white;
+        nav{
+            background-color: $main__black;
+        }
     }
 }

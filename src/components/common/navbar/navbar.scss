@@ -4,6 +4,7 @@
 body{
     &.dark{
         .navbar{
+            background-color:$main__black;
             a{
                 color:$main__white
             }
@@ -11,10 +12,11 @@ body{
     }
 }
 nav {
-    position: absolute;
+    position: fixed;
     top:0 ; 
     left: 0;
     width: 100%;
+    z-index: $zIndex__nav;
     .navbar{
         display: flex;
         justify-content: space-between;

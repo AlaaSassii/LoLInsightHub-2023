@@ -1,4 +1,36 @@
- 
+// element
+@mixin button {
+  padding:5px ; 
+  outline:transparent;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: $main__white;
+  transition: .3s;
+  @at-root body.dark{
+    background-color: $main__black;
+    color: $main__white;
+  }
+}
+@mixin input{
+  padding: 7px 5px;
+  font-size:14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: block;
+  margin-bottom: 10px;
+  &::placeholder{
+    font-size: 0.9em;
+  }
+  @at-root body.dark{
+    background-color: $sec__black;
+    color: $main__white;
+  }
+  @media (max-width:768px){
+    font-size: 12px;
+  }
+}
+// gradient 
 @mixin text-gradient($color1, $color2){
   background-image: linear-gradient(45deg, $color1, $color2);
   -webkit-background-clip: text;
@@ -8,7 +40,7 @@
 @mixin linearGradientBackground ($color1, $color2){
   background: linear-gradient(45deg, $color1, $color2);
 }
-
+// center
 @mixin centerElementWithFlex {
   display: flex;
   align-items: center;
@@ -21,23 +53,14 @@
   transform: translate(-50%, -50%);
 }
 
-
-@mixin button {
-  padding:5px ; 
-  outline:transparent;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: .3s;
-}
-
+// boxShadow
 @mixin boxShadow1 {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 @mixin boxShaodw2 {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-
+// border
 @mixin border1 {
   border: 1px solid #cecece ; 
   border-radius: 5px;
@@ -46,13 +69,12 @@
   border: 1px solid #ccc ; 
   border-radius: 5px;
 }
-
+// flex
 @mixin displayFlex {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 @mixin flexWithImage($direction,$alignItems,$justifyContent){
   display: flex;
   align-items: $alignItems;

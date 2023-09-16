@@ -14,22 +14,12 @@
     }
     input,
     textarea{
-      padding: 10px 7px;
-      border: 1px solid #d3d3d3;
-      border-radius: 4px;
-      margin-bottom: 10px;
-      display: block;
-      width: 100%;
-      outline: transparent;
+      @include input ;
     }
+  
+
+
   @media (max-width: 768px) {
-    input,
-    textarea{
-      padding: 8px 5px;
-      border-radius: 4px;
-      margin-bottom: 7px;
-      font-size: 14px;
-    }
     h1 {
       font-size: 22px;
       font-weight: bold;

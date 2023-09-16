@@ -11,12 +11,8 @@ body {
 
 .toggle__theme__btn{
     @include centerElementWithFlex ; 
+    @include button;
     width: 35px;
     height: 35px;
-    cursor: pointer;
-    background-color: transparent;
     border: 1px solid #cecece;
-    border-radius: 4px;
-    background-color: white;
-    color: $sec__black;
 }
