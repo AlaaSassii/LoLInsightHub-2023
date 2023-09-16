@@ -16,7 +16,6 @@ function App() {
         <Route path='/games' element={<Games />} />
         <Route path='/contactus' element={<Contact />} />
         <Route path='*' element={<PageNotFound />} />
-
       </Routes>
     </>
   )

@@ -1,9 +1,9 @@
 import React from 'react'
 import PageContainer from '../../components/common/pageContainer'
-
+import WelcomeSection from '../../components/specefic/home/welcomeSection'
 const home = () => {
     return (<PageContainer>
-        <h1>Hello Home page</h1>
+        <WelcomeSection />
     </PageContainer>
     )
 }

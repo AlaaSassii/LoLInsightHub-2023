@@ -25,6 +25,9 @@ nav {
         display: flex;
         align-items: center;
         gap:10px;
+        @media(max-width:798px){
+            gap:0px;
+        }
             li{
                 padding: 5px;
                 a{  
@@ -32,7 +35,10 @@ nav {
                     text-decoration: none;
                     text-transform: capitalize;
                     font-weight: 600;
-                    
+                    font-size: 14px;
+                    @media (max-width:798px){
+                        font-size: 9px;
+                    }
                 }
                 .isActive{
                     @include text-gradient($lightblue__logo, $purpole__logo)
