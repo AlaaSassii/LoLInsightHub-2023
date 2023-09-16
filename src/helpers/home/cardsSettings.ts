@@ -1,6 +1,7 @@
 import ChampionService from '../../assets/images/wallpaper/champions_service.webp';
 import MatchHistpry from '../../assets/images/wallpaper/match_history_service.webp';
 import GameService from '../../assets/images/wallpaper/game_service.png'
+import { links } from '../../enums/links';
 
 type cardServiceSection = {
     image: string,
@@ -16,18 +17,18 @@ export const cards: cardsServiceSection = [
         title: 'Champion Insights',
         image: ChampionService,
         text: "Warning: Champion Insights May Cause You to Attempt the 'Flashy' Plays!",
-        navigateLink: ''
+        navigateLink: links.HOME
     },
     {
         title: 'Match History Insights',
-        image: ChampionService,
+        image: MatchHistpry,
         text: 'Track Your Wins, Losses, and the Number of Times You Blamed Your Team!',
-        navigateLink: ''
+        navigateLink: links.SEARCH
     },
     {
         title: 'Game On!',
-        image: ChampionService,
+        image: GameService,
         text: 'Game On! Because Every Noob Has a Hidden Pro Inside (Somewhere)!',
-        navigateLink: ''
+        navigateLink: links.GAMES
     },
 ]
