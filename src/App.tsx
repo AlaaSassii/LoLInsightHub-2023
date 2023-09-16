@@ -1,6 +1,7 @@
 import Toggle from './components/common/toggle/toggle'
 import { Route, Routes } from 'react-router-dom'
 import Navbar from './components/common/navbar'
+import PageNotFound from './routes/pageNotFound'
 function App() {
   return (
     <>
@@ -11,7 +12,7 @@ function App() {
         <Route path='/search' element={<h1>search</h1>} />
         <Route path='/games' element={<h1>games</h1>} />
         <Route path='/contactus' element={<h1>contactus</h1>} />
-        <Route path='*' element={<h1>Not Found</h1>} />
+        <Route path='*' element={<PageNotFound />} />
 
       </Routes>
     </>

@@ -22,3 +22,15 @@
     justify-content: space-between;
     align-items: center;
 }
+@mixin linearGradientBackground ($color1, $color2){
+  background: linear-gradient(45deg, $color1, $color2);
+}
+
+@mixin Button {
+  padding:5px ; 
+  outline:transparent;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .3s;
+}
