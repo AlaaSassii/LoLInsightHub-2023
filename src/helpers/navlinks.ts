@@ -1,9 +1,10 @@
+import { links as linksEnum } from "../enums/links";
 import { links } from "../types/navbarType";
 
 export const navLinks: links = [
-    { name: 'home', path: '/' },
-    { name: 'Champion & Match Hub', path: '/search' },
-    { name: 'Games Hub', path: '/games' },
-    { name: 'contact us', path: '/contact' },
+    { name: 'home', path: linksEnum.HOME },
+    { name: 'Champion & Match Hub', path: linksEnum.SEARCH },
+    { name: 'Games Hub', path: linksEnum.GAMES },
+    { name: 'contact us', path: linksEnum.CONTACT },
 
 ]

@@ -6,16 +6,17 @@ import Home from './routes/home'
 import ShowData from './routes/showData'
 import Games from './routes/games'
 import Contact from './routes/contact'
+import { links } from './enums/links'
 function App() {
   return (
     <>
       <Navbar links={navLinks} />
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/search' element={<ShowData />} />
-        <Route path='/games' element={<Games />} />
-        <Route path='/contactus' element={<Contact />} />
-        <Route path='*' element={<PageNotFound />} />
+        <Route path={links.HOME} element={<Home />} />
+        <Route path={links.SEARCH} element={<ShowData />} />
+        <Route path={links.GAMES} element={<Games />} />
+        <Route path={links.CONTACT} element={<Contact />} />
+        <Route path={links.PAGENOTFOUND} element={<PageNotFound />} />
       </Routes>
     </>
   )
