@@ -34,3 +34,11 @@
   cursor: pointer;
   transition: .3s;
 }
+
+@mixin flexWithImage($direction,$alignItems,$justifyContent){
+  display: flex;
+  align-items: $alignItems;
+  justify-content: $justifyContent;
+  flex-direction: $direction;
+  
+}
