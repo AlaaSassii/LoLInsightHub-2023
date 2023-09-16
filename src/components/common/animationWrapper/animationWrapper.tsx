@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useRef } from 'react';
+import React, { ReactNode, useEffect, useRef, useState } from 'react';
 import './animationWrapper.scss';
 
 interface AnimatedWrapperProps {
@@ -11,29 +11,26 @@ const AnimatedWrapper: React.FC<AnimatedWrapperProps> = ({
     children,
 }) => {
     const animatedWrapperRef = useRef<HTMLDivElement | null>(null);
+    const [isVisible, setIsVisible] = useState<boolean>(false);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        // Add the 'visible' class when the element is in the viewport
-                        animatedWrapperRef.current?.classList.add('visible');
-                    } else {
-                        // Remove the 'visible' class when the element is not in the viewport
-                        animatedWrapperRef.current?.classList.remove('visible');
+                        setIsVisible(true);
+                        // Stop observing once the animation is triggered
+                        observer.unobserve(animatedWrapperRef.current!);
                     }
                 });
             },
-            { threshold: 0.5 } // Adjust the threshold as needed
+            { threshold: 0.5 }
         );
 
-        // Start observing the element when the component mounts
         if (animatedWrapperRef.current) {
             observer.observe(animatedWrapperRef.current);
         }
 
-        // Stop observing when the component unmounts
         return () => {
             if (animatedWrapperRef.current) {
                 observer.unobserve(animatedWrapperRef.current);
@@ -43,9 +40,9 @@ const AnimatedWrapper: React.FC<AnimatedWrapperProps> = ({
 
     return (
         <div
-            className={`animated-wrapper ${animationType}`}
+            className={`animated-wrapper ${animationType} ${isVisible ? 'visible' : ''}`}
             ref={animatedWrapperRef}
-            data-aos={animationType} // Add this line if using AOS library
+            data-aos={isVisible ? animationType : undefined} // Update data-aos conditionally
         >
             {children}
         </div>

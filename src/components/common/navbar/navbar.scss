@@ -17,6 +17,7 @@ nav {
     left: 0;
     width: 100%;
     z-index: $zIndex__nav;
+    height: $nav__height;
     .navbar{
         display: flex;
         justify-content: space-between;
