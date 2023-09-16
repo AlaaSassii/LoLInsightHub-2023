@@ -1,14 +1,12 @@
-@mixin flex-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
+ 
 @mixin text-gradient($color1, $color2){
   background-image: linear-gradient(45deg, $color1, $color2);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+@mixin linearGradientBackground ($color1, $color2){
+  background: linear-gradient(45deg, $color1, $color2);
 }
 
 @mixin centerElementWithFlex {
@@ -16,7 +14,6 @@
   align-items: center;
   justify-content: center;
 }
-
 @mixin centerElementWithPosition {
   position: absolute;
   top: 50%;
@@ -24,16 +21,8 @@
   transform: translate(-50%, -50%);
 }
 
-@mixin displayFlex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-@mixin linearGradientBackground ($color1, $color2){
-  background: linear-gradient(45deg, $color1, $color2);
-}
 
-@mixin Button {
+@mixin button {
   padding:5px ; 
   outline:transparent;
   border: none;
@@ -47,6 +36,21 @@
 }
 @mixin boxShaodw2 {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+@mixin border1 {
+  border: 1px solid #cecece ; 
+  border-radius: 5px;
+}
+@mixin border2 {
+  border: 1px solid #ccc ; 
+  border-radius: 5px;
+}
+
+@mixin displayFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 @mixin flexWithImage($direction,$alignItems,$justifyContent){

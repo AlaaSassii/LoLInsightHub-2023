@@ -5,7 +5,7 @@ import PageNotFound from './routes/pageNotFound'
 function App() {
   return (
     <>
-      <Navbar links={[{ name: 'home', path: '/' }, { name: 'search', path: '/search' }, { name: 'games', path: '/games' }]} />
+      <Navbar links={[{ name: 'home', path: '/' }, { name: 'Champion & Match Hub', path: '/search' }, { name: 'games', path: '/games' }]} />
 
       <Routes>
         <Route path='/' element={<h1>Home</h1>} />

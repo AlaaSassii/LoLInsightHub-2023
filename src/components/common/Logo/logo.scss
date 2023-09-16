@@ -1,7 +1,7 @@
 @import '../../../sass/mixins';
 @import '../../../sass/variables';
 .app__logo{
-    @include flex-container ;
+    @include centerElementWithFlex ;
     width: fit-content;
     cursor: pointer;
     .logo__svg{

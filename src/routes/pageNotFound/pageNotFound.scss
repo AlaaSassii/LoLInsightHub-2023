@@ -15,7 +15,8 @@
         color: $dark__gray;
     }
     button{
-        @include centerElement;
+        @include centerElementWithPosition;
+        @include button;
         gap:10px;
         margin: auto;
         padding: 10px 5px;

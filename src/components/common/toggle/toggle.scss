@@ -10,7 +10,7 @@ body {
 }
 
 .toggle__theme__btn{
-    @include centerElement ; 
+    @include centerElementWithFlex ; 
     width: 35px;
     height: 35px;
     cursor: pointer;
