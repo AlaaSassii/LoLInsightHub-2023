@@ -1,2 +1,2 @@
-import games from "./games";
-export default games;
+import Games from "./games";
+export default Games;

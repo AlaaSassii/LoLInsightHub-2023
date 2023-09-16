@@ -1,7 +1,7 @@
 import React from 'react'
 import PageUnavailable from '../../components/common/pageUnavailable'
 
-const contact = () => {
+const Contact = () => {
     return (
         <PageUnavailable
             title='Coming Soon'
@@ -11,4 +11,4 @@ const contact = () => {
     )
 }
 
-export default contact
+export default Contact

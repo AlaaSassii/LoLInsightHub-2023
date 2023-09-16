@@ -1,7 +1,7 @@
 import React from 'react'
 import PageUnavailable from '../../components/common/pageUnavailable'
 
-const showData = () => {
+const ShowData = () => {
     return (
         <PageUnavailable
             title='Coming Soon'
@@ -11,4 +11,4 @@ const showData = () => {
     )
 }
 
-export default showData
+export default ShowData

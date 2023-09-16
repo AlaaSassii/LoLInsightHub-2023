@@ -1,7 +1,7 @@
 import React from 'react'
 import PageUnavailable from '../../components/common/pageUnavailable'
 
-const games = () => {
+const Games = () => {
     return (
         <PageUnavailable
             title='Coming Soon'
@@ -11,4 +11,4 @@ const games = () => {
     )
 }
 
-export default games
+export default Games

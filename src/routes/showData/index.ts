@@ -1,2 +1,2 @@
-import showData from "./showData";
-export default showData;
+import ShowData from "./showData";
+export default ShowData;
