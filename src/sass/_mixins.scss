@@ -60,6 +60,14 @@
 @mixin boxShaodw2 {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+// images 
+@mixin smallScreenNoImage {
+  @media (max-width:768px){
+    img{
+      display:none
+    }
+}
+}
 // border
 @mixin border1 {
   border: 1px solid #cecece ; 
@@ -80,10 +88,20 @@
   align-items: $alignItems;
   justify-content: $justifyContent;
   flex-direction: $direction;
-  @media (max-width:768px){
-      img{
-        display:none
-      }
+  @include smallScreenNoImage;
+}
+
+// titles
+@mixin bigTitle{
+  font-weight: 800;
+  font-size: 75px;
+  @media(max-width:1024px){
+    font-weight: 700;
+    font-size: 65px;
+  }
+  @media(max-width:798px){
+    font-weight: 600;
+    font-size: 60px;
   }
 }
 

@@ -1,1 +1,22 @@
 @import '../../../../sass/index';
+
+.welcome__section__home{
+    @include displayFlex;
+    .welcome__section__text{
+        .big__text{
+            @include bigTitle;
+            .logo__name{
+                @include text-gradient(#1A6DFF,#C822FF);
+                @include bigTitle;
+
+            }
+        }
+        p{
+            line-height: 2;
+        }
+    }
+    img{
+        width: 600px;
+        height: 600px;
+    }
+}
