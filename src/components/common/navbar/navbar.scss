@@ -1,0 +1,31 @@
+@import '../../../sass/variables'; 
+@import '../../../sass/mixins'; 
+
+nav {
+    position: absolute;
+    top:0 ; 
+    left: 0;
+    width: 100%;
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+       ul {
+        display: flex;
+        align-items: center;
+        gap:10px;
+            li{
+                padding: 5px;
+                a{  
+                    color: $main__black;
+                    text-decoration: none;
+                    text-transform: capitalize;
+                    font-weight: 600;
+                    
+                }
+                .isActive{
+                    @include text-gradient($lightblue__logo, $purpole__logo)
+                }
+            }
+       }
+    }
+}

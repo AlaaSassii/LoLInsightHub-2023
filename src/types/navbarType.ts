@@ -5,4 +5,4 @@ type link = {
 
 export type links = link[]
 
-export type logo = JSX.Element
+export type logo = Element

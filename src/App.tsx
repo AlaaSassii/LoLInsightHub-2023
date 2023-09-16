@@ -5,9 +5,11 @@ import Alert from './components/common/alert'
 import Toggle from './components/common/toggle/toggle'
 import AnimatedWrapper from './components/common/animationWrapper'
 import { Route, Routes } from 'react-router-dom'
+import Navbar from './components/common/navbar'
 function App() {
   return (
     <>
+      <Navbar links={[{ name: 'home', path: '/' }, { name: 'search', path: '/search' }, { name: 'games', path: '/games' }]} />
       <Routes>
         <Route path='/' element={<h1>Home</h1>} />
         <Route path='/search' element={<h1>search</h1>} />
