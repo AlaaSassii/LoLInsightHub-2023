@@ -11,10 +11,17 @@
   color: transparent;
 }
 
-@mixin centerElement {
+@mixin centerElementWithFlex {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@mixin centerElementWithPosition {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @mixin displayFlex {
@@ -34,6 +41,7 @@
   cursor: pointer;
   transition: .3s;
 }
+
 @mixin boxShadow1 {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
@@ -52,3 +60,4 @@
       }
   }
 }
+

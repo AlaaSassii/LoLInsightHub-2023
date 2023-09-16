@@ -4,10 +4,7 @@
 
 
 .page__not__found{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include centerElementWithPosition ;
     text-align: center;
     .large__error__code{
         @include text-gradient($blue__logo,$purpole__logo);
