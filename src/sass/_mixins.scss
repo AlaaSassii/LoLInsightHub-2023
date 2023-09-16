@@ -68,6 +68,10 @@
     }
 }
 }
+@mixin homePageImage {
+  width: 600px;
+  height: 600px;
+}
 // border
 @mixin border1 {
   border: 1px solid #cecece ; 

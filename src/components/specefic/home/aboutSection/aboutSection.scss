@@ -1,0 +1,15 @@
+@import '../../../../sass/index';
+
+.aboutus__section__home{
+    @include displayFlex;
+    @include smallScreenNoImage;
+    .aboutus__section__text{
+        .big__text{
+            @include bigTitle;
+            @include text-gradient($lightblue__logo, $purpole__logo);
+        }
+    }
+    img{
+        @include homePageImage;
+    }
+}
