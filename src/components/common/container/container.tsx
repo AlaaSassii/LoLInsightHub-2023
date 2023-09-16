@@ -1,14 +1,16 @@
 // react
-import React, { FC, ReactNode } from 'react'
+import { FC, ReactNode } from 'react'
 
 // styles
 import './container.scss'
 type containerProps = {
-    children: ReactNode
+    children: ReactNode,
+    className?: string,
+    id?: string,
 }
-const Container: FC<containerProps> = ({ children }) => {
+const Container: FC<containerProps> = ({ children, className, id }) => {
     return (
-        <div className='container'>{children}</div>
+        <div id={id} className={`${className} container`}>{children}</div>
     )
 }
 
