@@ -2,57 +2,21 @@ import Logo from './components/common/logo'
 import Container from './components/common/container'
 import Tooltip from './components/common/tooltip'
 import Alert from './components/common/alert'
-import Toggle from './components/specefic/navbar/toggle/toggle'
+import Toggle from './components/common/toggle/toggle'
 import AnimatedWrapper from './components/common/animationWrapper'
-
+import { Route, Routes } from 'react-router-dom'
 function App() {
   return (
-    <Container>
-      <Logo />
-      <Tooltip text="toggle theme">
-        <Toggle />
-      </Tooltip>
-      <>
-        <Tooltip text="This is a tooltip">
-          <button>Hover me</button>
-        </Tooltip>
-        <Tooltip text="This is a tooltip">
-          <div>Hover me</div>
-        </Tooltip>
-      </>
-      <div>
-        <h1>Alert Example</h1>
-        <Alert type="error" message="This is an error message." icon="FaExclamationCircle" />
-        <Alert type="warning" message="This is a warning message." icon="FaExclamationTriangle" />
-        <Alert type="info" message="This is an info message." icon="FaInfoCircle" />
-        <Alert type="success" message="This is a success message." icon="FaCheckCircle" />
-      </div>
-      <>
-        <AnimatedWrapper animationType='from-bottom'>
-          <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h1>
-        </AnimatedWrapper>
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h2>
-        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h3>
-        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h4>
-        <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h5>
-        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, inventore.</h6>
-      </>
-      <>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia vero facilis aliquid ducimus magni quasi blanditiis adipisci suscipit cupiditate quos.</p>
-        <span>Lorem ipsum dolor sit amet consectetur adipisicing.</span>
-        <br />
-        <dt>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci esse reiciendis, nisi tenetur nam quibusdam ex vitae fugiat sequi dicta itaque exercitationem fugit dolores harum cupiditate nostrum ipsa vel nihil.</dt>
-        <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nulla quas officia! Unde saepe necessitatibus sequi quas rerum aliquid natus distinctio alias placeat? Deleniti rerum explicabo aliquam, illum iste nesciunt.</dd>
-        <b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsam magni velit.</b>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt deleniti magni tenetur placeat necessitatibus. Eius deserunt dignissimos odit magnam provident sunt fuga consequuntur iure. Accusantium dicta earum tenetur sunt modi. </p>
+    <>
+      <Routes>
+        <Route path='/' element={<h1>Home</h1>} />
+        <Route path='/search' element={<h1>search</h1>} />
+        <Route path='/games' element={<h1>games</h1>} />
+        <Route path='/contactus' element={<h1>contactus</h1>} />
+        <Route path='*' element={<h1>Not Found</h1>} />
 
-      </>
-      <>
-        <textarea></textarea>
-
-        <input type="text" placeholder='input' />
-      </>
-    </Container>
+      </Routes>
+    </>
   )
 }
 

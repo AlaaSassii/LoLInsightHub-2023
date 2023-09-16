@@ -1,6 +1,6 @@
 import { BiSolidSun, } from 'react-icons/bi'
 import { BsFillMoonStarsFill } from 'react-icons/bs'
-import useThemeToggle from '../../../../hooks/useToggleTheme'
+import useThemeToggle from '../../../hooks/useToggleTheme'
 import './toggle.scss';
 const Toggle = () => {
     const [light, toggleTheme,] = useThemeToggle();
