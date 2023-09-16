@@ -6,7 +6,7 @@ import './servicesSection.scss';
 const ServicesSection = () => {
     return (
         <section className='services__section__home'>
-            <h2>Our Services</h2>
+            <h1>Our Services</h1>
             <div className='cards__services__home'>
                 {
                     cards.map((card, index) => <Card

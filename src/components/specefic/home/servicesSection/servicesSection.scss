@@ -1,1 +1,19 @@
-@import '../../../../sass//index'
+@import '../../../../sass//index';
+
+.services__section__home{
+    @include sectionMixin(80% );
+    text-align: center;
+    h1{
+        position: relative;
+        &::after{
+            content: '';
+            @include centerElementWithPosition();
+            @include linearGradientBackground($blue__logo,$purpole__logo);
+            top:120%;
+            width: 40%;
+            height: 3px;
+            border-radius: 5px;
+        }
+    }
+}
+

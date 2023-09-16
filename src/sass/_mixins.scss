@@ -53,6 +53,14 @@
   transform: translate(-50%, -50%);
 }
 
+// section container 
+@mixin sectionMixin ($width){
+  width: $width;
+  margin: auto;
+  @media (max-width:798px){
+    width: 100%;
+  }
+}
 // boxShadow
 @mixin boxShadow1 {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
