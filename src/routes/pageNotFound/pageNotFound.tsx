@@ -1,4 +1,3 @@
-import './pageNotFound.scss'
 import PageUnavailable from '../../components/common/pageUnavailable'
 const PageNotFound = () => {
     return (
