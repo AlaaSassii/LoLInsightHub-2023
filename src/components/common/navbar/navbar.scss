@@ -1,6 +1,15 @@
 @import '../../../sass/variables'; 
 @import '../../../sass/mixins'; 
 
+body{
+    &.dark{
+        .navbar{
+            a{
+                color:$main__white
+            }
+        }
+    }
+}
 nav {
     position: absolute;
     top:0 ; 
