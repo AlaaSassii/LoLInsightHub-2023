@@ -1,9 +1,10 @@
-import React, { FC, ReactNode } from 'react'
-import { links, logo } from '../../../types/navbarType'
+import { FC } from 'react'
+import { links, } from '../../../types/navbarType'
 import Container from '../container'
 import { NavLink } from 'react-router-dom';
 import './navbar.scss'
 import Logo from '../logo';
+import Toggle from '../toggle';
 type navbarProps = {
     links: links,
 }
@@ -23,7 +24,9 @@ const Navbar: FC<navbarProps> = ({ links }) => {
                             </NavLink>
                         </li>)
                     }
+                    <Toggle />
                 </ul>
+
             </Container>
         </nav>
     )
