@@ -16,9 +16,11 @@ const Card: FC<cardProps> = ({ image, title, text, navigateLink }) => {
             <div className="card__image">
                 <img src={image} alt="" />
             </div>
-            <h2>{title}</h2>
-            <p>{text}</p>
-            <button onClick={handleClick}>navigate</button>
+            <div className="info">
+                <h2>{title}</h2>
+                <p>{text}</p>
+                <button onClick={handleClick}>navigate</button>
+            </div>
         </div>
     )
 }

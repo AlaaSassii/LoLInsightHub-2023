@@ -1,8 +1,9 @@
 @import '../../../../sass//index';
 
 .services__section__home{
-    @include sectionMixin(80% );
+    @include sectionMixin(90% );
     text-align: center;
+    padding-bottom: 10px;
         h1{
         position: relative;
         &::after{
@@ -13,6 +14,38 @@
             width: 40%;
             height: 3px;
             border-radius: 5px;
+        }
+        @media(max-width:798px){
+            @include sectionMixin(80% );
+            h1{
+                margin: 10px 0 20px;
+            }
+        }
+    }
+    .cards__services__home{
+        display: flex;
+        flex-wrap: wrap;
+        gap:10px;
+        @media(max-width:798px){
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        .card__home_page{
+            flex-basis: 32%;
+            @include border1;
+            overflow: hidden;
+            transition: $transition;   
+            .info{
+                padding:10px
+            }
+            img{
+                width: 100%;
+                min-height: 220px;
+                &hover{
+                    transform: scaleX(1.2);
+
+                }
+            }
         }
     }
 }
