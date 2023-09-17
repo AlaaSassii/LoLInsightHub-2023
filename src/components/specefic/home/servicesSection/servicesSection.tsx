@@ -1,4 +1,3 @@
-import React from 'react'
 import Card from './card';
 import { cards } from '../../../../helpers/home/cardsSettings'
 import './servicesSection.scss';
