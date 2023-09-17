@@ -3,6 +3,7 @@
 .contact__section__home{
     
     margin-top: 30px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     h1{
@@ -10,6 +11,8 @@
     }
     img{
         @include smallScreenNoImage;
-        flex-basis: 60%;
+        flex-basis: 20%;
+        width: 600px;
+        height: 400px;
     }
 }
