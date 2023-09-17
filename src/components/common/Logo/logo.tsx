@@ -1,6 +1,6 @@
 // assets
-import { logoName } from '../../../assets/logoName'
-import { logo } from '../../../assets/logo'
+import { logoName } from '../../../assets/logo/logoName'
+import { logo } from '../../../assets/logo/logo'
 // styles
 import './logo.scss'
 const Logo = () => {

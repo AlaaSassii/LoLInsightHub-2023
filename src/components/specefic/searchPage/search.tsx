@@ -7,7 +7,7 @@ const Search = () => {
             <p>Welcome to our League of Legends hub! Here, you'll find two exciting cards that hold the key to your journey in the Rift.</p>
             <div className="cards">
                 {cards.map((card, index) => (
-                    <Card key={index} {...card} />
+                    <Card key={`search__page__card__${index}`} {...card} />
                 ))}
             </div>
         </div>

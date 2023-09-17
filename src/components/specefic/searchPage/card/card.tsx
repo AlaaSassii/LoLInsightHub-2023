@@ -12,7 +12,7 @@ const Card: FC<cardProps> = ({ image, title, text, navigateLink }) => {
         navigate(navigateLink);
     }
     return (
-        <div className='card__home_page'>
+        <div className='card__service_page'>
             <div className="card__image">
                 <img src={image} alt="" />
             </div>
