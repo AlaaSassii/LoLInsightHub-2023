@@ -3,7 +3,7 @@
 .services__section__home{
     @include sectionMixin(80% );
     text-align: center;
-    h1{
+        h1{
         position: relative;
         &::after{
             content: '';
