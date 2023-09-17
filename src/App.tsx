@@ -8,6 +8,7 @@ import Games from './routes/games'
 import Contact from './routes/contact'
 import { links } from './enums/routes/links'
 function App() {
+
   return (
     <>
       <Navbar links={navLinks} />
