@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
 import Navbar from './components/common/navbar'
 import PageNotFound from './routes/pageNotFound'
-import { navLinks } from './helpers/navlinks'
+import { navLinks } from './helpers/navbar/navlinks'
 import Home from './routes/home'
 import ShowData from './routes/showData'
 import Games from './routes/games'

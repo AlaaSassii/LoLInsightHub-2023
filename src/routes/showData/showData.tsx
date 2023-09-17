@@ -1,13 +1,11 @@
-import React from 'react'
-import PageUnavailable from '../../components/common/pageUnavailable'
+import PageContainer from '../../components/common/pageContainer'
+import Search from '../../components/specefic/searchPage'
 
 const ShowData = () => {
     return (
-        <PageUnavailable
-            title='Coming Soon'
-            titleExplanation='Page Under Maintenance'
-            paragraph="We're currently working on this page to make it even better. Please check back later for updates!"
-        />
+        <PageContainer>
+            <Search />
+        </PageContainer>
     )
 }
 

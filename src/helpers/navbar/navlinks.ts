@@ -1,5 +1,5 @@
-import { links as linksEnum } from "../enums/routes/links";
-import { links } from "../types/navbarType";
+import { links as linksEnum } from "../../enums/routes/links";
+import { links } from "../../types/navbarType";
 
 export const navLinks: links = [
     { name: 'home', path: linksEnum.HOME },
