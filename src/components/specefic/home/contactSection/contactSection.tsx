@@ -1,7 +1,8 @@
 import { useNavigate } from 'react-router-dom'
 import { links } from '../../../../enums/links'
-import Champions from '../../../../assets/images/transparentChampions/group_champions.webp'
+import Champions from '../../../../assets/images/transparentChampions/group_champions.webp';
 import { BsArrowRight } from 'react-icons/bs';
+import './contactSection.scss';
 
 const ContactSection = () => {
     let navigate = useNavigate();
@@ -17,7 +18,6 @@ const ContactSection = () => {
                 <button onClick={handleClick}> click here <BsArrowRight /></button>
             </div>
             <img src={Champions} alt="" />
-
         </section>
     )
 }

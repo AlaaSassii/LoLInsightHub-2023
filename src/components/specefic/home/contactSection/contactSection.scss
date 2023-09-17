@@ -1,1 +1,15 @@
 @import '../../../../sass/index';
+
+.contact__section__home{
+    
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    h1{
+        @include bigTitle;
+    }
+    img{
+        @include smallScreenNoImage;
+        flex-basis: 60%;
+    }
+}
