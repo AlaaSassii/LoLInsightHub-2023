@@ -13,7 +13,7 @@ const ContactForm = () => {
                 <input type="email" placeholder='email' ref={inputEmailRef} />
             </div>
             <input type="text" placeholder='subject' ref={inputSubjetRef} />
-            <textarea placeholder='message' ref={inputMessageRef}></textarea>
+            <textarea placeholder='message' ref={inputMessageRef} rows={10}></textarea>
         </div>
     )
 }

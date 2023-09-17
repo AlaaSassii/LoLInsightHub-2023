@@ -1,1 +1,18 @@
 @import '../../../../sass/index';
+
+.contact__form{
+    margin-top: 60px !important;
+    width: 70%;
+    margin:auto;
+    @media (max-width:798px){
+        width: 95%;
+    }
+    input,
+    textarea{
+        width: 100%;
+    }
+    .user_data{
+        @include responsiveFlex;
+        gap: 10px;
+    }
+}

@@ -102,6 +102,13 @@
   flex-direction: $direction;
   @include smallScreenNoImage;
 }
+@mixin responsiveFlex {
+  display: flex;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0;
+  };
+}
 
 // titles
 @mixin bigTitle{
