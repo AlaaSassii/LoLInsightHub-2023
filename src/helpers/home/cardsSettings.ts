@@ -1,14 +1,8 @@
 import ChampionService from '../../assets/images/wallpaper/champions_service.webp';
 import MatchHistpry from '../../assets/images/wallpaper/match_history_service.webp';
 import GameService from '../../assets/images/wallpaper/game_service.png'
-import { links } from '../../enums/links';
-
-type cardServiceSection = {
-    image: string,
-    title: string,
-    text: string,
-    navigateLink: string,
-}
+import { links } from '../../enums/routes/links';
+import { cardServiceSection } from '../../types/card';
 
 type cardsServiceSection = cardServiceSection[]
 

@@ -1,4 +1,4 @@
-import { links as linksEnum } from "../enums/links";
+import { links as linksEnum } from "../enums/routes/links";
 import { links } from "../types/navbarType";
 
 export const navLinks: links = [

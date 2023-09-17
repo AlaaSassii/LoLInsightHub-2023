@@ -6,7 +6,7 @@ import Home from './routes/home'
 import ShowData from './routes/showData'
 import Games from './routes/games'
 import Contact from './routes/contact'
-import { links } from './enums/links'
+import { links } from './enums/routes/links'
 function App() {
   return (
     <>

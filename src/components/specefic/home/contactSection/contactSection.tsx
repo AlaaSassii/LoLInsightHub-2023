@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { links } from '../../../../enums/links'
+import { links } from '../../../../enums/routes/links'
 import Champions from '../../../../assets/images/transparentChampions/group_champions.webp';
 import { BsArrowRight } from 'react-icons/bs';
 import './contactSection.scss';

@@ -6,4 +6,4 @@ export enum links {
     CONTACT = '/contact',
     GAMES = '/games',
     PAGENOTFOUND = '*'
-}
+};
