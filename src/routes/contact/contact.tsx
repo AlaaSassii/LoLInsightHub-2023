@@ -1,13 +1,10 @@
-import React from 'react'
-import PageUnavailable from '../../components/common/pageUnavailable'
-
+import PageContainer from '../../components/common/pageContainer'
+import ContactForm from '../../components/specefic/contact/contactForm'
 const Contact = () => {
     return (
-        <PageUnavailable
-            title='Coming Soon'
-            titleExplanation='Page Under Maintenance'
-            paragraph="We're currently working on this page to make it even better. Please check back later for updates!"
-        />
+        <PageContainer>
+            <ContactForm />
+        </PageContainer>
     )
 }
 
