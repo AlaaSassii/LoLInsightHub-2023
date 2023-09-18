@@ -35,9 +35,7 @@ function App() {
         <Route path={links.CHAMPIONS} element={<ChampionsData />} />
         <Route path={links.PAGENOTFOUND} element={<PageNotFound />} />
       </Routes>
-      < SearchInput
-        handleSearchFunction={() => alert('')}
-        placeholder='placeholder' />
+
     </>
   )
 }

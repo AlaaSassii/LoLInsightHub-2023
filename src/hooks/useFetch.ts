@@ -6,7 +6,8 @@ type AsyncState<T> = {
     error: any;
     data: T | null;
 };
-function useAsync<T>(asyncFunction: () => Promise<T>, deps: any[] = []): AsyncState<T> {
+
+function useFetch<T>(asyncFunction: () => Promise<T>, deps: any[] = []): AsyncState<T> {
     const [state, setState] = useState<AsyncState<T>>({
         pending: false,
         success: false,
@@ -22,7 +23,7 @@ function useAsync<T>(asyncFunction: () => Promise<T>, deps: any[] = []): AsyncSt
             data: null,
         });
 
-        asyncFunction()
+        asyncFunction() // Call asyncFunction as a function here
             .then((data) => {
                 setState({
                     pending: false,
@@ -44,4 +45,4 @@ function useAsync<T>(asyncFunction: () => Promise<T>, deps: any[] = []): AsyncSt
     return state;
 }
 
-export default useAsync;
+export default useFetch;
