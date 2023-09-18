@@ -21,7 +21,7 @@ const PageUnavailable: FC<typePageUnavailable> = ({
             <div className='large__title'>{title}</div>
             <h2>{titleExplanation}</h2>
             <p>{paragraph}</p>
-            <button onClick={handleClick}><AiFillHome />  go to home page </button>
+            <button onClick={handleClick}><AiFillHome />go to home page </button>
         </div>
     )
 }
