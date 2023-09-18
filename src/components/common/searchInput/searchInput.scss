@@ -1,0 +1,30 @@
+@import '../../../sass/index'; 
+
+.search__input{
+    @include input;
+    display: flex;
+    height: 32px;
+    width: 400px;
+    border-radius: 20px;
+    margin:auto;
+    position: relative;
+    input {
+        margin-top: 5px;
+        @include centerElementWithFlex;
+        border: none !important;
+        outline: transparent !important;
+        flex:1;
+    }
+    button{
+        @include centerElementWithFlex;
+        @include backgroundColorMainBrandColor1;
+        position:absolute !important;
+        top:0;
+        right:-1px;
+        height: 100% ; 
+        width: 45px;
+        border-radius: 50%;
+        font-size: 20px;
+        color: white;
+    }
+}

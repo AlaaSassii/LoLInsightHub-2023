@@ -9,6 +9,7 @@ import Navbar from './components/common/navbar'
 import { links } from './enums/routes/links'
 import { navLinks } from './helpers/navbar/navlinks'
 import { Route, Routes } from 'react-router-dom'
+import SearchInput from './components/common/searchInput'
 
 function App() {
 
@@ -24,6 +25,9 @@ function App() {
         <Route path={links.CHAMPIONS} element={<ChampionsData />} />
         <Route path={links.PAGENOTFOUND} element={<PageNotFound />} />
       </Routes>
+      < SearchInput
+        onClick={() => alert('')}
+        placeholder='placeholder' />
     </>
   )
 }
