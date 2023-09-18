@@ -1,5 +1,15 @@
 @import '../../../sass/index'; 
 
+
+body{
+    &.dark{
+        .search__input{
+            background-color: $sec__black;
+            color: $main__white;
+        }
+    }
+}
+
 .search__input{
     @include input;
     display: flex;
@@ -9,7 +19,7 @@
     margin:auto;
     position: relative;
     input {
-        margin-top: 5px;
+        margin-top: 7px;
         @include centerElementWithFlex;
         border: none !important;
         outline: transparent !important;

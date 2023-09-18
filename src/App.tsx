@@ -26,7 +26,7 @@ function App() {
         <Route path={links.PAGENOTFOUND} element={<PageNotFound />} />
       </Routes>
       < SearchInput
-        onClick={() => alert('')}
+        handleSearchFunction={() => alert('')}
         placeholder='placeholder' />
     </>
   )
