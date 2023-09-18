@@ -1,9 +1,10 @@
 export enum links {
     HOME = '/',
-    CHAMPIONS = '/champions',
     MATCH = '/match',
-    SEARCH = '/search',
     CONTACT = '/contact',
     GAMES = '/games',
+    SEARCH = '/search',
+    MATCHHISTORY = '/search-history',
+    CHAMPIONS = '/champions-data',
     PAGENOTFOUND = '*'
 };
