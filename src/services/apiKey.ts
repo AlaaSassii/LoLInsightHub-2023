@@ -1,1 +1,1 @@
-const Api__key = ''
+export const Api__key: string = ''
