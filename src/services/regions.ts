@@ -1,4 +1,4 @@
-const regions: Record<string, string> = {
+export const regions: Record<string, string> = {
     Czech: 'cs_CZ',
     Greek: 'el_GR',
     Polish: 'pl_PL',

@@ -11,10 +11,13 @@ import { navLinks } from './helpers/navbar/navlinks'
 import { Route, Routes } from 'react-router-dom'
 import SearchInput from './components/common/searchInput'
 import { useEffect } from 'react'
-import axios from 'axios'
+import { versions } from './services/versions'
+import { getChampionData, getChampionsData } from './services/riotGamesApiService.ts'
+import { regions } from './services/regions.ts'
+
 function App() {
   useEffect(() => {
-    axios.get('http://ddragon.leagueoflegends.com/cdn/13.18.1/data/en_US/champion.json')
+    getChampionData(versions[0], regions.Czech, 'Aatrox')
       .then(res => {
         console.log(res.data)
       })

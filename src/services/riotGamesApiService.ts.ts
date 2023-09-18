@@ -1,13 +1,16 @@
 import { riotGamesApiAxiosInstance } from "./axios"
 
-export const getGameData = async (
+export const getChampionsData = async (
     version: string,
     region: string,
-    restOfApi: string) => {
-    return await riotGamesApiAxiosInstance.get(`${version}/data/${region}/${restOfApi}`);
+) => {
+    return await riotGamesApiAxiosInstance.get(`${version}/data/${region}/champion.json`);
 }
-export const getGameImage = async (
+
+export const getChampionData = async (
     version: string,
-    restOfApi: string) => {
-    return await riotGamesApiAxiosInstance.get(`${version}/img /${restOfApi}`);
+    region: string,
+    name: string,
+) => {
+    return await riotGamesApiAxiosInstance.get(`${version}/data/${region}/champion/${name}.json`);
 }
