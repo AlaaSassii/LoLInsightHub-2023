@@ -12,12 +12,12 @@ import { Route, Routes } from 'react-router-dom'
 import SearchInput from './components/common/searchInput'
 import { useEffect } from 'react'
 import { versions } from './services/versions'
-import { getChampionData, getChampionsData } from './services/riotGamesApiService.ts'
+import { getChampionData, getChampionsData, getItemImage } from './services/riotGamesApiService.ts'
 import { regions } from './services/regions.ts'
 
 function App() {
   useEffect(() => {
-    getChampionData(versions[0], regions.Czech, 'Aatrox')
+    getItemImage(versions[0], '1001')
       .then(res => {
         console.log(res.data)
       })
