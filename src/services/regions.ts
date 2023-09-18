@@ -1,4 +1,4 @@
-const languageNameToCode: Record<string, string> = {
+const regions: Record<string, string> = {
     Czech: 'cs_CZ',
     Greek: 'el_GR',
     Polish: 'pl_PL',
