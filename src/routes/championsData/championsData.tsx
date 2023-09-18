@@ -1,9 +1,12 @@
 // import PageContainer from '../../components/common/pageContainer'
-import PageUnavailable from '../../components/common/pageUnavailable'
+import PageContainer from '../../components/common/pageContainer'
+import SearchChampions from '../../components/specefic/searchChampions'
 
 const championsData = () => {
     return (
-        <PageUnavailable />
+        <PageContainer>
+            <SearchChampions />
+        </PageContainer>
 
     )
 }
