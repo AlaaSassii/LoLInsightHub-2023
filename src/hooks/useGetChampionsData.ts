@@ -1,18 +1,18 @@
 import { useEffect, useState } from 'react';
 import { getChampionsData } from '../services/riotGamesApiService.ts';
 import { championsData } from '../types/championsDataType.ts';
-import { AxiosError } from 'axios';
+import { AxiosError, AxiosResponse } from 'axios';
 
 type typeUseChampionsDataResponse = {
     pending: boolean;
     data: championsData | null;
-    error: AxiosError | null;
+    error: string | null;
 }
 
 function useChampionsData(version: string, region: string): typeUseChampionsDataResponse {
     const [data, setData] = useState<championsData | null>(null);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<AxiosError | null>(null);
+    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         setData(null);
@@ -20,12 +20,12 @@ function useChampionsData(version: string, region: string): typeUseChampionsData
         setLoading(true);
 
         getChampionsData(version, region)
-            .then((response) => {
+            .then((response: AxiosResponse) => {
                 setData(response.data);
                 setLoading(false);
             })
             .catch((error: AxiosError) => {
-                setError(error);
+                setError(error.message);
                 setLoading(false);
             });
     }, [version, region]);
