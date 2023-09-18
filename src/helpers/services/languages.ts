@@ -1,119 +1,30 @@
-type Language = {
-    code: string;
-    name: string;
-};
-
-const supportedLanguages: Record<string, Language> = {
-    cs_CZ: {
-        code: 'cs_CZ',
-        name: 'Czech (Czech Republic)',
-    },
-    el_GR: {
-        code: 'el_GR',
-        name: 'Greek (Greece)',
-    },
-    pl_PL: {
-        code: 'pl_PL',
-        name: 'Polish (Poland)',
-    },
-    ro_RO: {
-        code: 'ro_RO',
-        name: 'Romanian (Romania)',
-    },
-    hu_HU: {
-        code: 'hu_HU',
-        name: 'Hungarian (Hungary)',
-    },
-    en_GB: {
-        code: 'en_GB',
-        name: 'English (United Kingdom)',
-    },
-    de_DE: {
-        code: 'de_DE',
-        name: 'German (Germany)',
-    },
-    es_ES: {
-        code: 'es_ES',
-        name: 'Spanish (Spain)',
-    },
-    it_IT: {
-        code: 'it_IT',
-        name: 'Italian (Italy)',
-    },
-    fr_FR: {
-        code: 'fr_FR',
-        name: 'French (France)',
-    },
-    ja_JP: {
-        code: 'ja_JP',
-        name: 'Japanese (Japan)',
-    },
-    ko_KR: {
-        code: 'ko_KR',
-        name: 'Korean (Korea)',
-    },
-    es_MX: {
-        code: 'es_MX',
-        name: 'Spanish (Mexico)',
-    },
-    es_AR: {
-        code: 'es_AR',
-        name: 'Spanish (Argentina)',
-    },
-    pt_BR: {
-        code: 'pt_BR',
-        name: 'Portuguese (Brazil)',
-    },
-    en_US: {
-        code: 'en_US',
-        name: 'English (United States)',
-    },
-    en_AU: {
-        code: 'en_AU',
-        name: 'English (Australia)',
-    },
-    ru_RU: {
-        code: 'ru_RU',
-        name: 'Russian (Russia)',
-    },
-    tr_TR: {
-        code: 'tr_TR',
-        name: 'Turkish (Turkey)',
-    },
-    ms_MY: {
-        code: 'ms_MY',
-        name: 'Malay (Malaysia)',
-    },
-    en_PH: {
-        code: 'en_PH',
-        name: 'English (Republic of the Philippines)',
-    },
-    en_SG: {
-        code: 'en_SG',
-        name: 'English (Singapore)',
-    },
-    th_TH: {
-        code: 'th_TH',
-        name: 'Thai (Thailand)',
-    },
-    vi_VN: {
-        code: 'vi_VN',
-        name: 'Vietnamese (Viet Nam)',
-    },
-    id_ID: {
-        code: 'id_ID',
-        name: 'Indonesian (Indonesia)',
-    },
-    zh_MY: {
-        code: 'zh_MY',
-        name: 'Chinese (Malaysia)',
-    },
-    zh_CN: {
-        code: 'zh_CN',
-        name: 'Chinese (China)',
-    },
-    zh_TW: {
-        code: 'zh_TW',
-        name: 'Chinese (Taiwan)',
-    },
+const languageNameToCode: Record<string, string> = {
+    Czech: 'cs_CZ',
+    Greek: 'el_GR',
+    Polish: 'pl_PL',
+    Romanian: 'ro_RO',
+    Hungarian: 'hu_HU',
+    'English (United Kingdom)': 'en_GB',
+    'German (Germany)': 'de_DE',
+    'Spanish (Spain)': 'es_ES',
+    'Italian (Italy)': 'it_IT',
+    'French (France)': 'fr_FR',
+    'Japanese (Japan)': 'ja_JP',
+    'Korean (Korea)': 'ko_KR',
+    'Spanish (Mexico)': 'es_MX',
+    'Spanish (Argentina)': 'es_AR',
+    'Portuguese (Brazil)': 'pt_BR',
+    'English (United States)': 'en_US',
+    'English (Australia)': 'en_AU',
+    'Russian (Russia)': 'ru_RU',
+    'Turkish (Turkey)': 'tr_TR',
+    'Malay (Malaysia)': 'ms_MY',
+    'English (Republic of the Philippines)': 'en_PH',
+    'English (Singapore)': 'en_SG',
+    'Thai (Thailand)': 'th_TH',
+    'Vietnamese (Viet Nam)': 'vi_VN',
+    'Indonesian (Indonesia)': 'id_ID',
+    'Chinese (Malaysia)': 'zh_MY',
+    'Chinese (China)': 'zh_CN',
+    'Chinese (Taiwan)': 'zh_TW',
 };
