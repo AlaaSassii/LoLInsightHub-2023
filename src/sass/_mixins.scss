@@ -40,6 +40,12 @@
 @mixin linearGradientBackground ($color1, $color2){
   background: linear-gradient(45deg, $color1, $color2);
 }
+@mixin backgroundColorMainBrandColor1{
+  @include linearGradientBackground($blue__logo,$purpole__logo)
+}
+@mixin backgroundColorMainBrandColor2{
+  @include linearGradientBackground($lightblue__logo,$lightporpule__logo)
+}
 // center
 @mixin centerElementWithFlex {
   display: flex;

@@ -1,13 +1,17 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { AiFillHome } from 'react-icons/ai';
 import './pageUnavailable.scss';
 type typePageUnavailable = {
-    title: string,
-    titleExplanation: string,
-    paragraph: string,
+    title?: string,
+    titleExplanation?: string,
+    paragraph?: string,
 }
-const PageUnavailable: FC<typePageUnavailable> = ({ title, titleExplanation, paragraph }) => {
+const PageUnavailable: FC<typePageUnavailable> = ({
+    title = 'Coming Soon',
+    titleExplanation = 'Page Under Maintenance',
+    paragraph = "We're currently working on this page to make it even better. Please check back later for updates!"
+}) => {
     let navigate = useNavigate();
     const handleClick = () => {
         navigate('/');

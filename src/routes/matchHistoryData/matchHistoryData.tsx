@@ -1,8 +1,10 @@
-import PageContainer from '../../components/common/pageContainer'
+// import PageContainer from '../../components/common/pageContainer'
+import PageUnavailable from '../../components/common/pageUnavailable'
 
 const matchHistoryData = () => {
     return (
-        <PageContainer>matchHistoryData</PageContainer>
+        <PageUnavailable />
+
     )
 }
 
