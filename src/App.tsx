@@ -9,18 +9,9 @@ import Navbar from './components/common/navbar'
 import { links } from './enums/routes/links'
 import { navLinks } from './helpers/navbar/navlinks'
 import { Route, Routes } from 'react-router-dom'
-import { useEffect } from 'react'
-import { versions } from './services/versions'
-import { getItemImage } from './services/riotGamesApiService.ts'
 
 function App() {
-  useEffect(() => {
-    getItemImage(versions[0], '1001')
-      .then(res => {
-        console.log(res.data)
-      })
-      .catch(err => { console.error(err) });
-  }, []);
+
   return (
     <>
       <Navbar links={navLinks} />

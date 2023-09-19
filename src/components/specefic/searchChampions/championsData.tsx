@@ -1,11 +1,18 @@
-import { useState } from 'react'
+import { useEffect } from 'react'
+import { useAppDispatch } from '../../../hooks/useAppDispatch'
+import { useAppSelector } from '../../../hooks/useAppSelectore'
 import SearchInput from '../../common/searchInput'
 import ChampionsContainer from './championsContainer'
 import './searchChampions.scss'
-import useChampionsData from '../../../hooks/useGetChampionsData.ts'
+import { fetchMoreData } from '../../../redux/ChampionsData'
 const SearchChampions = () => {
-    const { data, error, pending } = useChampionsData('13.18.1', 'en_US');
-    const [value, setValue] = useState<string>('');
+    const dispatch = useAppDispatch();
+    const data = useAppSelector(state => state.champions.data);
+    const loading = useAppSelector(state => state.champions.loading);
+    const error = useAppSelector(state => state.champions.error);
+    useEffect(() => {
+        dispatch(fetchMoreData)
+    }, [])
     return (
         <div className='search__champions__container'>
             <p>Welcome to the League of Legends Champion Showcase.  Browse, search, and explore champions, then dive into detailed profiles for a complete understanding of your favorite champions.</p>
