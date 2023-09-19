@@ -29,7 +29,7 @@ type ChampionDataType = {
     version: string;
 };
 
-export type championsData = {
+export type championsDataType = {
     data: {
         [key: string]: ChampionDataType
     },

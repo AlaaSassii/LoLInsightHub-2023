@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import ChampionsReducer from './ChampionsData';
+import ChampionsReducer from './ChampionsSlice';
 const store = configureStore({
     reducer: {
         champions: ChampionsReducer,

@@ -1,10 +1,10 @@
 // counterSlice.ts
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { championsData } from '../types/championsDataType';
+import { championsDataType } from '../types/championsDataType';
 
 interface ChampionsState {
-    data: championsData | null
+    data: championsDataType | null
     loading: boolean;
     error: string | null;
 }

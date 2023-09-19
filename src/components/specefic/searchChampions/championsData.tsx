@@ -4,7 +4,7 @@ import { useAppSelector } from '../../../hooks/useAppSelectore'
 import SearchInput from '../../common/searchInput'
 import ChampionsContainer from './championsContainer'
 import './searchChampions.scss'
-import { fetchChampionsData } from '../../../redux/ChampionsData'
+import { fetchChampionsData } from '../../../redux/ChampionsSlice'
 const SearchChampions = () => {
     const dispatch = useAppDispatch();
     const data = useAppSelector(state => state.champions.data);
