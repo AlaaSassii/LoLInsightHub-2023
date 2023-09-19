@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState, ChangeEvent } from 'react'
 import { useAppDispatch } from '../../../hooks/useAppDispatch'
 import { useAppSelector } from '../../../hooks/useAppSelectore'
 import SearchInput from '../../common/searchInput'
@@ -9,6 +9,10 @@ import MainLoadingSpinner from '../../common/mainLoadingSpinner'
 const SearchChampions = () => {
     const dispatch = useAppDispatch();
     const { data, loading, error } = useAppSelector(state => state.champions);
+    const [searchInputValue, setSearchInputValue] = useState<string>('');
+    const handleChangeInputValue = (event: ChangeEvent<HTMLInputElement>) => {
+        setSearchInputValue(event.target.value);
+    }
     useEffect(() => {
         if (data === null) {
             dispatch(fetchChampionsData());
@@ -26,12 +30,11 @@ const SearchChampions = () => {
                         <MainLoadingSpinner /> :
                         <>
                             <SearchInput
+                                value={searchInputValue}
+                                onChange={handleChangeInputValue}
                                 handleSearchFunction={() => alert('')}
                                 placeholder='placeholder' />
-                            {data !== null
-                                && <ChampionsContainer
-                                    data={data}
-                                />}
+                            {data !== null && <ChampionsContainer data={data} championName={searchInputValue} />}
                         </>
             }
 

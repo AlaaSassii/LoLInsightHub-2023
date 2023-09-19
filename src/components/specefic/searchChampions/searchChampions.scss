@@ -6,9 +6,12 @@
     }
 }
 .champions__container {
+    margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));  
   gap: 10px; 
+  img{
+  }
   b{
     display: block;
   }
