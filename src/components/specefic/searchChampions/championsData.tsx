@@ -11,7 +11,9 @@ const SearchChampions = () => {
     const loading = useAppSelector(state => state.champions.loading);
     const error = useAppSelector(state => state.champions.error);
     useEffect(() => {
-        dispatch(fetchMoreData)
+        if (data === null) {
+            dispatch(fetchMoreData());
+        }
     }, [])
     return (
         <div className='search__champions__container'>
