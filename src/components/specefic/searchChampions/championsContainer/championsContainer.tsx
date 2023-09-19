@@ -2,6 +2,7 @@ import { FC, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { championsDataType } from '../../../../types/championsDataType'
 import { championSquareImage, } from '../../../../helpers/championSquareImage'
+import { links } from '../../../../enums/routes/links'
 
 export type championContainerType = {
     data: championsDataType,
@@ -11,6 +12,9 @@ export type championContainerType = {
 const ChampionsContainer: FC<championContainerType> = ({ data, championName }) => {
 
     let navigate = useNavigate();
+    const handleClick = (name: string) => {
+        navigate(`${name}`)
+    }
     const { data: champions } = data;
     const championsData = Object.keys(champions).filter(name => name.toLowerCase().includes(championName.toLowerCase()));
     return (
@@ -21,7 +25,7 @@ const ChampionsContainer: FC<championContainerType> = ({ data, championName }) =
                 </div> :
                 championsData
                     .map((name, index) => {
-                        return <div key={`champion__${index}`}>
+                        return <div key={`champion__${index}`} onClick={() => handleClick(name)}>
                             <img src={championSquareImage(name)} alt={`${name} image`} />
                             <b>{name}</b>
                         </div>
