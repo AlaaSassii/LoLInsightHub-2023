@@ -1,4 +1,4 @@
-type ChampionDataType = {
+type championDataType = {
     blurb: string;
     id: string;
     image: {
@@ -31,7 +31,7 @@ type ChampionDataType = {
 
 export type championsDataType = {
     data: {
-        [key: string]: ChampionDataType
+        [key: string]: championDataType
     },
     format: string,
     type: string,

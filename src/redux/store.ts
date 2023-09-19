@@ -1,8 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 import ChampionsReducer from './ChampionsSlice';
+import SingleChampionReducer from './SingleChampionSlice'
 const store = configureStore({
     reducer: {
         champions: ChampionsReducer,
+        champion: SingleChampionReducer
     },
 });
 
