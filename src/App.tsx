@@ -9,6 +9,7 @@ import Navbar from './components/common/navbar'
 import { links } from './enums/routes/links'
 import { navLinks } from './helpers/navbar/navlinks'
 import { Route, Routes } from 'react-router-dom'
+import SingleChampionData from './routes/singleChampionData'
 function App() {
 
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path={links.CONTACT} element={<Contact />} />
         <Route path={links.MATCHHISTORY} element={<MatchHistoryData />} />
         <Route path={links.CHAMPIONS} element={<ChampionsData />} />
+        <Route path={`${links.CHAMPIONS}/:id`} element={<SingleChampionData />} />
         <Route path={links.PAGENOTFOUND} element={<PageNotFound />} />
       </Routes>
     </>
