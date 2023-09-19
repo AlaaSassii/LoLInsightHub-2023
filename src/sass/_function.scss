@@ -1,0 +1,4 @@
+@function generateLinearGradient($color1, $color2) {
+    @return "linear-gradient( 45deg, #{$color1}, #{$color2})";
+  }
+  

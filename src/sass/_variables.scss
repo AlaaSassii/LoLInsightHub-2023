@@ -1,7 +1,12 @@
+@import './function' ; 
+
 $blue__logo: #1A6DFF ;
 $purpole__logo: #C822FF;
 $lightblue__logo: #6DC7FF; 
 $lightporpule__logo: #E6ABFF;
+
+$main__logo__theme: generateLinearGradient( $blue__logo, $purpole__logo);
+$sec__logo__theme:  generateLinearGradient( $lightblue__logo, $lightporpule__logo);
 
 $main__white:#fff;
 $main__black: #211A1E;; 
