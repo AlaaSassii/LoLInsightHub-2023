@@ -4,7 +4,7 @@ import SingleChampionReducer from './SingleChampionSlice'
 const store = configureStore({
     reducer: {
         champions: ChampionsReducer,
-        champion: SingleChampionReducer
+        singleChampion: SingleChampionReducer
     },
 });
 
