@@ -9,11 +9,9 @@ import Navbar from './components/common/navbar'
 import { links } from './enums/routes/links'
 import { navLinks } from './helpers/navbar/navlinks'
 import { Route, Routes } from 'react-router-dom'
-import SearchInput from './components/common/searchInput'
 import { useEffect } from 'react'
 import { versions } from './services/versions'
-import { getChampionData, getChampionsData, getItemImage } from './services/riotGamesApiService.ts'
-import { regions } from './services/regions.ts'
+import { getItemImage } from './services/riotGamesApiService.ts'
 
 function App() {
   useEffect(() => {

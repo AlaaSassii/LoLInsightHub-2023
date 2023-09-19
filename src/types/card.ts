@@ -1,4 +1,4 @@
-export type cardServiceSection = {
+export type cardServiceSectionType = {
     image: string,
     title: string,
     text: string,

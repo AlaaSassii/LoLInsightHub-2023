@@ -1,12 +1,12 @@
 import { FC } from 'react'
-import { links, } from '../../../types/navbarType'
+import { linksType, } from '../../../types/navbarType'
 import Container from '../container'
 import { NavLink } from 'react-router-dom';
 import './navbar.scss'
 import Logo from '../logo';
 import Toggle from '../toggle';
 type navbarProps = {
-    links: links,
+    links: linksType,
 }
 const Navbar: FC<navbarProps> = ({ links }) => {
     return (

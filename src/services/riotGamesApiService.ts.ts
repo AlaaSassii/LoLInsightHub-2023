@@ -1,7 +1,7 @@
 import { AxiosResponse } from "axios";
 import { riotGamesApiAxiosInstance } from "./axios"
 import { championsData } from "../types/championsDataType";
-import { ChampionData } from "../types/championDataType";
+import { ChampionDataType } from "../types/championDataType";
 
 //  champions data
 export const getChampionsData = async (
@@ -15,7 +15,7 @@ export const getChampionData = async (
     version: string,
     region: string,
     name: string,
-): Promise<AxiosResponse<ChampionData<any>, any>> => {
+): Promise<AxiosResponse<ChampionDataType<any>, any>> => {
     return await riotGamesApiAxiosInstance.get(`${version}/data/${region}/champion/${name}.json`);
 }
 

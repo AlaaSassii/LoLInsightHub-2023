@@ -1,4 +1,4 @@
-export type ChampionData<T> = {
+export type ChampionDataType<T> = {
     type: string;
     format: string;
     version: string;

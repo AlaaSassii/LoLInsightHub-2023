@@ -2,9 +2,9 @@ import ChampionService from '../../assets/images/wallpaper/champions_service.web
 import MatchHistpry from '../../assets/images/wallpaper/match_history_service.webp';
 import GameService from '../../assets/images/wallpaper/game_service.png'
 import { links } from '../../enums/routes/links';
-import { cardServiceSection } from '../../types/card';
+import { cardServiceSectionType } from '../../types/card';
 
-type cardsServiceSection = cardServiceSection[]
+type cardsServiceSection = cardServiceSectionType[]
 
 export const cards: cardsServiceSection = [
     {

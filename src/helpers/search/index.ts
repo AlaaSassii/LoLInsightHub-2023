@@ -1,9 +1,9 @@
 import { links } from "../../enums/routes/links";
-import { cardServiceSection } from "../../types/card";
+import { cardServiceSectionType } from "../../types/card";
 import ChampionsInsightImage from '../../assets/images/wallpaper/championsSerivepage.webp'
 import MatchHistoryInsightsImage from '../../assets/images/wallpaper/matchHistoryServicePage.webp'
 
-export const cards: cardServiceSection[] = [
+export const cards: cardServiceSectionType[] = [
     {
         title: 'Champion Insights',
         image: ChampionsInsightImage,

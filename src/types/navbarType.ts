@@ -1,8 +1,8 @@
-type link = {
+type linkType = {
     name: string,
     path: string,
 }
 
-export type links = link[]
+export type linksType = linkType[]
 
 export type logo = Element
