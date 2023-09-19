@@ -22,7 +22,7 @@ function App() {
         <Route path={links.CONTACT} element={<Contact />} />
         <Route path={links.MATCHHISTORY} element={<MatchHistoryData />} />
         <Route path={links.CHAMPIONS} element={<ChampionsData />} />
-        <Route path={`${links.CHAMPIONS}/:id`} element={<SingleChampionData />} />
+        <Route path={`${links.CHAMPIONS}/:name`} element={<SingleChampionData />} />
         <Route path={links.PAGENOTFOUND} element={<PageNotFound />} />
       </Routes>
     </>

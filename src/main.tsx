@@ -16,14 +16,3 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     </BrowserRouter>
   </React.StrictMode>,
 )
-// const dispatch = useAppDispatch();
-// const { data, loading, error } = useAppSelector(state => state.singleChampion);
-// useEffect(() => {
-//   const argument = {
-//       version: '13.18.1',
-//       region: 'en_US',
-//       name: 'Aatrox'
-
-//   }
-//   fetchChampionData(argument)
-// }, [])

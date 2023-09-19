@@ -1,2 +1,2 @@
-import SingleChampionData from "./singleChampionData";
-export default SingleChampionData
+import SingleChampionInfo from "./singleChampionInfo";
+export default SingleChampionInfo
