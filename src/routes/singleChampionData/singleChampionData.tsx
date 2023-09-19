@@ -4,7 +4,7 @@ import PageUnavailable from '../../components/common/pageUnavailable'
 const SingleChampionData = () => {
     return (
         <PageContainer>
-            <PageUnavailable />
+            <SingleChampionData />
         </PageContainer>
     )
 }
