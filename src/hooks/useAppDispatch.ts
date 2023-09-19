@@ -1,4 +1,3 @@
 import { useDispatch } from 'react-redux';
-import { AppDispatch } from './yourStoreFile'; // Replace with the path to your store file
-
+import { AppDispatch } from '../redux/store';
 export const useAppDispatch = () => useDispatch<AppDispatch>();
