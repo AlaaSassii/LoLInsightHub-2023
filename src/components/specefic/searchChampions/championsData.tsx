@@ -19,14 +19,20 @@ const SearchChampions = () => {
             <p>Welcome to the League of Legends Champion Showcase.  Browse, search, and explore champions, then dive into detailed profiles for a complete understanding of your favorite champions.</p>
             <p> Your journey to mastery begins now!</p>
             {
-                loading ?
-                    <MainLoadingSpinner /> :
-                    <>
-                        <SearchInput
-                            handleSearchFunction={() => alert('')}
-                            placeholder='placeholder' />
-                        <ChampionsContainer />
-                    </>
+                error !== null
+                    ? <p>{error}</p>
+                    :
+                    loading ?
+                        <MainLoadingSpinner /> :
+                        <>
+                            <SearchInput
+                                handleSearchFunction={() => alert('')}
+                                placeholder='placeholder' />
+                            {data !== null
+                                && <ChampionsContainer
+                                    data={data}
+                                />}
+                        </>
             }
 
         </div>

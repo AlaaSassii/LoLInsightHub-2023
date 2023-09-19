@@ -1,24 +1,18 @@
-import React, { useEffect } from 'react'
-import { useAppDispatch } from '../../../../hooks/useAppDispatch'
-import { useAppSelector } from '../../../../hooks/useAppSelectore';
-import { fetchChampionData } from '../../../../redux/SingleChampionSlice';
+import { FC } from 'react'
+import { championsDataType } from '../../../../types/championsDataType'
 
-const ChampionsContainer = () => {
-    const dispatch = useAppDispatch();
-    const { data, loading, error } = useAppSelector(state => state.singleChampion);
-    useEffect(() => {
-        const argument = {
-            version: '13.18.1',
-            region: 'en_US',
-            name: 'Aatrox'
+export type championContainerType = {
+    data: championsDataType
+}
 
-        }
-        fetchChampionData(argument)
-    }, [])
-
+const ChampionsContainer: FC<championContainerType> = ({ data }) => {
+    const { data: champions } = data;
     return (
         <>
-
+            {Object.keys(champions)
+                .map((name, index) => {
+                    return <div key={index}>{name}</div>
+                })}
         </>
     )
 }

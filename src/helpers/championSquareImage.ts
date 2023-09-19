@@ -1,0 +1,1 @@
+export const championSquareImage = (name: string): string => `http://ddragon.leagueoflegends.com/cdn/13.18.1/img/champion/${name}.png`
