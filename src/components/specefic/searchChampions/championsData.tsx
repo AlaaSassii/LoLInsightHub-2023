@@ -4,7 +4,7 @@ import { useAppSelector } from '../../../hooks/useAppSelectore'
 import SearchInput from '../../common/searchInput'
 import ChampionsContainer from './championsContainer'
 import './searchChampions.scss'
-import { fetchMoreData } from '../../../redux/ChampionsData'
+import { fetchChampionsData } from '../../../redux/ChampionsData'
 const SearchChampions = () => {
     const dispatch = useAppDispatch();
     const data = useAppSelector(state => state.champions.data);
@@ -12,7 +12,7 @@ const SearchChampions = () => {
     const error = useAppSelector(state => state.champions.error);
     useEffect(() => {
         if (data === null) {
-            dispatch(fetchMoreData());
+            dispatch(fetchChampionsData());
         }
     }, [])
     return (

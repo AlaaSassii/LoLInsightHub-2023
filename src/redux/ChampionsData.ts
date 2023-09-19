@@ -13,8 +13,8 @@ const initialState: ChampionsState = {
     loading: false,
     error: null,
 };
-export const fetchMoreData = createAsyncThunk(
-    'champions/fetchMoreData',
+export const fetchChampionsData = createAsyncThunk(
+    'champions/fetchChampionsData',
     async () => {
         try {
             const response = await axios.get(`http://ddragon.leagueoflegends.com/cdn/13.18.1/data/en_US/champion.json`);
@@ -31,15 +31,15 @@ const championsSlice = createSlice({
     reducers: {},
     extraReducers: (builder) => {
         builder
-            .addCase(fetchMoreData.pending, (state) => {
+            .addCase(fetchChampionsData.pending, (state) => {
                 state.loading = true;
                 state.error = null;
             })
-            .addCase(fetchMoreData.fulfilled, (state, action) => {
+            .addCase(fetchChampionsData.fulfilled, (state, action) => {
                 state.loading = false;
                 state.data = action.payload
             })
-            .addCase(fetchMoreData.rejected, (state, action) => {
+            .addCase(fetchChampionsData.rejected, (state, action) => {
                 state.loading = false;
                 state.error = action.error.message || 'An error occurred.';
             });
