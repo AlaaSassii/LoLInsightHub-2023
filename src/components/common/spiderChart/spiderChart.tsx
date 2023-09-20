@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import './spiderChart.scss';
+import './spiderChart.scss'
 interface SpiderChartProps {
     data: number[];
     categories: string[];
@@ -10,25 +10,37 @@ const SpiderChart: React.FC<SpiderChartProps> = ({ data, categories }) => {
 
     useEffect(() => {
         if (chartRef.current) {
-            const maxValue = Math.max(...data);
-
             const chartContainer = chartRef.current;
             chartContainer.innerHTML = '';
 
+            // Create the spider chart container
+            const spiderChart = document.createElement('div');
+            spiderChart.classList.add('spider-chart');
+            chartContainer.appendChild(spiderChart);
+
+            // Create the chart content using a table structure
+            const table = document.createElement('table');
+            table.classList.add('spider-table');
+            spiderChart.appendChild(table);
+
+            // Create rows for categories and data points
             categories.forEach((category, index) => {
-                const dataValue = data[index];
-                const dataPercentage = (dataValue / maxValue) * 100;
+                const row = document.createElement('tr');
 
-                const chartItem = document.createElement('div');
-                chartItem.classList.add('chart-item');
-                chartItem.style.width = `${dataPercentage}%`;
+                // Category label cell
+                const labelCell = document.createElement('td');
+                labelCell.classList.add('category-label');
+                labelCell.textContent = category;
+                row.appendChild(labelCell);
 
-                const label = document.createElement('div');
-                label.textContent = category;
-                label.classList.add('chart-label');
+                // Data point cell
+                const dataCell = document.createElement('td');
+                dataCell.classList.add('data-point');
+                dataCell.style.width = `${(data[index] / 60) * 100}%`; // Scale data points
+                dataCell.textContent = `${data[index]}%`;
+                row.appendChild(dataCell);
 
-                chartItem.appendChild(label);
-                chartContainer.appendChild(chartItem);
+                table.appendChild(row);
             });
         }
     }, [data, categories]);

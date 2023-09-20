@@ -10,23 +10,17 @@ import { links } from './enums/routes/links'
 import { navLinks } from './helpers/navbar/navlinks'
 import { Route, Routes } from 'react-router-dom'
 import SingleChampionData from './routes/singleChampionData'
+import SpiderChart from './components/common/spiderChart'
 function App() {
+  const spiderChartData = [55, 48, 43, 39, 18, 15, 5];
+  const spiderChartCategories = ["Time", "Cost Saving", "Productivity", "Reduction in Errors", "ROI", "Revenue Increase", "Payback Period"];
 
   return (
-    <>
-      <Navbar links={navLinks} />
-      <Routes>
-        <Route path={links.HOME} element={<Home />} />
-        <Route path={links.SEARCH} element={<ShowData />} />
-        <Route path={links.GAMES} element={<Games />} />
-        <Route path={links.CONTACT} element={<Contact />} />
-        <Route path={links.MATCHHISTORY} element={<MatchHistoryData />} />
-        <Route path={links.CHAMPIONS} element={<ChampionsData />} />
-        <Route path={`${links.CHAMPIONS}/:name`} element={<SingleChampionData />} />
-        <Route path={links.PAGENOTFOUND} element={<PageNotFound />} />
-      </Routes>
-    </>
-  )
+    <div>
+      <h1>Spider Chart Example</h1>
+      <SpiderChart data={spiderChartData} categories={spiderChartCategories} />
+    </div>
+  );
 }
 
 export default App
