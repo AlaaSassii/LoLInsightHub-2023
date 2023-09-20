@@ -4,6 +4,7 @@ import { useAppDispatch } from "../../../hooks/useAppDispatch";
 import { useAppSelector } from "../../../hooks/useAppSelectore";
 import { useEffect } from "react";
 import { fetchChampionData } from "../../../redux/SingleChampionSlice";
+import MainLoadingSpinner from "../../common/mainLoadingSpinner";
 
 const SingleChampionInfo = () => {
     const { name } = useParams();
@@ -19,7 +20,7 @@ const SingleChampionInfo = () => {
         dispatch(fetchChampionData(argument))
     }, [])
     if (error) return error;
-    if (loading) return <h1>Loading...</h1>
+    if (loading) return <MainLoadingSpinner />
     return (
         <Container>{name}</Container>
     )
