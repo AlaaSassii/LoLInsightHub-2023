@@ -10,15 +10,21 @@ import { links } from './enums/routes/links'
 import { navLinks } from './helpers/navbar/navlinks'
 import { Route, Routes } from 'react-router-dom'
 import SingleChampionData from './routes/singleChampionData'
-import SpiderChart from './components/common/spiderChart'
 function App() {
-  const data = [3, 2, 4, 5, 3];
-  const labels = ['Label 1', 'Label 2', 'Label 3', 'Label 4', 'Label 5'];
   return (
-    <div className="App">
-      <h1>Spider Chart Example</h1>
-      <SpiderChart data={data} labels={labels} maxScale={5} />
-    </div>
+    <>
+      <Navbar links={navLinks} />
+      <Routes>
+        <Route path={links.HOME} element={<Home />} />
+        <Route path={links.SEARCH} element={<ShowData />} />
+        <Route path={links.GAMES} element={<Games />} />
+        <Route path={links.CONTACT} element={<Contact />} />
+        <Route path={links.MATCHHISTORY} element={<MatchHistoryData />} />
+        <Route path={links.CHAMPIONS} element={<ChampionsData />} />
+        <Route path={`${links.CHAMPIONS}/:name`} element={<SingleChampionData />} />
+        <Route path={links.PAGENOTFOUND} element={<PageNotFound />} />
+      </Routes>
+    </>
   );
 }
 
