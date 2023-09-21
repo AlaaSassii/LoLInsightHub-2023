@@ -26,6 +26,8 @@ const SingleChampionInfo = () => {
     if (error) return error;
     if (loading) return <MainLoadingSpinner />
     return (
+        data !== null
+        &&
         <Container>
             <ChampionDef />
             <ChampionType />
