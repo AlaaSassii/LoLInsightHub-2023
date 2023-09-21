@@ -1,2 +1,2 @@
-import allyTips from "./allyTips";
-export default allyTips
+import AllyTips from "./allyTips";
+export default AllyTips
