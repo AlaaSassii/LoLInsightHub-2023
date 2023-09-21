@@ -29,7 +29,11 @@ const SingleChampionInfo = () => {
         data !== null
         &&
         <Container>
-            <ChampionDef />
+            <ChampionDef
+                blurb={data.data?.blurb as string}
+                image={data.data.image}
+                spells={data.data.spells}
+                passive={data.data.passive} />
             <ChampionType />
             <AllyTips />
             <EnemyTips />

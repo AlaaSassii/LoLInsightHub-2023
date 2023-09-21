@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import CardContainer from '../../../common/cardContainer'
-import { image, passive, skins, spells } from '../../../../types/championDataType'
+import { image, passive, spells } from '../../../../types/championDataType'
 type ChampionDefProps = {
     blurb: string,
     image: image,
@@ -8,9 +8,12 @@ type ChampionDefProps = {
     passive: passive
 
 }
-const ChampionDef: FC<ChampionDefProps> = () => {
+const ChampionDef: FC<ChampionDefProps> = ({ blurb, image, passive, spells }) => {
     return (
-        <CardContainer loading={false}>championDef</CardContainer>
+        <CardContainer loading={false}>
+            <p>{blurb}</p>
+            <img src={image?.full} alt="" />
+        </CardContainer>
     )
 }
 
