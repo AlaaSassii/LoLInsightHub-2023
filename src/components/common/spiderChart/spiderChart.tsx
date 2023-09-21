@@ -1,51 +1,74 @@
 import React, { useEffect, useRef } from 'react';
-import './spiderChart.scss'
-interface SpiderChartProps {
-    data: number[];
-    categories: string[];
-}
 
-const SpiderChart: React.FC<SpiderChartProps> = ({ data, categories }) => {
-    const chartRef = useRef<HTMLDivElement | null>(null);
+const SpiderChart: React.FC<{
+    data: number[];
+    labels: string[];
+    maxScale: number;
+}> = ({ data, labels, maxScale }) => {
+    const svgRef = useRef<SVGSVGElement | null>(null);
+
+    const centerX = 150; // Adjust as needed
+    const centerY = 150; // Adjust as needed
+    const radius = 100; // Adjust as needed
+    const sides = data.length;
 
     useEffect(() => {
-        if (chartRef.current) {
-            const chartContainer = chartRef.current;
-            chartContainer.innerHTML = '';
+        if (!svgRef.current) return;
 
-            // Create the spider chart container
-            const spiderChart = document.createElement('div');
-            spiderChart.classList.add('spider-chart');
-            chartContainer.appendChild(spiderChart);
+        const svg = svgRef.current;
 
-            // Create the chart content using a table structure
-            const table = document.createElement('table');
-            table.classList.add('spider-table');
-            spiderChart.appendChild(table);
-
-            // Create rows for categories and data points
-            categories.forEach((category, index) => {
-                const row = document.createElement('tr');
-
-                // Category label cell
-                const labelCell = document.createElement('td');
-                labelCell.classList.add('category-label');
-                labelCell.textContent = category;
-                row.appendChild(labelCell);
-
-                // Data point cell
-                const dataCell = document.createElement('td');
-                dataCell.classList.add('data-point');
-                dataCell.style.width = `${(data[index] / 60) * 100}%`; // Scale data points
-                dataCell.textContent = `${data[index]}%`;
-                row.appendChild(dataCell);
-
-                table.appendChild(row);
-            });
+        // Clear any previous content
+        while (svg.firstChild) {
+            svg.removeChild(svg.firstChild);
         }
-    }, [data, categories]);
 
-    return <div className="spider-chart" ref={chartRef}></div>;
+        // Draw the polygon lines
+        const polygonPoints = data
+            .map((value, index) => {
+                const angle = (Math.PI * 2 * index) / sides - Math.PI / 2;
+                const x = centerX + radius * (value / maxScale) * Math.cos(angle);
+                const y = centerY + radius * (value / maxScale) * Math.sin(angle);
+                return `${x},${y}`;
+            })
+            .join(' ');
+
+        const polygon = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+        polygon.setAttribute('points', polygonPoints);
+        polygon.setAttribute('fill', 'rgba(0, 0, 255, 0.2)'); // Adjust color and opacity
+        polygon.setAttribute('stroke', 'blue'); // Adjust the stroke color
+        svg.appendChild(polygon);
+
+        // Draw the lines connecting the center to the data points
+        data.forEach((value, index) => {
+            const angle = (Math.PI * 2 * index) / sides - Math.PI / 2;
+            const x = centerX + radius * Math.cos(angle);
+            const y = centerY + radius * Math.sin(angle);
+
+            const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+            line.setAttribute('x1', centerX.toString());
+            line.setAttribute('y1', centerY.toString());
+            line.setAttribute('x2', x.toString());
+            line.setAttribute('y2', y.toString());
+            line.setAttribute('stroke', 'blue'); // Adjust the line color
+            svg.appendChild(line);
+        });
+    }, [data, maxScale]);
+
+    return (
+        <svg width={300} height={300} ref={svgRef}>
+            {/* Add labels */}
+            {labels.map((label, index) => {
+                const angle = (Math.PI * 2 * index) / sides - Math.PI / 2;
+                const x = centerX + (radius + 10) * Math.cos(angle); // Adjust label position
+                const y = centerY + (radius + 10) * Math.sin(angle); // Adjust label position
+                return (
+                    <text key={index} x={x} y={y} textAnchor="middle" alignmentBaseline="middle">
+                        {label}
+                    </text>
+                );
+            })}
+        </svg>
+    );
 };
 
 export default SpiderChart;

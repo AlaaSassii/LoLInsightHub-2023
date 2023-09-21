@@ -12,13 +12,12 @@ import { Route, Routes } from 'react-router-dom'
 import SingleChampionData from './routes/singleChampionData'
 import SpiderChart from './components/common/spiderChart'
 function App() {
-  const spiderChartData = [55, 48, 43, 39, 18, 15, 5];
-  const spiderChartCategories = ["Time", "Cost Saving", "Productivity", "Reduction in Errors", "ROI", "Revenue Increase", "Payback Period"];
-
+  const data = [3, 2, 4, 5, 3];
+  const labels = ['Label 1', 'Label 2', 'Label 3', 'Label 4', 'Label 5'];
   return (
-    <div>
+    <div className="App">
       <h1>Spider Chart Example</h1>
-      <SpiderChart data={spiderChartData} categories={spiderChartCategories} />
+      <SpiderChart data={data} labels={labels} maxScale={5} />
     </div>
   );
 }
