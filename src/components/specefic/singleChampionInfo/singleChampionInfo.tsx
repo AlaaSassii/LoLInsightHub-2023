@@ -14,7 +14,7 @@ import ChampionSkins from "./championSkins";
 const SingleChampionInfo = () => {
     const { name } = useParams();
     const dispatch = useAppDispatch();
-    const { data, loading, error } = useAppSelector(state => state.singleChampion);
+    const { data: champion, loading, error } = useAppSelector(state => state.singleChampion);
     useEffect(() => {
         const argument = {
             version: '13.18.1',
@@ -23,17 +23,20 @@ const SingleChampionInfo = () => {
         }
         dispatch(fetchChampionData(argument))
     }, [])
+    console.log({ champion })
     if (error) return error;
     if (loading) return <MainLoadingSpinner />
     return (
-        data !== null
+        champion !== null
         &&
         <Container>
             <ChampionDef
-                blurb={data.data?.blurb as string}
-                image={data.data.image}
-                spells={data.data.spells}
-                passive={data.data.passive} />
+                name={name as string}
+                title={champion?.data?.[name as string].title}
+                blurb={champion?.data?.[name as string].blurb}
+                image={champion.data?.[name as string].image}
+                spells={champion?.data?.[name as string].spells}
+                passive={champion?.data?.[name as string].passive} />
             <ChampionType />
             <AllyTips />
             <EnemyTips />
