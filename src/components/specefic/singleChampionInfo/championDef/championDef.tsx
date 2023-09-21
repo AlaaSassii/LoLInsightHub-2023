@@ -1,10 +1,11 @@
 import React from 'react'
+import CardContainer from '../../../common/cardContainer'
 type ChampionDef = {
 
 }
 const ChampionDef = () => {
     return (
-        <div>championDef</div>
+        <CardContainer loading={false}>championDef</CardContainer>
     )
 }
 

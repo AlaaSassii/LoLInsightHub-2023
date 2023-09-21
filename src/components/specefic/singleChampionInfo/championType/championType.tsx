@@ -1,10 +1,11 @@
 import React from 'react'
+import CardContainer from '../../../common/cardContainer'
 type championTypeProps = {
 
 }
 const championType = () => {
     return (
-        <div>championType</div>
+        <CardContainer loading={false}>championType</CardContainer>
     )
 }
 

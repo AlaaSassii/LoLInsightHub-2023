@@ -1,9 +1,11 @@
+import CardContainer from "../../../common/cardContainer"
+
 type championSkinsProps = {
 
 }
 const championSkins = () => {
     return (
-        <div>championSkins</div>
+        <CardContainer loading={false}>championSkins</CardContainer>
     )
 }
 

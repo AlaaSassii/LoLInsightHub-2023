@@ -1,8 +1,9 @@
 import React from 'react'
+import CardContainer from '../../../common/cardContainer'
 
 const EnemyTips = () => {
     return (
-        <div>enemyTips</div>
+        <CardContainer loading={false}>enemyTips</CardContainer>
     )
 }
 
