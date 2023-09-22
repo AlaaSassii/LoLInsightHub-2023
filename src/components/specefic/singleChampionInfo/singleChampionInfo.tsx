@@ -29,7 +29,7 @@ const SingleChampionInfo = () => {
     return (
         champion !== null
         &&
-        <Container>
+        <Container className="champion__info__contaienr">
             <ChampionDef
                 name={name as string}
                 title={champion?.data?.[name as string]?.title}

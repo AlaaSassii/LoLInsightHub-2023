@@ -3,11 +3,13 @@ import './cardContainer.scss';
 import MainLoadingSpinner from '../mainLoadingSpinner';
 type cardContaienrProps = {
     children: ReactNode,
-    loading: boolean
+    className: string,
+    loading: boolean,
+
 }
-const CardContainer: FC<cardContaienrProps> = ({ children, loading }) => {
+const CardContainer: FC<cardContaienrProps> = ({ children, loading, className }) => {
     return (
-        <div className='card__container'>
+        <div className={`card__container ${className}`}>
             {
                 loading ?
                     <div className="loading">

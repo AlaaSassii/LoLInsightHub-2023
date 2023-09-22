@@ -1,1 +1,10 @@
 @import '../../../sass/index' ;
+.champion__info__contaienr{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 5px;
+    grid-template-areas: 
+    "def def def def def def def def tag tag"
+    "aa aa aa ea ea ea gp gp gp gp"
+    "sk sk sk sk sk sk sk sk sk sk"
+}
