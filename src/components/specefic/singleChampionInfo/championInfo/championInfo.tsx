@@ -39,7 +39,7 @@ const ChampionInfo: FC<championInfoProps> = ({ info }) => {
         ],
     };
     return (
-        <CardContainer loading={false}>
+        <CardContainer loading={false} className='champion__info'>
             <Radar
                 data={data}
             />
