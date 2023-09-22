@@ -13,7 +13,6 @@ import ChampionInfo from "./championInfo";
 import ChampionSkins from "./championSkins";
 const SingleChampionInfo = () => {
     const { name } = useParams();
-
     const dispatch = useAppDispatch();
     const { data: champion, loading, error } = useAppSelector(state => state.singleChampion);
     useEffect(() => {
@@ -24,7 +23,6 @@ const SingleChampionInfo = () => {
         }
         dispatch(fetchChampionData(argument))
     }, [])
-    console.log({ lore: champion?.data?.[name as string].lore })
     if (error) return error;
     if (loading) return <MainLoadingSpinner />
     return (
