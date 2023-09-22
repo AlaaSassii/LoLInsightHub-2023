@@ -35,7 +35,9 @@ const SingleChampionInfo = () => {
                 title={champion?.data?.[name as string]?.title}
                 lore={champion?.data?.[name as string]?.lore}
                 spells={champion?.data?.[name as string]?.spells}
-                passive={champion?.data?.[name as string]?.passive} />
+                passive={champion?.data?.[name as string]?.passive}
+
+            />
             <ChampionType
                 tags={champion?.data?.[name as string]?.tags}
             />
