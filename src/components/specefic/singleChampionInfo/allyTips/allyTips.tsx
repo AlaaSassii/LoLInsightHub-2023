@@ -5,7 +5,7 @@ type allyTipsProps = {
 }
 const allyTips: FC<allyTipsProps> = ({ allytips }) => {
     return (
-        <CardContainer loading={false}>
+        <CardContainer loading={false} className='ally__tips'>
             <ul>
                 {
                     allytips.map((tip, index) => <li key={`ally__tip__${index}`}>{tip}</li>)
