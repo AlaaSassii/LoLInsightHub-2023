@@ -6,7 +6,7 @@ import Tooltip from '../../../common/tooltip'
 import { abilityImage, passiveImage } from '../../../../helpers'
 type ChampionDefProps = {
     name: string,
-    lore: string,
+    lore: string | undefined,
     title: string,
     spells: spells,
     passive: passive
