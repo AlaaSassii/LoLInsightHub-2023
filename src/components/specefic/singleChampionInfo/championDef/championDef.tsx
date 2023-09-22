@@ -15,7 +15,7 @@ type ChampionDefProps = {
 const ChampionDef: FC<ChampionDefProps> = ({ name, lore, title, passive, spells }) => {
     const imageSrc = championSquareImage(name);
     return (
-        <CardContainer loading={false}>
+        <CardContainer loading={false} className='champion__def'>
             <h1>{name}</h1>
             <p>{title}</p>
             <img src={imageSrc} alt="" />
