@@ -1,6 +1,9 @@
 @import './elements';
 @import './variables';
 @import './scrollBar';
+*{
+  box-sizing: border-box;
+}
 body{
     &.dark{
         background-color: $main__black;
