@@ -6,7 +6,7 @@ type enemytipsProps = {
 }
 const EnemyTips: FC<enemytipsProps> = ({ enemytips }) => {
     return (
-        <CardContainer loading={false} className='champion__enemy__tips'>
+        <CardContainer loading={false} className='enemy__tips'>
             <ul>
                 {
                     enemytips.map((tip, index) => <li key={`enemy__tip__${index}`}>{tip}</li>)

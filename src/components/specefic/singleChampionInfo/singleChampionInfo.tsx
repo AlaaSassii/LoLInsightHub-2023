@@ -11,6 +11,7 @@ import AllyTips from "./allyTips";
 import EnemyTips from "./emenyTips";
 import ChampionInfo from "./championInfo";
 import ChampionSkins from "./championSkins";
+import './singleChampionInfo.scss'
 const SingleChampionInfo = () => {
     const { name } = useParams();
     console.log({ name })
