@@ -13,6 +13,17 @@
     }
     .champion__type{
         grid-area: tag;
-        background-color: red;
+    }
+    .ally__tips{
+        grid-area: aa;
+    }
+    .enemy__tips{
+        grid-area: ea;
+    }
+    .champion__info{
+        grid-area: gp;
+    }
+    .champion__skins{
+        grid-area: sk;
     }
 }

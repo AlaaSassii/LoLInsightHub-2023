@@ -21,9 +21,9 @@ const ChampionDef: FC<ChampionDefProps> = ({ name, lore, title, passive, spells 
             <img src={imageSrc} alt="" />
             <p>{lore || ""}</p>
             <div className="spells">
-                <Tooltip text={passive.description}><img src={passiveImage(name)} alt="" /></Tooltip>
+                <Tooltip text={passive?.description}><img src={passiveImage(name)} alt="" /></Tooltip>
                 {
-                    spells.map((spell, index) => <Tooltip text={spell.description}><img src={abilityImage(spell.image.full)} /></Tooltip>)
+                    spells?.map((spell, index) => <Tooltip key={`spell__${index}`} text={spell?.description}><img src={abilityImage(spell?.image?.full)} /></Tooltip>)
                 }
             </div>
         </CardContainer>
