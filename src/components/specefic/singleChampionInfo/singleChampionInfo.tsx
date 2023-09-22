@@ -1,9 +1,5 @@
 import { useParams } from "react-router-dom"
 import Container from "../../common/container"
-import { useAppDispatch } from "../../../hooks/useAppDispatch";
-import { useAppSelector } from "../../../hooks/useAppSelectore";
-import { useEffect, useState } from "react";
-import { fetchChampionData } from "../../../redux/SingleChampionSlice";
 import MainLoadingSpinner from "../../common/mainLoadingSpinner";
 import ChampionDef from "./championDef";
 import ChampionType from "./championType";
@@ -12,30 +8,10 @@ import EnemyTips from "./emenyTips";
 import ChampionInfo from "./championInfo";
 import ChampionSkins from "./championSkins";
 import './singleChampionInfo.scss'
-import { championDataType } from "../../../types/championDataType";
-import axios, { AxiosError, AxiosResponse } from "axios";
+import { useFetchSingleChampion } from "../../../hooks/useFetchSingleChampionInfo";
 const SingleChampionInfo = () => {
     const { name } = useParams();
-    console.log({ name })
-    const [champion, setChampion] = useState<championDataType<string> | null>(null);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState("");
-
-    useEffect(() => {
-        setLoading(true);
-        const argument = {
-            version: '13.18.1',
-            region: 'en_US',
-            name: name || ''
-        }
-        axios
-            .get<championDataType<string>>(`http://ddragon.leagueoflegends.com/cdn/${argument.version}/data/${argument.region}/champion/${argument.name}.json`)
-            .then((resp: AxiosResponse) => {
-                setChampion(resp.data);
-                setLoading(false);
-            })
-            .catch((err: AxiosError) => setError(err.message))
-    }, [])
+    const { champion, error, loading } = useFetchSingleChampion(name || '')
     if (error) return error;
     if (loading) return <MainLoadingSpinner />
     return (
