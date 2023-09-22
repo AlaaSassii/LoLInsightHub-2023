@@ -46,7 +46,7 @@ const SingleChampionInfo = () => {
             <EnemyTips
                 enemytips={champion?.data?.[name as string].enemytips}
             />
-            <ChampionInfo />
+            <ChampionInfo info={champion?.data?.[name as string]?.info} />
             <ChampionSkins />
         </Container>
     )
