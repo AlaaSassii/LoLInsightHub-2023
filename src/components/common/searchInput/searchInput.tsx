@@ -6,9 +6,9 @@ type SearchInputProps = {
     placeholder: string,
     value: string,
     handleSearchFunction: () => void,
-    onChange: (event: ChangeEvent<HTMLInputElement>) => void
+    onChange?: (event: ChangeEvent<HTMLInputElement>) => void
 }
-const SearchInput: FC<SearchInputProps> = ({ placeholder, value, handleSearchFunction, onChange }) => {
+const SearchInput: FC<SearchInputProps> = ({ placeholder, value, handleSearchFunction, onChange = () => { } }) => {
     const handleKeyPress = (event: KeyboardEvent<HTMLInputElement>) => {
         if (event.key === 'Enter') {
             handleSearchFunction();
