@@ -58,6 +58,7 @@ export type spells = {
     resource: string;
     range: number[];
     rangeBurn: string;
+    image: image
 }[];
 export type passive = {
     name: string;

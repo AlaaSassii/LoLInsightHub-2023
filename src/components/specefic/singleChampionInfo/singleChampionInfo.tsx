@@ -13,6 +13,7 @@ import ChampionInfo from "./championInfo";
 import ChampionSkins from "./championSkins";
 const SingleChampionInfo = () => {
     const { name } = useParams();
+
     const dispatch = useAppDispatch();
     const { data: champion, loading, error } = useAppSelector(state => state.singleChampion);
     useEffect(() => {
@@ -23,7 +24,7 @@ const SingleChampionInfo = () => {
         }
         dispatch(fetchChampionData(argument))
     }, [])
-    console.log({ champion })
+    console.log({ lore: champion?.data?.[name as string].lore })
     if (error) return error;
     if (loading) return <MainLoadingSpinner />
     return (
@@ -33,11 +34,12 @@ const SingleChampionInfo = () => {
             <ChampionDef
                 name={name as string}
                 title={champion?.data?.[name as string].title}
-                blurb={champion?.data?.[name as string].blurb}
-                image={champion.data?.[name as string].image}
+                lore={champion?.data?.[name as string]?.lore}
                 spells={champion?.data?.[name as string].spells}
                 passive={champion?.data?.[name as string].passive} />
-            <ChampionType />
+            <ChampionType
+                tags={champion?.data?.[name as string].tags}
+            />
             <AllyTips />
             <EnemyTips />
             <ChampionInfo />
