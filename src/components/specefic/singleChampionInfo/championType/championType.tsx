@@ -6,7 +6,7 @@ type championTypeProps = {
 }
 const championType: FC<championTypeProps> = ({ tags }) => {
     return (
-        <CardContainer loading={false}>
+        <CardContainer loading={false} className='champion__type'>
             <h2>{formatArrayToSentence(tags)}</h2>
         </CardContainer>
     )
