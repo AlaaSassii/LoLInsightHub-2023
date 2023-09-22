@@ -2,7 +2,7 @@ import Home from './routes/home'
 import Games from './routes/games'
 import Contact from './routes/contact'
 import ShowData from './routes/showData'
-import MatchHistoryData from './routes/matchHistoryData'
+import MatchHistory from './routes/matchHistoryData'
 import ChampionsData from './routes/championsData'
 import PageNotFound from './routes/pageNotFound'
 import Navbar from './components/common/navbar'
@@ -19,7 +19,7 @@ function App() {
         <Route path={links.SEARCH} element={<ShowData />} />
         <Route path={links.GAMES} element={<Games />} />
         <Route path={links.CONTACT} element={<Contact />} />
-        <Route path={links.MATCHHISTORY} element={<MatchHistoryData />} />
+        <Route path={links.MATCHHISTORY} element={<MatchHistory />} />
         <Route path={links.CHAMPIONS} element={<ChampionsData />} />
         <Route path={`${links.CHAMPIONS}/:name`} element={<SingleChampionData />} />
         <Route path={links.PAGENOTFOUND} element={<PageNotFound />} />

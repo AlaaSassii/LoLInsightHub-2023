@@ -1,2 +1,2 @@
-import MatchHistoryData from "./matchHistoryData";
-export default MatchHistoryData; 
+import MatchHistory from "./matchHistoryData";
+export default MatchHistory; 
