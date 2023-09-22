@@ -40,8 +40,12 @@ const SingleChampionInfo = () => {
             <ChampionType
                 tags={champion?.data?.[name as string].tags}
             />
-            <AllyTips />
-            <EnemyTips />
+            <AllyTips
+                allytips={champion?.data?.[name as string].allytips}
+            />
+            <EnemyTips
+                enemytips={champion?.data?.[name as string].enemytips}
+            />
             <ChampionInfo />
             <ChampionSkins />
         </Container>

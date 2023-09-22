@@ -1,11 +1,17 @@
-import React from 'react'
+import { FC } from 'react'
 import CardContainer from '../../../common/cardContainer'
 type allyTipsProps = {
-
+    allytips: string[]
 }
-const allyTips = () => {
+const allyTips: FC<allyTipsProps> = ({ allytips }) => {
     return (
-        <CardContainer loading={false}>allyTips</CardContainer>
+        <CardContainer loading={false}>
+            <ul>
+                {
+                    allytips.map((tip, index) => <li key={`ally__tip__${index}`}>{tip}</li>)
+                }
+            </ul>
+        </CardContainer>
     )
 }
 

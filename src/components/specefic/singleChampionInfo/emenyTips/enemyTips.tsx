@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { FC } from 'react'
 import CardContainer from '../../../common/cardContainer'
 
-const EnemyTips = () => {
+type enemytipsProps = {
+    enemytips: string[]
+}
+const EnemyTips: FC<enemytipsProps> = ({ enemytips }) => {
     return (
-        <CardContainer loading={false}>enemyTips</CardContainer>
+        <CardContainer loading={false}>
+            <ul>
+                {
+                    enemytips.map((tip, index) => <li key={`enemy__tip__${index}`}>{tip}</li>)
+                }
+            </ul>
+        </CardContainer>
     )
 }
 
