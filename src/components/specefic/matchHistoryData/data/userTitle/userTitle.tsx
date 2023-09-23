@@ -8,13 +8,14 @@ type userTitleProps = {
 }
 const UserTitle: FC<userTitleProps> = ({ name, profileIconId, error }) => {
     const [loading, setLoading] = useState<boolean>(false);
+
     useEffect(() => {
         const image: HTMLImageElement = new Image();
         image.src = `http://ddragon.leagueoflegends.com/cdn/13.18.1/img/profileicon/${profileIconId}.png`;
         image.onload = () => {
             setLoading(false);
         }
-    })
+    }, [name, profileIconId])
     return (
         <CardContainer className='' loading={loading} >
             {error
