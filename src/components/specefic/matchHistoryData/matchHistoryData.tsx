@@ -8,7 +8,7 @@ import Data from './data/data';
 const matchHistory = () => {
     const [summonerName, setSummonerName] = useState<string>('');
     const [summonerInfo, setSummonerInfo] = useState<summonerInfoType>(summonerInfoInitialState);
-
+    const [error, setError] = useState<string>('')
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         setSummonerName(e.target.value);
     }
@@ -19,21 +19,26 @@ const matchHistory = () => {
                 setSummonerInfo(resp.data);
                 setSummonerName('');
             })
-            .catch((error: AxiosError) => console.log(error))
+            .catch((error: AxiosError) => setError(error.message))
     }
 
     return (
-        <div className='match__history__data'>
+        <>
             <SearchInput
                 placeholder='search your account'
                 value={summonerName}
                 onChange={handleChange}
                 handleSearchFunction={searchForPlayer}
             />
-            <Data
-                {...summonerInfo}
-            />
-        </div>
+            {
+                (!error && summonerInfo.name) ?
+                    <Data
+                        {...summonerInfo}
+                    />
+                    :
+                    null
+            }
+        </>
     )
 }
 
