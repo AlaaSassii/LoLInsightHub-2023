@@ -1,20 +1,20 @@
-import React, { ChangeEvent, useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 import SearchInput from '../../common/searchInput'
 import { Api__key } from '../../../services/apiKey';
-import { baseUrl } from '../../../services/baseUrl';
-import axios from 'axios';
+import axios, { AxiosError, AxiosProgressEvent, AxiosResponse } from 'axios';
 const matchHistory = () => {
     const [summonerName, setSummonerName] = useState<string>('');
+
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         setSummonerName(e.target.value);
     }
-    const searchForPlater = () => {
-        const APICallString = `https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-account/${summonerName}?api_key=${Api__key}`;
+    const searchForPlayer = () => {
+        const APICallString = `https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summonerName}?api_key=${Api__key}`;
         axios(APICallString)
-            .then(resp => {
-                console.log('');
+            .then((resp: AxiosResponse) => {
+                setSummonerName('')
             })
-            .catch(err => console.log(err))
+            .catch((error: AxiosError) => console.log(error))
     }
 
     return (
@@ -23,7 +23,7 @@ const matchHistory = () => {
                 placeholder='search your account'
                 value={summonerName}
                 onChange={handleChange}
-                handleSearchFunction={searchForPlater}
+                handleSearchFunction={searchForPlayer}
             />
         </div>
     )

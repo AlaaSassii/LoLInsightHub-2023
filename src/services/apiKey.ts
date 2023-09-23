@@ -1,1 +1,1 @@
-export const Api__key: string = 'RGAPI-db162f90-4030-4590-a06b-1bde7da4d6d7';
+export const Api__key: string = 'RGAPI-572a0871-1950-428d-bffd-60cfac5c537e';
