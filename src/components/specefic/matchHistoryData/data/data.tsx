@@ -4,6 +4,7 @@ import Container from '../../../common/container'
 import UserTitle from './userTitle'
 import UserChampions from './userChampions'
 import UserRankInfo from './userRankInfo'
+import UserMatches from './userMatches'
 
 type dataProps = summonerInfoType & {
     error: string
@@ -25,6 +26,11 @@ const Data: FC<dataProps> = ({ id: summonerId, accountId, name, profileIconId, p
                 puuid={puuid}
                 error={error}
             />
+            <UserMatches
+                puuid={puuid}
+                error={error}
+            />
+
         </Container>
     )
 }
