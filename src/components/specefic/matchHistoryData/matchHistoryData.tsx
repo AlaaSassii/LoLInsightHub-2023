@@ -7,6 +7,7 @@ import { summonerInfoInitialState } from '../../../consts/summonerInfo';
 const matchHistory = () => {
     const [summonerName, setSummonerName] = useState<string>('');
     const [summonerInfo, setSummonerInfo] = useState<summonerInfoType>(summonerInfoInitialState);
+
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         setSummonerName(e.target.value);
     }
