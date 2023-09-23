@@ -1,7 +1,9 @@
-import React from 'react'
+import { FC } from 'react'
 import CardContainer from '../../../../common/cardContainer'
+type userRankInfoProps = {
 
-const UserRankInfo = () => {
+}
+const UserRankInfo: FC<userRankInfoProps> = ({ }) => {
     return (
         <CardContainer className='' loading={false}>
 
