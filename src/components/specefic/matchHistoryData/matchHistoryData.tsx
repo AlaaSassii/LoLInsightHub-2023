@@ -13,6 +13,7 @@ const matchHistory = () => {
         setSummonerName(e.target.value);
     }
     const searchForPlayer = () => {
+        setError('');
         const APICallString = `https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summonerName}?api_key=${Api__key}`;
         axios(APICallString)
             .then((resp: AxiosResponse) => {
