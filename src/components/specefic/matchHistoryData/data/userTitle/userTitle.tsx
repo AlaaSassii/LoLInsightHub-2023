@@ -1,8 +1,16 @@
-import React from 'react'
 import './userTitle.scss';
-const UserTitle = () => {
+import CardContainer from '../../../../common/cardContainer';
+import { FC } from 'react';
+type userTitleProps = {
+    name: string,
+    profileIcon: number
+}
+const UserTitle: FC<userTitleProps> = ({ name, profileIcon }) => {
     return (
-        <div>userTitle</div>
+        <CardContainer className='' loading={name === ''} >
+            <p><b>summoner name:</b>{name}</p>
+            <img src={`http://ddragon.leagueoflegends.com/cdn/13.18.1/img/profileicon/${profileIcon}.png`} alt="" />
+        </CardContainer>
     )
 }
 

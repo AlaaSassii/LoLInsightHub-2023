@@ -4,6 +4,7 @@ import { Api__key } from '../../../services/apiKey';
 import axios, { AxiosError, AxiosResponse } from 'axios';
 import { summonerInfoType } from '../../../types/summonerInfoType';
 import { summonerInfoInitialState } from '../../../consts/summonerInfo';
+import Data from './data/data';
 const matchHistory = () => {
     const [summonerName, setSummonerName] = useState<string>('');
     const [summonerInfo, setSummonerInfo] = useState<summonerInfoType>(summonerInfoInitialState);
@@ -29,13 +30,9 @@ const matchHistory = () => {
                 onChange={handleChange}
                 handleSearchFunction={searchForPlayer}
             />
-            {
-                summonerInfo?.name
-            }
-            {summonerInfo?.profileIconId ? <img src={`http://ddragon.leagueoflegends.com/cdn/13.18.1/img/profileicon/${summonerInfo?.profileIconId}.png`} /> : null}
-            {
-                summonerInfo.summonerLevel ? <p>summoner level: {summonerInfo.summonerLevel}</p> : null
-            }
+            <Data
+                {...summonerInfo}
+            />
         </div>
     )
 }
