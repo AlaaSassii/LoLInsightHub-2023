@@ -1,7 +1,7 @@
 import { ChangeEvent, useState } from 'react'
 import SearchInput from '../../common/searchInput'
 import { Api__key } from '../../../services/apiKey';
-import axios, { AxiosError, AxiosProgressEvent, AxiosResponse } from 'axios';
+import axios, { AxiosError, AxiosResponse } from 'axios';
 const matchHistory = () => {
     const [summonerName, setSummonerName] = useState<string>('');
 

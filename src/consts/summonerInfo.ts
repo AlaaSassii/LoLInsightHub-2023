@@ -1,6 +1,6 @@
 import { summonerInfoType } from "../types/summonerInfoType";
 
-const summonerInfo: summonerInfoType = {
+const summonerInfoInitialState: summonerInfoType = {
     "id": "",
     "accountId": "",
     "puuid": "",
