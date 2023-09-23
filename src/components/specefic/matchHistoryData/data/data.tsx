@@ -18,6 +18,8 @@ const Data: FC<dataProps> = ({ id: summonerId, accountId, name, profileIconId, p
             />
             <UserRankInfo
                 summonerId={summonerId}
+                error={error}
+
             />
             <UserChampions
                 puuid={puuid}
