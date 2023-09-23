@@ -31,6 +31,10 @@ const matchHistory = () => {
             {
                 summonerInfo?.name
             }
+            {summonerInfo?.profileIconId ? <img src={`http://ddragon.leagueoflegends.com/cdn/13.18.1/img/profileicon/${summonerInfo?.profileIconId}.png`} /> : null}
+            {
+                summonerInfo.summonerLevel ? <p>summoner level: {summonerInfo.summonerLevel}</p> : null
+            }
         </div>
     )
 }
