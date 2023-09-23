@@ -2,6 +2,7 @@ import axios, { AxiosResponse, AxiosError } from "axios";
 import { FC, useEffect, useState } from "react"
 import { Api__key } from "../../../../../services/apiKey";
 import CardContainer from "../../../../common/cardContainer";
+import Match from "./match";
 type userMatchesProps = {
     puuid: string,
     error: string
@@ -28,7 +29,14 @@ const UserMatches: FC<userMatchesProps> = ({ puuid, error }) => {
                 <p>{error}</p>
                 :
                 <>
-
+                    {
+                        matchesId.map((matchId, index) => {
+                            <Match
+                                matchId={matchId}
+                                key={`match__history__${index}`}
+                            />
+                        })
+                    }
                 </>}
         </CardContainer>
     )
