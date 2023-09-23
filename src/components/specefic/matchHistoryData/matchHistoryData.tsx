@@ -32,8 +32,9 @@ const matchHistory = () => {
                 handleSearchFunction={searchForPlayer}
             />
             {
-                (!error && summonerInfo.name) ?
+                summonerInfo.name ?
                     <Data
+                        error={error}
                         {...summonerInfo}
                     />
                     :
