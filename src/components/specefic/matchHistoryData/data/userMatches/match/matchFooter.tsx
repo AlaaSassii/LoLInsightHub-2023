@@ -5,8 +5,46 @@ type typeMatchFooterProps = {
 }
 const MatchFooter: FC<typeMatchFooterProps> = ({ user }) => {
     console.log({ user });
+    const { firstBloodKill, firstTowerKill, pentaKills, tripleKills, quadraKills, doubleKills, dragonKills, lane } = user;
     return (
-        <div>matchFooter</div>
+        <div>
+            {
+                firstBloodKill && <b> first blood</b>
+            }
+            {
+                pentaKills
+                    ?
+                    <b>penta kill</b>
+                    :
+                    quadraKills
+                        ?
+                        <b>qudra kill</b>
+                        :
+                        tripleKills
+                            ?
+                            <b>triple Kill</b>
+                            :
+                            doubleKills
+                                ?
+                                <b>double kill</b>
+                                :
+                                null
+            }
+            {
+                firstTowerKill ?
+                    <b>first tower</b>
+                    :
+                    null
+            }
+            {
+                (lane === 'JUNGLE' && dragonKills)
+                    ?
+                    <b>dragon  kill: {dragonKills}</b>
+                    :
+                    null
+
+            }
+        </div>
     )
 }
 

@@ -33,18 +33,17 @@ const Match: FC<matchProps> = ({ matchId, puuid }) => {
     return (
         <div className="match__card" >
             <MatchHeader
-                gameMode={match.info.gameMode as string}
-                gameCreation={match.info.gameCreation as Date}
-                gameDuration={match.info.gameDuration as number}
-                gameVersion={match.info.gameVersion as string}
+                gameMode={match?.info?.gameMode as string}
+                gameCreation={match?.info?.gameCreation as Date}
+                gameDuration={match?.info?.gameDuration as number}
+                gameVersion={match?.info?.gameVersion as string}
             />
-            <MatchContent
-
-            />
+            {/* <MatchContent
+                match={match}
+                user={user}
+            /> */}
             <MatchFooter
-                user={match?.info?.participants.find(
-                    (participant) => participant.puuid === puuid
-                )}
+                user={user}
             />
         </div>
     )
