@@ -32,6 +32,7 @@ const UserMatches: FC<userMatchesProps> = ({ puuid, error }) => {
                     {
                         matchesId.map((matchId, index) =>
                             <Match
+                                puuid={puuid}
                                 matchId={matchId}
                                 key={`match__history__${index}`}
                             />

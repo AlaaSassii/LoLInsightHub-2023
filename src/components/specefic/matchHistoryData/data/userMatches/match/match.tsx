@@ -7,8 +7,9 @@ import MatchFooter from "./matchFooter";
 
 type matchProps = {
     matchId: string,
+    puuid: string
 }
-const Match: FC<matchProps> = ({ matchId }) => {
+const Match: FC<matchProps> = ({ matchId, puuid }) => {
     const [match, setMatch] = useState<Object | any>({});
     const [matchLoading, setMatchLoading] = useState<boolean>(false);
     const [matchError, setMatchError] = useState<boolean>(false);
@@ -38,7 +39,10 @@ const Match: FC<matchProps> = ({ matchId }) => {
             <MatchContent
             />
             <MatchFooter
-
+                puuid={puuid}
+                user={match.info.participants.find(
+                    (participant) => participant.puuid === puuid
+                )}
             />
         </div>
     )
