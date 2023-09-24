@@ -1,8 +1,19 @@
-import React from 'react'
+import { FC } from 'react'
 
-const MatchHeader = () => {
+type matchHeaderProps = {
+    gameMode: string,
+    gameCreation: string,
+    gameDuration: string,
+    gameVersion: string
+}
+const MatchHeader: FC<matchHeaderProps> = ({ gameMode, gameCreation, gameDuration, gameVersion }) => {
     return (
-        <div>matchHeader</div>
+        <div className='match__header'>
+            <div>{gameMode}</div>
+            <div>{gameCreation}</div>
+            <div>{gameDuration}</div>
+            <div>{gameVersion}</div>
+        </div>
     )
 }
 

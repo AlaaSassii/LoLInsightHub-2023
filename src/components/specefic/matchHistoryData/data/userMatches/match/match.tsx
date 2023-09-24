@@ -29,7 +29,14 @@ const Match: FC<matchProps> = ({ matchId }) => {
     if (matchLoading) return <h1>Loading..</h1>
     return (
         <div className="match__card" >
-            <MatchHeader />
+            <MatchHeader
+                gameMode={match.info.gameMode as string}
+                gameCreation={match.info.gameCreation as string}
+                gameDuration={match.info.gameDuration as string}
+                gameVersion={match.info.gameVersion as string}
+
+
+            />
             <MatchContent />
             <MatchFooter />
         </div>
