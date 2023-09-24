@@ -3,7 +3,7 @@ import { formatTimestamp, formatUnixTimestamp } from '../../../../../../helpers/
 
 type matchHeaderProps = {
     gameMode: string,
-    gameCreation: Date | number,
+    gameCreation: number,
     gameDuration: number,
     gameVersion: string
 }

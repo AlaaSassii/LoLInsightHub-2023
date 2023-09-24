@@ -4,17 +4,17 @@ import { Api__key } from "../../../../../../services/apiKey";
 import MatchHeader from "./matchHeader";
 import MatchContent from "./matchContent";
 import MatchFooter from "./matchFooter";
+import { singleMatch } from "../../../../../../types/singleMatch";
 
 type matchProps = {
     matchId: string,
     puuid: string
 }
 const Match: FC<matchProps> = ({ matchId, puuid }) => {
-    const [match, setMatch] = useState<Object | any>({});
+    const [match, setMatch] = useState<singleMatch | null>(null);
     const [user, setUser] = useState<any>({});
     const [matchLoading, setMatchLoading] = useState<boolean>(false);
     const [matchError, setMatchError] = useState<boolean>(false);
-    const [error, setError] = useState<boolean>(false);
     useEffect(() => {
         setMatchLoading(true)
         axios.get(`https://europe.api.riotgames.com/lol/match/v5/matches/${matchId}?api_key=${Api__key}`)
@@ -28,20 +28,16 @@ const Match: FC<matchProps> = ({ matchId, puuid }) => {
                 setMatchLoading(false)
             })
     }, [])
-    if (error) return <p>Something Went Wrong While Getting The Data.</p>
+    if (matchError) return <p>Something Went Wrong While Getting The Data.</p>
     if (matchLoading) return <h1>Loading..</h1>
     return (
         <div className="match__card" >
             <MatchHeader
                 gameMode={match?.info?.gameMode as string}
-                gameCreation={match?.info?.gameCreation as Date}
+                gameCreation={match?.info.gameCreation as number}
                 gameDuration={match?.info?.gameDuration as number}
                 gameVersion={match?.info?.gameVersion as string}
             />
-            {/* <MatchContent
-                match={match}
-                user={user}
-            /> */}
             <MatchFooter
                 user={user}
             />
