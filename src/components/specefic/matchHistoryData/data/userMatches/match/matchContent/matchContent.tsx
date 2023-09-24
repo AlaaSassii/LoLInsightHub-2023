@@ -16,7 +16,7 @@ const MatchContent: FC<matchContentProps> = ({ info, metadata, puuid }) => {
         <div>
             <UserChampion
                 championName={user.championName}
-                lane={user.lane}
+                lane={user.lane.toLocaleLowerCase()}
                 level={user.champLevel}
             />
             <div>
