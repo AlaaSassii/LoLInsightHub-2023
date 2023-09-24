@@ -1,10 +1,11 @@
 import { FC } from 'react'
 import Participant from './participant'
 type participantsProps = {
-  participants: Array<T>,
+  participants: any,
   user: any
 }
 const participants: FC<participantsProps> = ({ participants, user }) => {
+
   return (
     <div className='participants'>
       <div className='participants__team_A'>
@@ -12,9 +13,11 @@ const participants: FC<participantsProps> = ({ participants, user }) => {
           participants
             .slice(0, 4)
             .map(
-              participant => <Participant
+              (participant, index) => <Participant
                 {...participant}
                 user={user}
+                index={index + 1}
+                key={`participant_teamA_${index}`}
               />
             )
         }
@@ -24,9 +27,11 @@ const participants: FC<participantsProps> = ({ participants, user }) => {
           participants
             .slice(4, participants.length)
             .map(
-              participant => <Participant
+              (participant, index) => <Participant
                 {...participant}
                 user={user}
+                index={index + 1}
+                key={`participant_teamB_${index}`}
               />
             )
         }
