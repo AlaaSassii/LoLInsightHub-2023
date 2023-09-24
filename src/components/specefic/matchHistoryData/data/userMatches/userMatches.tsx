@@ -24,7 +24,7 @@ const UserMatches: FC<userMatchesProps> = ({ puuid, error }) => {
     }, [])
     return (
         <CardContainer className='' loading={matchesLoading} >
-            {error
+            {(error || getUserMatchesError)
                 ?
                 <p>{error}</p>
                 :
