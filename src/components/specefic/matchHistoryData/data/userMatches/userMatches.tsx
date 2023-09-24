@@ -21,21 +21,22 @@ const UserMatches: FC<userMatchesProps> = ({ puuid, error }) => {
             .catch((error: AxiosError) => {
                 setUserMatchesError(false)
             })
-    }, [])
+    }, [puuid])
+    console.log({ error, getUserMatchesError, matchesId });
     return (
         <CardContainer className='' loading={matchesLoading} >
-            {(error || getUserMatchesError)
+            {(error !== '' || getUserMatchesError)
                 ?
                 <p>{error}</p>
                 :
                 <>
                     {
-                        matchesId.map((matchId, index) => {
+                        matchesId.map((matchId, index) =>
                             <Match
                                 matchId={matchId}
                                 key={`match__history__${index}`}
                             />
-                        })
+                        )
                     }
                 </>}
         </CardContainer>
