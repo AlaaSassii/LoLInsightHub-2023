@@ -6,45 +6,51 @@ type typeMatchFooterProps = {
 const MatchFooter: FC<typeMatchFooterProps> = ({ user }) => {
     console.log({ user });
     const { firstBloodKill, firstTowerKill, pentaKills, tripleKills, quadraKills, doubleKills, dragonKills, lane } = user;
+    const isFooterData: boolean = firstBloodKill || firstTowerKill || pentaKills || tripleKills || quadraKills || doubleKills || dragonKills || lane
     return (
-        <div>
-            {
-                firstBloodKill && <b> first blood</b>
-            }
-            {
-                pentaKills
-                    ?
-                    <b>penta kill</b>
-                    :
-                    quadraKills
+        isFooterData
+            ?
+            <div>
+                {
+                    firstBloodKill && <b> first blood</b>
+                }
+                {
+                    pentaKills
                         ?
-                        <b>qudra kill</b>
+                        <b>penta kill</b>
                         :
-                        tripleKills
+                        quadraKills
                             ?
-                            <b>triple Kill</b>
+                            <b>qudra kill</b>
                             :
-                            doubleKills
+                            tripleKills
                                 ?
-                                <b>double kill</b>
+                                <b>triple Kill</b>
                                 :
-                                null
-            }
-            {
-                firstTowerKill ?
-                    <b>first tower</b>
-                    :
-                    null
-            }
-            {
-                (lane === 'JUNGLE' && dragonKills)
-                    ?
-                    <b>dragon  kill: {dragonKills}</b>
-                    :
-                    null
+                                doubleKills
+                                    ?
+                                    <b>double kill</b>
+                                    :
+                                    null
+                }
+                {
+                    firstTowerKill ?
+                        <b>first tower</b>
+                        :
+                        null
+                }
+                {
+                    (lane === 'JUNGLE' && dragonKills)
+                        ?
+                        <b>dragon  kill: {dragonKills}</b>
+                        :
+                        null
 
-            }
-        </div>
+                }
+            </div>
+            :
+            null
+
     )
 }
 
