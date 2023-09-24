@@ -15,12 +15,12 @@ const MatchContent: FC<matchContentProps> = ({ info, metadata, puuid }) => {
     return (
         <div>
             <UserChampion
-                championName={user.championName}
-                lane={user.lane}
-                level={user.champLevel}
+                championName={user?.championName as string}
+                lane={user?.lane as string}
+                level={user?.champLevel as number}
             />
             <div>
-                <p><b>{user.kills}/<b>{user.deaths}</b>/<b>{user.assists}</b></b></p>
+                <p><b>{user?.kills as number}/<b>{user?.deaths as number}</b>/<b>{user?.assists as number}</b></b></p>
             </div>
             <Participants
                 participants={info?.participants}

@@ -8,7 +8,7 @@ type matchHeaderProps = {
     gameVersion: string
 }
 const MatchHeader: FC<matchHeaderProps> = ({ gameMode, gameCreation, gameDuration, gameVersion }) => {
-    const gameCreatedTime = formatUnixTimestamp(gameCreation as number);
+    const gameCreatedTime = formatUnixTimestamp(gameCreation);
     const gameDurationTime = formatTimestamp(gameDuration)
     return (
         <div className='match__header'>
