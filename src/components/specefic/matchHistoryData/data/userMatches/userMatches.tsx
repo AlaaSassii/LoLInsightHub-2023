@@ -22,7 +22,6 @@ const UserMatches: FC<userMatchesProps> = ({ puuid, error }) => {
                 setUserMatchesError(false)
             })
     }, [puuid])
-    console.log({ error, getUserMatchesError, matchesId });
     return (
         <CardContainer className='' loading={matchesLoading} >
             {(error !== '' || getUserMatchesError)

@@ -2,7 +2,9 @@ import React from 'react'
 
 const MatchContent = () => {
     return (
-        <div>matchContent</div>
+        <div>
+
+        </div>
     )
 }
 
