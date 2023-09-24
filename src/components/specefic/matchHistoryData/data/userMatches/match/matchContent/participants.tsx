@@ -18,38 +18,40 @@ const Participants: FC<participantsProps> = ({ participants, user }) => {
   return (
     <div className='participants'>
       {
-        loading
-        &&
-        <>
-          <div className='participants__team_A'>
-            {
-              participants
-                .slice(0, 4)
-                .map(
-                  (participant: particpantType, index) => <Participant
-                    puuid={participant.puuid}
-                    championName={participant.championName}
-                    index={index + 1}
-                    key={`participant_teamA_${index}`}
-                  />
-                )
-            }
-          </div>
-          <div className='participants__team_B'>
-            {
-              participants
-                .slice(4, participants.length)
-                .map(
-                  (participant, index) => <Participant
-                    puuid={participant.puuid}
-                    championName={participant.championName}
-                    index={index + 1}
-                    key={`participant_teamB_${index}`}
-                  />
-                )
-            }
-          </div>
-        </>
+        !loading
+          ?
+          <>
+            <div className='participants__team_A'>
+              {
+                participants
+                  .slice(0, 4)
+                  .map(
+                    (participant: particpantType, index) => <Participant
+                      puuid={participant.puuid}
+                      championName={participant.championName}
+                      index={index + 1}
+                      key={`participant_teamA_${index}`}
+                    />
+                  )
+              }
+            </div>
+            <div className='participants__team_B'>
+              {
+                participants
+                  .slice(4, participants.length)
+                  .map(
+                    (participant, index) => <Participant
+                      puuid={participant.puuid}
+                      championName={participant.championName}
+                      index={index + 1}
+                      key={`participant_teamB_${index}`}
+                    />
+                  )
+              }
+            </div>
+          </>
+          :
+          <h1>Loading...</h1>
       }
 
     </div>
