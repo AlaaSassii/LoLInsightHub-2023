@@ -1,8 +1,9 @@
 import { FC } from 'react'
+import { formatTimestamp, formatUnixTimestamp } from '../../../../../../helpers/timeToString'
 
 type matchHeaderProps = {
     gameMode: string,
-    gameCreation: Date,
+    gameCreation: number,
     gameDuration: number,
     gameVersion: string
 }
@@ -10,8 +11,8 @@ const MatchHeader: FC<matchHeaderProps> = ({ gameMode, gameCreation, gameDuratio
     return (
         <div className='match__header'>
             <div>{gameMode}</div>
-            <div>{gameCreation}</div>
-            <div>{gameDuration}</div>
+            <div>{formatUnixTimestamp(gameCreation)}</div>
+            <div>{formatTimestamp(gameDuration)}</div>
             <div>{gameVersion}</div>
         </div>
     )
