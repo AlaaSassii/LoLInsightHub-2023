@@ -38,6 +38,11 @@ const Match: FC<matchProps> = ({ matchId, puuid }) => {
                 gameDuration={match?.info?.gameDuration as number}
                 gameVersion={match?.info?.gameVersion as string}
             />
+            <MatchContent
+                info={match?.info}
+                metadata={match?.metadata}
+
+            />
             <MatchFooter
                 user={user}
             />

@@ -1,8 +1,9 @@
 import { FC } from 'react'
 import Participant from './participant'
+import { Participant as particpantType } from '../../../../../../../types/singleMatch'
 type participantsProps = {
-  participants: any,
-  user: any
+  participants: particpantType[],
+  user: particpantType
 }
 const participants: FC<participantsProps> = ({ participants, user }) => {
 
@@ -13,9 +14,9 @@ const participants: FC<participantsProps> = ({ participants, user }) => {
           participants
             .slice(0, 4)
             .map(
-              (participant, index) => <Participant
-                {...participant}
-                user={user}
+              (participant: particpantType, index) => <Participant
+                puuid={participant.puuid}
+                championName={participant.championName}
                 index={index + 1}
                 key={`participant_teamA_${index}`}
               />
@@ -28,8 +29,8 @@ const participants: FC<participantsProps> = ({ participants, user }) => {
             .slice(4, participants.length)
             .map(
               (participant, index) => <Participant
-                {...participant}
-                user={user}
+                puuid={participant.puuid}
+                championName={participant.championName}
                 index={index + 1}
                 key={`participant_teamB_${index}`}
               />
