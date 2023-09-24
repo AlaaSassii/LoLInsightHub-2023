@@ -4,7 +4,8 @@ import { Api__key } from "../../../../../../services/apiKey";
 import MatchHeader from "./matchHeader";
 import MatchContent from "./matchContent";
 import MatchFooter from "./matchFooter";
-import { singleMatch } from "../../../../../../types/singleMatch";
+import { Info, Metadata, singleMatch } from "../../../../../../types/singleMatch";
+import { info } from "../../../../../../types/championDataType";
 
 type matchProps = {
     matchId: string,
@@ -39,9 +40,9 @@ const Match: FC<matchProps> = ({ matchId, puuid }) => {
                 gameVersion={match?.info?.gameVersion as string}
             />
             <MatchContent
-                info={match?.info}
-                metadata={match?.metadata}
-
+                info={match?.info as Info}
+                metadata={match?.metadata as Metadata}
+                puuid={puuid}
             />
             <MatchFooter
                 user={user}

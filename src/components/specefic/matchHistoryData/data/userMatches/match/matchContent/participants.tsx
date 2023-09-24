@@ -5,7 +5,7 @@ type participantsProps = {
   participants: particpantType[],
   user: particpantType
 }
-const participants: FC<participantsProps> = ({ participants, user }) => {
+const Participants: FC<participantsProps> = ({ participants, user }) => {
 
   return (
     <div className='participants'>
@@ -41,4 +41,4 @@ const participants: FC<participantsProps> = ({ participants, user }) => {
   )
 }
 
-export default participants
+export default Participants
