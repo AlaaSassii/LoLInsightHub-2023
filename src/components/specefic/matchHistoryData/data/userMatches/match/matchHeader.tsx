@@ -3,7 +3,7 @@ import { formatTimestamp, formatUnixTimestamp } from '../../../../../../helpers/
 
 type matchHeaderProps = {
     gameMode: string,
-    gameCreation: number,
+    gameCreation: Date | number,
     gameDuration: number,
     gameVersion: string
 }
@@ -11,7 +11,7 @@ const MatchHeader: FC<matchHeaderProps> = ({ gameMode, gameCreation, gameDuratio
     return (
         <div className='match__header'>
             <div>{gameMode}</div>
-            <div>{formatUnixTimestamp(gameCreation)}</div>
+            <div>{formatUnixTimestamp(gameCreation as number)}</div>
             <div>{formatTimestamp(gameDuration)}</div>
             <div>{gameVersion}</div>
         </div>

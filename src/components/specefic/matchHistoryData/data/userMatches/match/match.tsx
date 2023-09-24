@@ -39,8 +39,7 @@ const Match: FC<matchProps> = ({ matchId, puuid }) => {
             <MatchContent
             />
             <MatchFooter
-                puuid={puuid}
-                user={match.info.participants.find(
+                user={match?.info?.participants.find(
                     (participant) => participant.puuid === puuid
                 )}
             />

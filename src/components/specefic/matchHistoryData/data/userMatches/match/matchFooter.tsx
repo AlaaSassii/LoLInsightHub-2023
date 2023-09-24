@@ -1,10 +1,10 @@
 import React, { FC } from 'react'
 
 type typeMatchFooterProps = {
-    puuid: string,
     user: any
 }
-const MatchFooter: FC<typeMatchFooterProps> = () => {
+const MatchFooter: FC<typeMatchFooterProps> = ({ user }) => {
+    console.log({ user });
     return (
         <div>matchFooter</div>
     )
