@@ -20,7 +20,7 @@ const Match: FC<matchProps> = ({ matchId, puuid }) => {
         axios.get(`https://europe.api.riotgames.com/lol/match/v5/matches/${matchId}?api_key=${Api__key}`)
             .then((response: AxiosResponse) => {
                 setMatch(response.data);
-                setUser(response.data.info.participants.find((participant) => participant.puuid === puuid))
+                setUser(response.data.info.participants.find((participant: unknown & { puuid: string }) => participant.puuid === puuid))
                 setMatchLoading(false);
             })
             .catch((error: AxiosError) => {
