@@ -31,14 +31,15 @@ const Match: FC<matchProps> = ({ matchId }) => {
         <div className="match__card" >
             <MatchHeader
                 gameMode={match.info.gameMode as string}
-                gameCreation={match.info.gameCreation as string}
-                gameDuration={match.info.gameDuration as string}
+                gameCreation={match.info.gameCreation as Date}
+                gameDuration={match.info.gameDuration as number}
                 gameVersion={match.info.gameVersion as string}
-
+            />
+            <MatchContent
+            />
+            <MatchFooter
 
             />
-            <MatchContent />
-            <MatchFooter />
         </div>
     )
 }

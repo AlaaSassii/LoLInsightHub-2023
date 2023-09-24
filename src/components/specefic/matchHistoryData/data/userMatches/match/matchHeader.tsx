@@ -2,8 +2,8 @@ import { FC } from 'react'
 
 type matchHeaderProps = {
     gameMode: string,
-    gameCreation: string,
-    gameDuration: string,
+    gameCreation: Date,
+    gameDuration: number,
     gameVersion: string
 }
 const MatchHeader: FC<matchHeaderProps> = ({ gameMode, gameCreation, gameDuration, gameVersion }) => {
