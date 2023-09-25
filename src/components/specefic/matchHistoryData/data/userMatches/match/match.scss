@@ -66,9 +66,13 @@ body.dark{
         }
         .participants{
             display: flex;
-            gap: 10px;
-            .participants__team_A > user,.participants__team_B > user{
+            gap: 10px;  
+            .participants__team_A ,.participants__team_B{
+                
+            }
+            .participants__team_A > .user,.participants__team_B > .user{
                 display: flex;
+                align-items: center;
                 img{
                     border-style: none;
                     width: 20px;
@@ -76,6 +80,9 @@ body.dark{
                     border-radius: 50%;
                     object-fit: cover;
                 }
+            }
+            .participants__team_B > .user{
+                flex-direction: row-reverse;
             }
         }
     }

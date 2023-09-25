@@ -28,7 +28,7 @@ const Match: FC<matchProps> = ({ matchId, puuid }) => {
                 setMatchLoading(false)
             })
     }, [])
-    if (matchError) return <p>Something Went Wrong While Getting The Data.</p>
+    if (matchError) return null
     if (matchLoading) return <h1>Loading..</h1>
     return (
         <div className={`single__match ${user?.win ? 'win__match' : 'lost__match'}`}>
