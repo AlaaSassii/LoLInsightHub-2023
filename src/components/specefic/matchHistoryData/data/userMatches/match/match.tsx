@@ -4,7 +4,7 @@ import { Api__key } from "../../../../../../services/apiKey";
 import MatchHeader from "./matchHeader";
 import MatchContent from "./matchContent";
 import MatchFooter from "./matchFooter";
-import { singleMatch } from "../../../../../../types/singleMatch";
+import { singleMatch, Participant } from "../../../../../../types/singleMatch";
 
 type matchProps = {
     matchId: string,
@@ -12,7 +12,7 @@ type matchProps = {
 }
 const Match: FC<matchProps> = ({ matchId, puuid }) => {
     const [match, setMatch] = useState<singleMatch | null>(null);
-    const [user, setUser] = useState<any>({});
+    const [user, setUser] = useState<Participant | null>(null);
     const [matchLoading, setMatchLoading] = useState<boolean>(false);
     const [matchError, setMatchError] = useState<boolean>(false);
     useEffect(() => {
@@ -31,9 +31,9 @@ const Match: FC<matchProps> = ({ matchId, puuid }) => {
     if (matchError) return <p>Something Went Wrong While Getting The Data.</p>
     if (matchLoading) return <h1>Loading..</h1>
     return (
-        <div className="match__card" >
+        <div className={`single__match ${user?.win ? 'win__match' : 'lost__match'}`}>
             {
-                match !== null ?
+                (match !== null && user !== null) ?
                     <>
                         <MatchHeader
                             gameMode={match.info.gameMode}
