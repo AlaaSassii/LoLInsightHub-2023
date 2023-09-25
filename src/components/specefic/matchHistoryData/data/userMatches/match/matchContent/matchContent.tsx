@@ -20,7 +20,7 @@ const MatchContent: FC<matchContentProps> = ({ info, metadata, puuid }) => {
                 level={user.champLevel}
             />
             <div>
-                <p><b>{user.kills}/<b>{user.deaths}</b>/<b>{user.assists}</b></b></p>
+                <p><b>{user.kills}/<b className='b__user__death'>{user.deaths}</b>/<b>{user.assists}</b></b></p>
             </div>
             <Participants
                 participants={info.participants}
