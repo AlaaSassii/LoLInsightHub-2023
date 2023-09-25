@@ -10,7 +10,7 @@ const MatchFooter: FC<typeMatchFooterProps> = ({ user }) => {
     return (
         isFooterData
             ?
-            <div>
+            <div className='match__footer'>
                 {
                     firstBloodKill && <b> first blood</b>
                 }

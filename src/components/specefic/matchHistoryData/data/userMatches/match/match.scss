@@ -7,6 +7,12 @@ body.dark{
     .lost__match{
         background-color: $dark__red;
     }
+    .match__footer{
+        b{
+           background-color: $main__white;
+           color:dodgerblue;
+        }
+   }
 }
 
 
@@ -68,7 +74,7 @@ body.dark{
             display: flex;
             gap: 10px;  
             .participants__team_A ,.participants__team_B{
-                
+
             }
             .participants__team_A > .user,.participants__team_B > .user{
                 display: flex;
@@ -86,5 +92,14 @@ body.dark{
             }
         }
     }
-
+    .match__footer{
+         b{
+            padding:2px 10px ;
+            border-radius: 10px;
+            width: 200px;
+            border:1px solid #ccc ;
+            background-color: $main__black;
+            color:dodgerblue;
+         }
+    }
 }
