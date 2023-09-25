@@ -5,7 +5,7 @@ import MatchHeader from "./matchHeader";
 import MatchContent from "./matchContent";
 import MatchFooter from "./matchFooter";
 import { singleMatch, Participant } from "../../../../../../types/singleMatch";
-
+import './match.scss';
 type matchProps = {
     matchId: string,
     puuid: string
