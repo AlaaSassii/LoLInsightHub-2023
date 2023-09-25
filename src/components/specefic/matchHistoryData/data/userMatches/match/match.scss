@@ -22,4 +22,9 @@ body.dark{
     &.lost__match{
         background-color: $light__red;
     }
+    .match__header{
+        display: flex;
+        align-items: center;
+        gap: 28px;
+    }
 }

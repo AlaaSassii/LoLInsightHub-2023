@@ -13,7 +13,7 @@ const MatchContent: FC<matchContentProps> = ({ info, metadata, puuid }) => {
     const user = info?.participants?.find((participant: Participant) => participant.puuid === puuid) as Participant
 
     return (
-        <div>
+        <div className='match__content'>
             <UserChampion
                 championName={user.championName}
                 lane={user.lane.toLocaleLowerCase()}
