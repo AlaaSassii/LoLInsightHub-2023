@@ -67,6 +67,16 @@ body.dark{
         .participants{
             display: flex;
             gap: 10px;
+            .participants__team_A > user,.participants__team_B > user{
+                display: flex;
+                img{
+                    border-style: none;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
         }
     }
 
