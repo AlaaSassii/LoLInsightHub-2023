@@ -1,5 +1,14 @@
 @import '../../../../../../sass/index' ;
 
+body.dark{
+    .win__match{
+        background-color: $datk__green;
+    }
+    .lost__match{
+        background-color: $dark__red;
+    }
+}
+
 
 .single__match{
     background-color: deepskyblue;
@@ -7,4 +16,10 @@
     border-radius: 5px;
     font-size: small;
     padding:5px 10px;
+    &.win__match{
+        background-color: $light__green;
+    }
+    &.lost__match{
+        background-color: $light__red;
+    }
 }
