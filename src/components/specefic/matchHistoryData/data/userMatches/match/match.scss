@@ -42,6 +42,22 @@ body.dark{
                     object-fit: cover;
                 }
             }
+            .champion__data{
+                display: flex;
+                flex-direction: column  ;
+                justify-content: space-around;
+                .circle{
+                    width: 30px;
+                    height: 30px;
+                    background-color: $main__black;
+                    color: white;
+                    border-radius: 50%;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
            
         }
     }
