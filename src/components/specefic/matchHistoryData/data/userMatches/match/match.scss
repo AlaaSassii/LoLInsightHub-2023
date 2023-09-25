@@ -34,12 +34,15 @@ body.dark{
         .user__match__champion{
             display: flex;
             align-items: center;
-            img{
-                width: 100px;
-                height: 100px;
-                border-radius: 50%;
-                object-fit: cover;
+            .image{
+                img{
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
             }
+           
         }
     }
 
