@@ -31,5 +31,16 @@ body.dark{
         display: flex;
         align-items: center;
         gap: 10px;
+        .user__match__champion{
+            display: flex;
+            align-items: center;
+            img{
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
     }
+
 }
