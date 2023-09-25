@@ -4,8 +4,7 @@ import { Api__key } from "../../../../../../services/apiKey";
 import MatchHeader from "./matchHeader";
 import MatchContent from "./matchContent";
 import MatchFooter from "./matchFooter";
-import { Info, Metadata, singleMatch } from "../../../../../../types/singleMatch";
-import { info } from "../../../../../../types/championDataType";
+import { singleMatch } from "../../../../../../types/singleMatch";
 
 type matchProps = {
     matchId: string,
