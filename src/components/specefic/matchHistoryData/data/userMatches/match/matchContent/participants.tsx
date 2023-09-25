@@ -24,7 +24,7 @@ const Participants: FC<participantsProps> = ({ participants, user }) => {
             <div className='participants__team_A'>
               {
                 participants
-                  .slice(0, 4)
+                  .slice(0, 5)
                   .map(
                     (participant: particpantType, index) => <Participant
                       puuid={participant.puuid}
@@ -38,7 +38,7 @@ const Participants: FC<participantsProps> = ({ participants, user }) => {
             <div className='participants__team_B'>
               {
                 participants
-                  .slice(4, participants.length)
+                  .slice(5, participants.length)
                   .map(
                     (participant, index) => <Participant
                       puuid={participant.puuid}
