@@ -3,7 +3,8 @@ import CardContainer from "../../../../common/cardContainer"
 import axios, { AxiosError, AxiosResponse } from "axios"
 import { Api__key } from "../../../../../services/apiKey"
 import { ChampionInfo } from "../../../../../types/championInfoTypes"
-import { ChampionsDataType, championConst } from "../../../../../consts/champions"
+import { ChampionsDataType, championConst } from "../../../../../consts/champions";
+import './userChampion.scss';
 type userChampionsProps = {
     puuid: string,
     error: string
@@ -21,11 +22,13 @@ const UserChampions: FC<userChampionsProps> = ({ puuid, error }) => {
                 console.log(error.message)
             })
     }, [])
-    const championObject = (userChampionId: string | number): ChampionsDataType => {
-        return championConst.find(champ => userChampionId == champ.id) as ChampionsDataType
+    const championName = (userChampionId: string | number): string => {
+        console.log('userChampionId', championConst, userChampionId, championConst.filter(champ => userChampionId.toString() === champ.id.toString()))
+        return championConst.find(champ => userChampionId.toString() === champ.key.toString())?.id as string
     }
+
     return (
-        <CardContainer loading={false} className="">
+        <CardContainer loading={false} className="user__champions__container">
             {
                 (error || getChampionsError)
                     ?
@@ -47,9 +50,9 @@ const UserChampions: FC<userChampionsProps> = ({ puuid, error }) => {
                             <tbody>
                                 {champions.map((championInfo, index) => (
                                     <tr key={index}>
-                                        <td><img src={`https://opgg-static.akamaized.net/meta/images/lol/champion/${championObject(championInfo.championId)?.key?.toLowerCase()}.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_170&v=1695370772879`} /></td>
+                                        <td><img src={`https://opgg-static.akamaized.net/meta/images/lol/champion/${championName(championInfo.championId)}.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_170&v=1695370772879`} /></td>
                                         <td>{championInfo.championLevel}</td>
-                                        <td>{championInfo.championPoints}</td>
+                                        <td>{championInfo.championPoints} pts</td>
                                         <td>{championInfo.championPointsSinceLastLevel}</td>
                                         <td>{championInfo.championPointsUntilNextLevel}</td>
                                         <td>{championInfo.chestGranted ? 'Yes' : 'No'}</td>
