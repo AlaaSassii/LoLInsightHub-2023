@@ -21,6 +21,9 @@ const UserChampions: FC<userChampionsProps> = ({ puuid, error }) => {
                 console.log(error.message)
             })
     }, [])
+    const championObject = (userChampionId: string | number): ChampionsDataType => {
+        return championConst.find(champ => userChampionId == champ.id) as ChampionsDataType
+    }
     return (
         <CardContainer loading={false} className="">
             {
@@ -45,7 +48,7 @@ const UserChampions: FC<userChampionsProps> = ({ puuid, error }) => {
                                 {champions.map((championInfo, index) => (
                                     <tr key={index}>
                                         {/* ChampionsData.find((champion:ChampionsDataType) => champion.id == championInfo.championId) */}
-                                        <td><img src={`https://opgg-static.akamaized.net/meta/images/lol/champion/${championConst.find((champion: ChampionsDataType) => champion?.id == championInfo?.championId.toString()).id.toLowerCase()}.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_170&v=1695370772879`} /></td>
+                                        <td><img src={`https://opgg-static.akamaized.net/meta/images/lol/champion/${championObject(championInfo.championId).id.toLowerCase()}.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_170&v=1695370772879`} /></td>
                                         <td>{championInfo.championLevel}</td>
                                         <td>{championInfo.championPoints}</td>
                                         <td>{championInfo.championPointsSinceLastLevel}</td>
