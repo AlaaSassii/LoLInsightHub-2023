@@ -1,5 +1,5 @@
 import { FC, useState } from 'react'
-
+import Tooltip from '../../../../../../common/tooltip'
 type itemImageProps = {
     image: string
 }
