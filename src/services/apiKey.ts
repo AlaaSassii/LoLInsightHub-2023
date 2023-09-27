@@ -1,1 +1,1 @@
-export const Api__key: string = 'RGAPI-093accb7-cf88-4deb-a01a-75fd1cf351dc'
+export const Api__key: string = 'RGAPI-0ce9f25c-104c-4956-8e83-383014f88598'
