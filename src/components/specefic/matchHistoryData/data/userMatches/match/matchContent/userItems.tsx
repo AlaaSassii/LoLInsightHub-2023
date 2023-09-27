@@ -1,18 +1,19 @@
 import React, { FC } from 'react'
 import { Participant } from '../../../../../../../types/singleMatch'
+import ItemImage from './itemImage'
 
 type userItemsProps = {
     user: Participant
 }
-const UserItems: FC<userItemsProps> = ({ user }) => {
+const UserItems: FC<userItemsProps> = ({ user: { item0, item1, item2, item3, item4, item5 } }) => {
+
     return (
         <div className='items__match___container'>
-            <div><img src={`http://ddragon.leagueoflegends.com/cdn/13.19.1/img/item/${user.item0}.png`} /></div>
-            <div><img src={`http://ddragon.leagueoflegends.com/cdn/13.19.1/img/item/${user.item1}.png`} /></div>
-            <div><img src={`http://ddragon.leagueoflegends.com/cdn/13.19.1/img/item/${user.item2}.png`} /></div>
-            <div><img src={`http://ddragon.leagueoflegends.com/cdn/13.19.1/img/item/${user.item3}.png`} /></div>
-            <div><img src={`http://ddragon.leagueoflegends.com/cdn/13.19.1/img/item/${user.item4}.png`} /></div>
-            <div><img src={`http://ddragon.leagueoflegends.com/cdn/13.19.1/img/item/${user.item5}.png`} /></div>
+            {
+                [item0, item1, item2, item3, item4, item5]
+                    .map((number, index) => <ItemImage key={`item__image__${index}`} image={`http://ddragon.leagueoflegends.com/cdn/13.19.1/img/item/${number}.png`} />)
+
+            }
         </div>
     )
 }

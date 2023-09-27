@@ -108,5 +108,10 @@ body.dark{
 display: grid;
   grid-template-columns: repeat(3, 1fr); 
   gap: 10px; 
+  img{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+  }
 }
 
