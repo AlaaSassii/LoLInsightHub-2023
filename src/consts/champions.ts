@@ -1,8 +1,8 @@
-type champiopn = {
+export type ChampionsDataType = {
     id: string,
     key: string
 }
-const champions: champiopn[] = [
+export const championConst: ChampionsDataType[] = [
     { id: 'Aatrox', key: '266' },
     { id: 'Ahri', key: '103' },
     { id: 'Akali', key: '84' },

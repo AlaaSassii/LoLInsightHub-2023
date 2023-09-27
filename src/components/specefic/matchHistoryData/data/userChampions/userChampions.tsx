@@ -3,6 +3,7 @@ import CardContainer from "../../../../common/cardContainer"
 import axios, { AxiosError, AxiosResponse } from "axios"
 import { Api__key } from "../../../../../services/apiKey"
 import { ChampionInfo } from "../../../../../types/championInfoTypes"
+import { ChampionsDataType, championConst } from "../../../../../consts/champions"
 type userChampionsProps = {
     puuid: string,
     error: string
@@ -43,7 +44,8 @@ const UserChampions: FC<userChampionsProps> = ({ puuid, error }) => {
                             <tbody>
                                 {champions.map((championInfo, index) => (
                                     <tr key={index}>
-                                        <td>{championInfo.championId}</td>
+                                        {/* ChampionsData.find((champion:ChampionsDataType) => champion.id == championInfo.championId) */}
+                                        <td><img src={`https://opgg-static.akamaized.net/meta/images/lol/champion/${championConst.find((champion: ChampionsDataType) => champion?.id == championInfo?.championId.toString()).id.toLowerCase()}.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_170&v=1695370772879`} /></td>
                                         <td>{championInfo.championLevel}</td>
                                         <td>{championInfo.championPoints}</td>
                                         <td>{championInfo.championPointsSinceLastLevel}</td>
