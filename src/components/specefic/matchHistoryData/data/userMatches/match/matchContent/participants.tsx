@@ -7,14 +7,7 @@ type participantsProps = {
 }
 const Participants: FC<participantsProps> = ({ participants, user }) => {
   const [loading, setLoading] = useState<boolean>(false);
-  useEffect(() => {
-    setLoading(true);
-    const timeoutId = setTimeout(() => {
-      setLoading(loading)
-    }, 2000)
-    return () => clearTimeout(timeoutId)
 
-  }, [participants, user])
   return (
     <div className='participants'>
       {

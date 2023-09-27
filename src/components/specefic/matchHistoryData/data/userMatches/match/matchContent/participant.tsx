@@ -15,9 +15,6 @@ const Participant: FC<participantProps> = ({ championName, puuid, index }) => {
             .then((response: AxiosResponse) => {
                 setUserName(response.data.gameName)
             })
-            .catch((error: AxiosError) => {
-                setUserName('error')
-            })
     }, [puuid])
 
 
