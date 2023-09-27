@@ -6,7 +6,7 @@ type userItemsProps = {
 }
 const UserItems: FC<userItemsProps> = ({ user }) => {
     return (
-        <div className='items'>
+        <div className='items__match___container'>
             <div><img src={`http://ddragon.leagueoflegends.com/cdn/13.19.1/img/item/${user.item0}.png`} /></div>
             <div><img src={`http://ddragon.leagueoflegends.com/cdn/13.19.1/img/item/${user.item1}.png`} /></div>
             <div><img src={`http://ddragon.leagueoflegends.com/cdn/13.19.1/img/item/${user.item2}.png`} /></div>
