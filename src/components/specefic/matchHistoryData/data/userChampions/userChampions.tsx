@@ -47,7 +47,7 @@ const UserChampions: FC<userChampionsProps> = ({ puuid, error }) => {
                             <tbody>
                                 {champions.map((championInfo, index) => (
                                     <tr key={index}>
-                                        <td><img src={`https://opgg-static.akamaized.net/meta/images/lol/champion/${championObject(championInfo.championId).id.toLowerCase()}.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_170&v=1695370772879`} /></td>
+                                        <td><img src={`https://opgg-static.akamaized.net/meta/images/lol/champion/${championObject(championInfo.championId)?.key?.toLowerCase()}.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_170&v=1695370772879`} /></td>
                                         <td>{championInfo.championLevel}</td>
                                         <td>{championInfo.championPoints}</td>
                                         <td>{championInfo.championPointsSinceLastLevel}</td>
