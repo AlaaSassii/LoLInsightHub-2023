@@ -21,7 +21,8 @@ body.dark{
     margin:10px 0 ;
     border-radius: 5px;
     font-size: small;
-    padding:5px 10px;
+    padding: 10px 30px;
+
     &.win__match{
         background-color: $light__green;
     }
@@ -36,6 +37,7 @@ body.dark{
     .match__content{
         display: flex;
         align-items: center;
+        justify-content: space-between;
         gap: 10px;
         .user__match__champion{
             display: flex;

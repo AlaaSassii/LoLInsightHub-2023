@@ -14,6 +14,8 @@ const UserRankInfo: FC<userRankInfoProps> = ({ summonerId, error }) => {
         axios.get(`https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/${summonerId}?api_key=${Api__key}`)
             .then((response: AxiosResponse) => {
                 setRankInfo(response.data)
+                console.log('responsee', response.data);
+
             })
             .catch((error: AxiosError) => {
                 setRanksInfoError(true)
