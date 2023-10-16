@@ -13,7 +13,7 @@ body{
 .search__input{
     @include input;
     display: flex;
-    height: 32px;
+    height: 45px;
     width: 400px;
     border-radius: 20px;
     margin:auto;
@@ -30,7 +30,7 @@ body{
         @include backgroundColorMainBrandColor1;
         position:absolute !important;
         top:0;
-        right:-1px;
+        right:0px;
         height: 100% ; 
         width: 45px;
         border-radius: 50%;
