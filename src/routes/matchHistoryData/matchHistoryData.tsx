@@ -1,7 +1,6 @@
 // import PageContainer from '../../components/common/pageContainer'
 import PageContainer from '../../components/common/pageContainer'
-import MatchHistory from '../../components/specefic/matchHistoryData'
-import PageNotFound from '../pageNotFound'
+import PageUnavailable from '../../components/common/pageUnavailable'
 const MatchHistoryData = () => {
     return (
         <PageContainer  >
