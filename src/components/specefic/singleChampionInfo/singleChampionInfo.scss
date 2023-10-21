@@ -9,6 +9,10 @@
     "aa aa aa ea ea ea gp gp gp gp"
     "sk sk sk sk sk sk sk sk sk sk" 
     ;
+    @media(width<=991px){
+        display: flex;
+        flex-direction: column;
+    }
     .champion__def{
         grid-area: def;
     }
