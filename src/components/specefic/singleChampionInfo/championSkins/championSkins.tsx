@@ -9,7 +9,8 @@ type championSkinsProps = {
     skins: skins
 }
 const championSkins: FC<championSkinsProps> = ({ name, skins }) => {
-    const images = skins.map(skin => `http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${name}_${skin.num}.jpg `)
+    const images = skins.map(skin => `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${name}_${skin.num}.jpg`)
+    // 
     const titles = skins.map(skin => skin.name)
     return (
         <CardContainer loading={false} className='champion__skins'>

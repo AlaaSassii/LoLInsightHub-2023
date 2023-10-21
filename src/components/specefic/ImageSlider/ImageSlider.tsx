@@ -1,5 +1,7 @@
 import { FC, useState } from "react"
 import './ImageSlider.scss'
+import { BiRadioCircle, BiRadioCircleMarked } from "react-icons/bi"
+import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai"
 type ImageSliderProps = {
     images: string[]
 }
@@ -53,7 +55,7 @@ const ImageSlider: FC<ImageSliderProps> = ({ images }) => {
                 style={{ left: 0 }}
                 aria-label="View Previous Image"
             >
-                <p>left</p>
+                <p><AiFillCaretLeft /></p>
             </button>
             <button
                 onClick={showNextImage}
@@ -61,7 +63,7 @@ const ImageSlider: FC<ImageSliderProps> = ({ images }) => {
                 style={{ right: 0 }}
                 aria-label="View Next Image"
             >
-                <p>right</p>
+                <p><AiFillCaretRight /></p>
             </button>
             <div
                 style={{
@@ -81,9 +83,9 @@ const ImageSlider: FC<ImageSliderProps> = ({ images }) => {
                         onClick={() => setImageIndex(index)}
                     >
                         {index === imageIndex ? (
-                            <p>Circle DOt</p>
+                            <p><BiRadioCircleMarked /></p>
                         ) : (
-                            <p>Circle</p>
+                            <p><BiRadioCircle /></p>
                         )}
                     </button>
                 ))}
