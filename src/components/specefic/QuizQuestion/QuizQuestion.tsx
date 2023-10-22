@@ -28,7 +28,7 @@ const QuizGame: React.FC<QuizProps> = ({ questions }) => {
 
     return (
         <div>
-            {currentQuestion < questions.length ? (
+            {currentQuestion < questions.length - 1 ? (
                 <div>
                     <h2>Question {currentQuestion + 1}</h2>
                     <p>{questions[currentQuestion].quizQuestion}</p>
