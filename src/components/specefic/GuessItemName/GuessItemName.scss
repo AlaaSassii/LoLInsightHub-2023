@@ -1,0 +1,40 @@
+.categories{
+    width: fit-content;
+    display: flex;
+    margin: auto;
+}
+.guess__item__name{
+    text-align: center;
+    img{
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }    
+    button{
+        margin: 0 10px;
+    }
+    input{
+        display: block;
+        margin: auto;
+        margin-bottom: 20px;
+        width: 300px;
+    }
+}
+.game__buttons__{
+    display: flex;
+    width: fit-content;
+    margin: auto;
+    margin-top: 20px;
+}
+
+@media (width <= 991px){
+    .guess__item__name{
+        margin-top: 40px;
+        font-size: x-small;
+
+    }
+}

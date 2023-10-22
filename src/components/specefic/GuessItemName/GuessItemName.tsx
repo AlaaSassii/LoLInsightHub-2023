@@ -3,7 +3,7 @@ import { useGuessImageGame } from '../../../hooks/useGuessImageGame'
 import { useGuessItemName } from '../../../hooks/useGuessItemName'
 import { modeGame } from '../../../enums/modeGame'
 import { replaceRandomLetters } from '../../../helpers/replaceRandomLetter'
-
+import './GuessItemName.scss'
 type itemString = {
     items: string[],
     itemsId: string[],
@@ -17,6 +17,11 @@ const GuessItemName: FC<itemString> = ({ items, itemsId }) => {
                 !stop
                     ?
                     <>
+                        <div className="categories">
+                            <button onClick={() => { changeGameMode(modeGame.easy) }}>Easy</button>
+                            <button onClick={() => { changeGameMode(modeGame.medium) }}>Medium</button>
+                            <button onClick={() => { changeGameMode(modeGame.hard) }}>Hard</button>
+                        </div>
                         <img src={`https://ddragon.leagueoflegends.com/cdn/13.20.1/img/item/${correctItemId}.png`} alt="" />
                         {
                             gameMode === modeGame.easy
@@ -30,18 +35,16 @@ const GuessItemName: FC<itemString> = ({ items, itemsId }) => {
                                 </>
                         }
 
-                        <div className="categories">
-                            <button onClick={() => { changeGameMode(modeGame.easy) }}>Easy</button>
-                            <button onClick={() => { changeGameMode(modeGame.medium) }}>Medium</button>
-                            <button onClick={() => { changeGameMode(modeGame.hard) }}>Hard</button>
-                        </div>
+
                     </>
                     :
                     <p><b>your score is:</b>{score}</p>
             }
 
-            <button onClick={repeat}>Repeat</button>
-            <button onClick={endGame}>get score</button>
+            <div className='game__buttons__'>
+                <button onClick={repeat}>Repeat</button>
+                <button onClick={endGame}>get score</button>
+            </div>
         </div>
     )
 }

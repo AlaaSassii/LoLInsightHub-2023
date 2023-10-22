@@ -13,6 +13,7 @@ import SingleChampionData from './routes/singleChampionData'
 import CardGame from './routes/games/cardGame'
 import QuizGame from './routes/games/quizGame'
 import GuessChampion from './routes/games/GuessChampion'
+import GuessItem from './routes/games/GuessItem'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path={links.CARDCHAMPIONSGAME} element={<CardGame />} />
         <Route path={links.GUESSCHAMPION} element={<GuessChampion />} />
         <Route path={links.QUIZGAME} element={<QuizGame />} />
+        <Route path={links.GUESSITEM} element={<GuessItem />} />
         <Route path={links.CONTACT} element={<Contact />} />
         <Route path={links.MATCHHISTORY} element={<MatchHistory />} />
         <Route path={links.CHAMPIONS} element={<ChampionsData />} />
