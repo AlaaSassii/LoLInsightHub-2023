@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { modeGame } from "../enums/modeGame"
 
 export const useGuessItemName = (items: string[], itemsId: string[]) => {
@@ -7,7 +7,7 @@ export const useGuessItemName = (items: string[], itemsId: string[]) => {
     const [correctItem, setCorrectItem] = useState('');
     const [correctItemId, setCorrectItemId] = useState('');
     const [score, setScore] = useState(0)
-
+    const inputRef = useRef<HTMLInputElement | null>(null)
 
     const play = () => {
         if (gameMode === modeGame.easy) {
@@ -47,6 +47,18 @@ export const useGuessItemName = (items: string[], itemsId: string[]) => {
         }
         play()
     }
+    const handleClickButton = () => {
+        if (inputRef?.current) {
+            if (inputRef.current.value === '') {
+                alert("Please fill the input")
+            } else {
+                handleAnswerClicked(inputRef.current.value)
+            }
+        }
+    }
+    useEffect(() => {
+        playEayMode()
+    }, [])
 
-    return { gameMode, suggestions, correctItem, score, playEayMode, defaultPlay, changeGameMode, repeat, handleAnswerClicked, correctItemId }
+    return { gameMode, suggestions, correctItem, score, playEayMode, defaultPlay, changeGameMode, repeat, handleAnswerClicked, correctItemId, handleClickButton, inputRef }
 }
