@@ -28,8 +28,15 @@ export const useGuessImageGame = (championsNames: string[]) => {
             setAlertMessage({ ...alertMessage, show: false })
         }, 1500)
     }
+
+    const repeatGame = () => {
+        setScore(0);
+        setAlertMessage({ ...alertMessage, show: false })
+        gameStart();
+    }
     useEffect(() => {
         gameStart()
-    }, [])
-    return { names, score, stopGame, setStopGame, alertMessage, handleAnswerClicked }
+    }, []);
+
+    return { names, score, stopGame, setStopGame, alertMessage, handleAnswerClicked, choosedName, repeatGame }
 }
