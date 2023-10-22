@@ -21,14 +21,12 @@ const QuizGame: React.FC<QuizProps> = ({ questions }) => {
         if (isCorrect) {
             setScore(score + 1);
         }
-        if (currentQuestion < questions.length - 1) {
-            setCurrentQuestion(currentQuestion + 1);
-        }
+        setCurrentQuestion(currentQuestion + 1);
     };
 
     return (
         <div>
-            {currentQuestion < questions.length - 1 ? (
+            {currentQuestion < questions.length ? (
                 <div>
                     <h2>Question {currentQuestion + 1}</h2>
                     <p>{questions[currentQuestion].quizQuestion}</p>
@@ -48,7 +46,7 @@ const QuizGame: React.FC<QuizProps> = ({ questions }) => {
                         <ul>
                             {questions.map((question, index) => (
                                 <li key={index}>
-                                    {question.quizQuestion} - Your Answer: {userAnswers[index]}
+                                    {question.quizQuestion} - Your Answer: {userAnswers[index]} - true Answer: {question.trueAnswer}
                                 </li>
                             ))}
                         </ul>
