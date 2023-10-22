@@ -1,9 +1,5 @@
-import PageUnavailable from '../../components/common/pageUnavailable'
-import GuessImageGame from '../../components/specefic/GuessImageGame/GuessImageGame'
-import MatchingCardGame from '../../components/specefic/MatchingCardGame/MatchingCardGame'
-import QuizGame from '../../components/specefic/QuizQuestion/QuizQuestion'
-import { championsNames } from '../../consts/championsNames'
-import { quizQuestions } from '../../consts/questionQuiz'
+import GuessItemName from '../../components/specefic/GuessItemName/GuessItemName'
+import { items } from '../../consts/items'
 const Games = () => {
     return (
         <>
@@ -11,7 +7,7 @@ const Games = () => {
             <br />
             <br />
             <br />
-            <GuessImageGame championsNames={championsNames} />
+            <GuessItemName itemsId={items.map(v => v.key)} items={items.map(v => v.name)} />
         </>
     )
 }

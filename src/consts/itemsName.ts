@@ -1,4 +1,4 @@
-const itemNames: string[] = [
+export const itemNames: string[] = [
     "Boots",
     "Faerie Charm",
     "Rejuvenation Bead",
@@ -201,4 +201,3 @@ const itemNames: string[] = [
     "Relic Shield"
 ];
 
-console.log(itemNames);

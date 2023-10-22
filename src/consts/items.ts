@@ -1,4 +1,4 @@
-const items = [
+export const items = [
     { name: 'Boots', key: '1001' },
     { name: 'Faerie Charm', key: '1004' },
     { name: 'Rejuvenation Bead', key: '1006' },
