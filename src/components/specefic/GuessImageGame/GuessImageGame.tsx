@@ -24,12 +24,9 @@ const GuessImageGame: FC<GuessImageGameType> = ({ championsNames }) => {
                             }
                         </div>
                         <button className='stop__game__btn' onClick={() => setStopGame(true)}>Stop</button>
-                        <button className='stop__game__btn' onClick={() => setStopGame(true)}>Stop</button>
                     </div>
             }
-            {
-                <div className={`alert__message in__top ${alertMessage.show && 'alert__message__show'} ${alertMessage.error ? 'alert__error' : 'alert__succ'}`}>{alertMessage.message}</div>
-            }
+
         </div>
     )
 }
