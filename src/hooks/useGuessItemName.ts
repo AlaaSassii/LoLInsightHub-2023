@@ -42,5 +42,5 @@ export const useGuessItemName = (items: string[]) => {
         play()
     }
 
-    return { gameMode, suggestions, correctItem, score, playEayMode, defaultPlay, changeGameMode, handleAnswerClicked, repeat }
+    return { gameMode, suggestions, correctItem, score, playEayMode, defaultPlay, changeGameMode, repeat, handleAnswerClicked }
 }
