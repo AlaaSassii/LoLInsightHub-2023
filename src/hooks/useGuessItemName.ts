@@ -7,6 +7,7 @@ export const useGuessItemName = (items: string[], itemsId: string[]) => {
     const [correctItem, setCorrectItem] = useState('');
     const [correctItemId, setCorrectItemId] = useState('');
     const [score, setScore] = useState(0)
+    const [stop, setStop] = useState(false)
     const inputRef = useRef<HTMLInputElement | null>(null)
 
     const play = () => {
@@ -38,6 +39,7 @@ export const useGuessItemName = (items: string[], itemsId: string[]) => {
 
     const repeat = () => {
         setScore(0);
+        setStop(false)
         play()
     }
 
@@ -56,9 +58,12 @@ export const useGuessItemName = (items: string[], itemsId: string[]) => {
             }
         }
     }
+    const endGame = () => {
+        setStop(true)
+    }
     useEffect(() => {
         playEayMode()
     }, [])
 
-    return { gameMode, suggestions, correctItem, score, playEayMode, defaultPlay, changeGameMode, repeat, handleAnswerClicked, correctItemId, handleClickButton, inputRef }
+    return { gameMode, suggestions, correctItem, score, playEayMode, defaultPlay, changeGameMode, repeat, handleAnswerClicked, correctItemId, handleClickButton, inputRef, endGame, stop }
 }

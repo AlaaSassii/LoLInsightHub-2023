@@ -26,6 +26,7 @@ const MatchingCardGame = () => {
                 setTimeout(() => {
                     newRevealedGrid[rowIndex][colIndex] = false;
                     newRevealedGrid[prevClicked.row][prevClicked.col] = false
+                    setRevealedGrid(newRevealedGrid)
                 }, 1000)
             }
             setPrevClicked(undefined)
