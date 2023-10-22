@@ -13,7 +13,7 @@ const GuessImageGame: FC<GuessImageGameType> = ({ championsNames }) => {
                     ?
                     <div className='stop__game'>
                         <h2>Score:{score}</h2>
-                        <button>reload</button>
+                        <button onClick={() => { repeatGame() }}>repeat game</button>
                     </div>
                     :
                     <div className='game'>
