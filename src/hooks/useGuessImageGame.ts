@@ -30,6 +30,7 @@ export const useGuessImageGame = (championsNames: string[]) => {
     }
 
     const repeatGame = () => {
+        setStopGame(false)
         setScore(0);
         setAlertMessage({ ...alertMessage, show: false })
         gameStart();
