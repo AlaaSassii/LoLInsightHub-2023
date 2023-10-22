@@ -16,17 +16,18 @@ const MatchingCardGame = () => {
     const [prevClicked, setPrevClicked] = useState<TCell | undefined>();
 
     const handleCardClicked = (rowIndex: number, colIndex: number) => {
-        const clickedNumber = grid[rowIndex][colIndex]
+        const clickedChampion = grid[rowIndex][colIndex]
         const newRevealedGrid = [...revealedGrid];
         newRevealedGrid[rowIndex][colIndex] = true;
         setRevealedGrid(newRevealedGrid)
         if (prevClicked) {
             const previousClickChampion = grid[prevClicked.row][prevClicked.col]
-            if (previousClickChampion !== clickedNumber) {
+            if (previousClickChampion !== clickedChampion) {
+                console.log({ previousClickChampion, clickedChampion, prevClicked })
                 setTimeout(() => {
                     newRevealedGrid[rowIndex][colIndex] = false;
                     newRevealedGrid[prevClicked.row][prevClicked.col] = false
-                    setRevealedGrid(newRevealedGrid)
+                    setRevealedGrid(newRevealedGrid);
                 }, 1000)
             }
             setPrevClicked(undefined)
@@ -35,9 +36,7 @@ const MatchingCardGame = () => {
                 row: rowIndex,
                 col: colIndex,
             })
-
         }
-
     }
     return (
         <div className='matching__card__game'>
