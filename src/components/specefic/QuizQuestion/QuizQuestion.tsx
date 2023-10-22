@@ -38,7 +38,7 @@ const QuizGame: React.FC<QuizProps> = ({ questions }) => {
 
                 </div>
             ) : (
-                <div>
+                <div className='result'>
                     <h2>Quiz Completed!</h2>
                     <p>Your Score: {score} out of {questions.length}</p>
 

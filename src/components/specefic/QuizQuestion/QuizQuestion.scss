@@ -1,7 +1,29 @@
+@import '../../../sass/variables';
 .quiz__questions{
     button{
         display: block;
         width: 100%;
         margin-bottom: 10px;
+    }
+   
+}
+body.dark{
+    table{
+        background-color: white;
+        td,th{
+            background-color: $main__black;
+        }
+
+    }
+}
+.result{
+  
+    table{
+        background-color: $main__black;
+        td,th{
+        background-color: white;
+
+        }
+
     }
 }
