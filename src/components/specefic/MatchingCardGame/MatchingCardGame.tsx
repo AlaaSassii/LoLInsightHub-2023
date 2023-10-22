@@ -6,7 +6,7 @@ type TCell = {
 import './MatchingCardGame.scss'
 import Container from '../../common/container'
 const MatchingCardGame = () => {
-    const [grid, setGrid] = useState(
+    const [championsCard, setChampionsCard] = useState(
         [
             ["Yasuo", "Ahri", "Jinx", "Yasuo"],
             ["Ahri", "Thresh", "Ashe", "Jinx"],
@@ -17,12 +17,12 @@ const MatchingCardGame = () => {
     const [prevClicked, setPrevClicked] = useState<TCell | undefined>();
 
     const handleCardClicked = (rowIndex: number, colIndex: number) => {
-        const clickedChampion = grid[rowIndex][colIndex]
+        const clickedChampion = championsCard[rowIndex][colIndex]
         const newRevealedGrid = [...revealedGrid];
         newRevealedGrid[rowIndex][colIndex] = true;
         setRevealedGrid(newRevealedGrid)
         if (prevClicked) {
-            const previousClickChampion = grid[prevClicked.row][prevClicked.col]
+            const previousClickChampion = championsCard[prevClicked.row][prevClicked.col]
             if (previousClickChampion !== clickedChampion) {
                 console.log({ previousClickChampion, clickedChampion, prevClicked })
                 setTimeout(() => {
@@ -40,14 +40,16 @@ const MatchingCardGame = () => {
         }
     }
     const playAgain = () => {
-
+        setChampionsCard(championsCard.map(c => c.sort(() => 0.5 - Math.random())));
+        setRevealedGrid(new Array(3).fill("").map(() => new Array(4).fill(false)))
     }
     return (
         <div className='matching__card__game'>
             <Container>
+                <h2>Card Game</h2>
                 <div className="champions__cards">
                     {
-                        grid.map((row, rowIndex) => (
+                        championsCard.map((row, rowIndex) => (
                             <div className='grid__row' key={rowIndex}>
                                 {
                                     row.map((champion, colIndex) => <div onClick={() => handleCardClicked(rowIndex, colIndex)} className='champion__card' key={`${rowIndex}-${colIndex}`}>
@@ -58,6 +60,7 @@ const MatchingCardGame = () => {
                             </div>
                         ))
                     }
+                    <button className='play__again' onClick={playAgain}>play Again</button>
                 </div>
             </Container>
         </div >
