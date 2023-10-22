@@ -4,6 +4,7 @@ export enum links {
     CONTACT = '/contact',
     GAMES = '/games',
     CARDCHAMPIONSGAME = '/games/card-game',
+    QUIZGAME = '/games/quiz-game',
     SEARCH = '/search',
     MATCHHISTORY = '/search-history',
     CHAMPIONS = '/champions-data',

@@ -19,46 +19,46 @@ export const quizQuestions = [
         trueAnswer: "Herald",
         questions: ["Dragon", "Baron Nashor", "Herald"],
     },
-    // {
-    //     quizQuestion: "Which elemental drake is associated with the Infernal Rift map?",
-    //     trueAnswer: "Infernal Drake",
-    //     questions: ["Mountain Drake", "Infernal Drake", "Cloud Drake"],
-    // },
-    // {
-    //     quizQuestion: "Who is the Demacian champion known as the 'Lady of Luminosity'?",
-    //     trueAnswer: "Lux",
-    //     questions: ["Garen", "Fiora", "Lux"],
-    // },
-    // {
-    //     quizQuestion: "What is the ultimate ability of Yasuo?",
-    //     trueAnswer: "Last Breath",
-    //     questions: ["Steel Tempest", "Wind Wall", "Last Breath"],
-    // },
-    // {
-    //     quizQuestion: "Which champion can transform into a big angry monster with their ultimate ability?",
-    //     trueAnswer: "Gnar",
-    //     questions: ["Renekton", "Volibear", "Gnar"],
-    // },
-    // {
-    //     quizQuestion: "Which item provides a shield that blocks crowd control effects?",
-    //     trueAnswer: "Banshee's Veil",
-    //     questions: ["Thornmail", "Guardian Angel", "Banshee's Veil"],
-    // },
-    // {
-    //     quizQuestion: "What is the passive ability of the champion Garen called?",
-    //     trueAnswer: "Perseverance",
-    //     questions: ["Decisive Strike", "Courage", "Perseverance"],
-    // },
-    // {
-    //     quizQuestion: "Which champion is known for having a pet crow named Valor?",
-    //     trueAnswer: "Quinn",
-    //     questions: ["Vayne", "Ashe", "Quinn"],
-    // },
-    // {
-    //     quizQuestion: "What is the name of Twisted Fate's ultimate ability?",
-    //     trueAnswer: "Destiny",
-    //     questions: ["Wild Cards", "Pick a Card", "Destiny"],
-    // },
+    {
+        quizQuestion: "Which elemental drake is associated with the Infernal Rift map?",
+        trueAnswer: "Infernal Drake",
+        questions: ["Mountain Drake", "Infernal Drake", "Cloud Drake"],
+    },
+    {
+        quizQuestion: "Who is the Demacian champion known as the 'Lady of Luminosity'?",
+        trueAnswer: "Lux",
+        questions: ["Garen", "Fiora", "Lux"],
+    },
+    {
+        quizQuestion: "What is the ultimate ability of Yasuo?",
+        trueAnswer: "Last Breath",
+        questions: ["Steel Tempest", "Wind Wall", "Last Breath"],
+    },
+    {
+        quizQuestion: "Which champion can transform into a big angry monster with their ultimate ability?",
+        trueAnswer: "Gnar",
+        questions: ["Renekton", "Volibear", "Gnar"],
+    },
+    {
+        quizQuestion: "Which item provides a shield that blocks crowd control effects?",
+        trueAnswer: "Banshee's Veil",
+        questions: ["Thornmail", "Guardian Angel", "Banshee's Veil"],
+    },
+    {
+        quizQuestion: "What is the passive ability of the champion Garen called?",
+        trueAnswer: "Perseverance",
+        questions: ["Decisive Strike", "Courage", "Perseverance"],
+    },
+    {
+        quizQuestion: "Which champion is known for having a pet crow named Valor?",
+        trueAnswer: "Quinn",
+        questions: ["Vayne", "Ashe", "Quinn"],
+    },
+    {
+        quizQuestion: "What is the name of Twisted Fate's ultimate ability?",
+        trueAnswer: "Destiny",
+        questions: ["Wild Cards", "Pick a Card", "Destiny"],
+    },
     // {
     //     quizQuestion: "Which champion is a yordle and is known for throwing boomerangs?",
     //     trueAnswer: "Zac",

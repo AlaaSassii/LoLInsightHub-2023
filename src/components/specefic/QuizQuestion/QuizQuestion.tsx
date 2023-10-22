@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { quizQuestions } from '../../../types/quizQuestions';
-
+import './QuizQuestion.scss'
 
 type QuizProps = {
     questions: quizQuestions;
@@ -27,7 +27,7 @@ const QuizGame: React.FC<QuizProps> = ({ questions }) => {
     return (
         <div>
             {currentQuestion < questions.length ? (
-                <div>
+                <div className='quiz__questions'>
                     <h2>Question {currentQuestion + 1}</h2>
                     <p>{questions[currentQuestion].quizQuestion}</p>
                     {questions[currentQuestion].questions.map((answer, index) => (
@@ -41,16 +41,27 @@ const QuizGame: React.FC<QuizProps> = ({ questions }) => {
                 <div>
                     <h2>Quiz Completed!</h2>
                     <p>Your Score: {score} out of {questions.length}</p>
-                    <div>
-                        <h3>Answers:</h3>
-                        <ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Question Number</th>
+                                <th>Question</th>
+                                <th>Your Answer</th>
+                                <th>True Answer</th>
+                            </tr>
+                        </thead>
+                        <tbody>
                             {questions.map((question, index) => (
-                                <li key={index}>
-                                    {question.quizQuestion} - Your Answer: {userAnswers[index]} - true Answer: {question.trueAnswer}
-                                </li>
+                                <tr key={index}>
+                                    <td>{index + 1}</td>
+                                    <td>{question.quizQuestion}</td>
+                                    <td>{userAnswers[index]}</td>
+                                    <td>{question.trueAnswer}</td>
+                                </tr>
                             ))}
-                        </ul>
-                    </div>
+                        </tbody>
+                    </table>
                 </div>
             )}
         </div>
