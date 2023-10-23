@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import './GameInfoCard.scss'
 import { links } from '../../../enums/routes/links'
 import { useNavigate } from 'react-router-dom'
