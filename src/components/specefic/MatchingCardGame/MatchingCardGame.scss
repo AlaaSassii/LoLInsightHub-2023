@@ -7,7 +7,11 @@
         margin: auto;
         width: fit-content;        
     }
-
+    button{
+        background-color: #7300ff;
+        color: white;
+        margin-bottom: 20px;
+    }
     .grid__row{
         display: flex;
         gap: 10px;

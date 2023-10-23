@@ -1,0 +1,17 @@
+.games__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 10px;
+  }
+  
+  .game__info__card {
+    width: 400px;
+    margin-left: 40px;
+  }
+  
+  @media (max-width: 991px) {
+    .games__cards {
+      grid-template-columns: 1fr;
+    }
+  }
+  

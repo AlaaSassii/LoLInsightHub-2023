@@ -1,0 +1,35 @@
+@import '../../../sass/main.scss';
+.game__info__card{
+    overflow: hidden;
+    font-size: small;
+    border: 1px solid $light__gray;
+    border-radius: 10px;
+    transition: .3s;
+    &:hover{
+        img{
+            transform: scale(1.2);
+        }
+    }
+    h1{
+        font-size: medium;
+    }
+    .image{
+        max-height: 200px;
+        overflow: hidden;
+    }
+    img{
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+    transition: .3s;
+
+    }
+    .card__info{
+        padding: 20px;
+        button{
+            width: 100px;
+            background-color: #7300ff;
+            color: white;
+        }
+    }
+}
