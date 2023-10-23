@@ -1,5 +1,4 @@
 import { FC } from 'react'
-import { useGuessImageGame } from '../../../hooks/useGuessImageGame'
 import { useGuessItemName } from '../../../hooks/useGuessItemName'
 import { modeGame } from '../../../enums/modeGame'
 import { replaceRandomLetters } from '../../../helpers/replaceRandomLetter'

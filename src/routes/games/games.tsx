@@ -5,7 +5,7 @@ import { items } from '../../consts/items'
 const Games = () => {
     return (
         <PageContainer>
-            <MatchingCardGame />
+
         </PageContainer>
     )
 }
