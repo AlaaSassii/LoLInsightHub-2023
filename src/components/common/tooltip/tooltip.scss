@@ -21,11 +21,12 @@ $tooltipArrowSize: 6px;
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    white-space: nowrap;
     opacity: 0;
     pointer-events: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: opacity 0.2s;
+    width: 200px;
+    padding: 10px;
   }
 
   &:hover {
