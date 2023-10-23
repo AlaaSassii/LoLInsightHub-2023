@@ -1,5 +1,4 @@
 import { links } from "../enums/routes/links";
-import q from '../assets/images/wallpaper/qiyana-4096x2303-16939.jpg';
 import akaliJinx from '../assets/images/wallpaper/akalijinx.jpg';
 import akaliysas from '../assets/images/wallpaper/akaliyass.jpg';
 import mf from '../assets/images/wallpaper/mf.jpg'

@@ -1,4 +1,4 @@
-import axios, { AxiosError, AxiosResponse } from "axios";
+import axios, { AxiosResponse } from "axios";
 import { FC, useEffect, useState } from "react"
 import { Api__key } from "../../../../../../services/apiKey";
 import MatchHeader from "./matchHeader";
@@ -23,7 +23,7 @@ const Match: FC<matchProps> = ({ matchId, puuid }) => {
                 setUser(response.data.info.participants.find((participant: unknown & { puuid: string }) => participant.puuid === puuid))
                 setMatchLoading(false);
             })
-            .catch((error: AxiosError) => {
+            .catch(() => {
                 setMatchError(true);
                 setMatchLoading(false)
             })

@@ -3,7 +3,7 @@ import CardContainer from "../../../../common/cardContainer"
 import axios, { AxiosError, AxiosResponse } from "axios"
 import { Api__key } from "../../../../../services/apiKey"
 import { ChampionInfo } from "../../../../../types/championInfoTypes"
-import { ChampionsDataType, championConst } from "../../../../../consts/champions";
+import { championConst } from "../../../../../consts/champions";
 import './userChampion.scss';
 type userChampionsProps = {
     puuid: string,

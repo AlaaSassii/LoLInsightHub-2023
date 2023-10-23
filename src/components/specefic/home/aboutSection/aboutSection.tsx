@@ -1,4 +1,3 @@
-import React from 'react'
 import './aboutSection.scss';
 import { logoName } from '../../../../assets/logo/logoName';
 import luxImage from '../../../../assets/images/transparentChampions/lux.png';

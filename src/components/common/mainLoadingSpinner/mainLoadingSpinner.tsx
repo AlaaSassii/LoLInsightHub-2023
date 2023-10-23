@@ -1,4 +1,3 @@
-import React from 'react'
 import './mainLoadingSpinner.scss';
 const MainLoadingSpinner = () => {
     return (

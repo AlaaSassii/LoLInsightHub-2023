@@ -1,6 +1,5 @@
 import { FC } from 'react'
 import { Info, Metadata, Participant } from "../../../../../../../types/singleMatch"
-import UserChampions from '../../../userChampions'
 import UserChampion from './userChampion'
 import Participants from './participants'
 import UserItems from './userItems'
@@ -10,7 +9,7 @@ type matchContentProps = {
     metadata: Metadata
     puuid: string
 }
-const MatchContent: FC<matchContentProps> = ({ info, metadata, puuid, }) => {
+const MatchContent: FC<matchContentProps> = ({ info, puuid, }) => {
     const user = info?.participants?.find((participant: Participant) => participant.puuid === puuid) as Participant
 
     return (

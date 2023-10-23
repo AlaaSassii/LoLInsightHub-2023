@@ -5,7 +5,7 @@ type GuessImageGameType = {
     championsNames: string[]
 }
 const GuessImageGame: FC<GuessImageGameType> = ({ championsNames }) => {
-    const { alertMessage, handleAnswerClicked, names, score, setStopGame, stopGame, choosedName, repeatGame } = useGuessImageGame(championsNames)
+    const { handleAnswerClicked, names, score, setStopGame, stopGame, choosedName, repeatGame } = useGuessImageGame(championsNames)
     return (
         <div className='guess__image__game'>
             {

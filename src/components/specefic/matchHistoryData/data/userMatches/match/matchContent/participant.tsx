@@ -1,4 +1,4 @@
-import axios, { AxiosError, AxiosResponse } from 'axios';
+import axios, { AxiosResponse } from 'axios';
 import { FC, useState, useEffect } from 'react'
 import { Api__key } from '../../../../../../../services/apiKey';
 type participantProps = {

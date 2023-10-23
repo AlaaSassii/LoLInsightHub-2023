@@ -1,4 +1,4 @@
-import React, { FC, Fragment, useState } from 'react';
+import { FC, Fragment, useState } from 'react';
 import './slider.scss';
 
 interface sliderProps {

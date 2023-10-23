@@ -1,6 +1,4 @@
-import React from 'react'
 import PageContainer from '../../components/common/pageContainer'
-import GuessImageGame from '../../components/specefic/GuessImageGame/GuessImageGame'
 import GuessItemName from '../../components/specefic/GuessItemName/GuessItemName'
 import { items } from '../../consts/items'
 

@@ -1,12 +1,11 @@
-import { FC, useEffect, useState } from 'react'
+import { FC } from 'react'
 import Participant from './participant'
 import { Participant as particpantType } from '../../../../../../../types/singleMatch'
 type participantsProps = {
   participants: particpantType[],
-  user: particpantType
+  user?: particpantType
 }
-const Participants: FC<participantsProps> = ({ participants, user }) => {
-  const [loading, setLoading] = useState<boolean>(false);
+const Participants: FC<participantsProps> = ({ participants }) => {
 
   return (
     <div className='participants'>

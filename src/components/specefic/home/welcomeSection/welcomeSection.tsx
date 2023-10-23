@@ -1,4 +1,3 @@
-import React from 'react'
 import './welcomeSection.scss'
 import { logoName } from '../../../../assets/logo/logoName';
 import jinxImage from '../../../../assets/images/transparentChampions/jinx.png'

@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import CardContainer from '../../../common/cardContainer'
-import { image, passive, spells } from '../../../../types/championDataType'
+import { passive, spells } from '../../../../types/championDataType'
 import { championSquareImage } from '../../../../helpers/championSquareImage'
 import Tooltip from '../../../common/tooltip'
 import { abilityImage, passiveImage } from '../../../../helpers'

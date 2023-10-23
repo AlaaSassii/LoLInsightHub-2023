@@ -1,4 +1,4 @@
-import axios, { AxiosResponse, AxiosError } from "axios";
+import axios, { AxiosResponse } from "axios";
 import { FC, useEffect, useState } from "react"
 import { Api__key } from "../../../../../services/apiKey";
 import CardContainer from "../../../../common/cardContainer";
@@ -18,7 +18,7 @@ const UserMatches: FC<userMatchesProps> = ({ puuid, error }) => {
                 setMatchesId(response.data);
                 setMatchesLoading(false)
             })
-            .catch((error: AxiosError) => {
+            .catch(() => {
                 setUserMatchesError(false)
             })
     }, [puuid])

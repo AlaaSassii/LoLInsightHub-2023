@@ -8,7 +8,7 @@ type itemString = {
     itemsId: string[],
 }
 const GuessItemName: FC<itemString> = ({ items, itemsId }) => {
-    const { changeGameMode, correctItem, defaultPlay, gameMode, handleAnswerClicked, playEayMode, repeat, score, correctItemId, suggestions, handleClickButton, inputRef, endGame, stop } = useGuessItemName(items, itemsId);
+    const { changeGameMode, correctItem, gameMode, handleAnswerClicked, repeat, score, correctItemId, suggestions, handleClickButton, inputRef, endGame, stop } = useGuessItemName(items, itemsId);
 
     return (
         <div className='guess__item__name'>

@@ -1,8 +1,7 @@
-import { FC, useState } from 'react'
+import { FC } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { championsDataType } from '../../../../types/championsDataType'
 import { championSquareImage, } from '../../../../helpers/championSquareImage'
-import { links } from '../../../../enums/routes/links'
 
 export type championContainerType = {
     data: championsDataType,

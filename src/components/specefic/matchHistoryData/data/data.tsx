@@ -9,7 +9,7 @@ import UserMatches from './userMatches'
 type dataProps = summonerInfoType & {
     error: string
 }
-const Data: FC<dataProps> = ({ id: summonerId, accountId, name, profileIconId, puuid, revisionDate, summonerLevel, error }) => {
+const Data: FC<dataProps> = ({ id: summonerId, name, profileIconId, puuid, error }) => {
     return (
         <Container className='user__data__container'>
             <UserTitle
