@@ -15,9 +15,13 @@ body{
     display: flex;
     height: 45px;
     width: 400px;
+    
     border-radius: 20px;
     margin:auto;
     position: relative;
+    @media(width <= 991px){
+        width: 300px;
+    }
     input {
         margin-top: 7px;
         @include centerElementWithFlex;

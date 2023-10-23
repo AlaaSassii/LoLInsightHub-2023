@@ -10,6 +10,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));  
   gap: 10px; 
+  >div{
+    cursor: pointer;
+  }
   img{
   }
   b{
@@ -17,7 +20,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .champions__container {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));  
   }
