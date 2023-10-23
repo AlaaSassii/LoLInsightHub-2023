@@ -1,7 +1,19 @@
 @import '../../../../sass/index';
 
 .contact__section__home{
-    
+    @media(max-width:991px){
+        img{
+        display: none;
+
+        }
+    }
+    button{
+        background-color: #7300ff;
+        color: white;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+    }
     margin-top: 30px;
     margin-bottom: 20px;
     display: flex;

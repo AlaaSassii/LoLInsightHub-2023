@@ -24,6 +24,9 @@
 
 @media (max-width: 991px) {
   .champions__container {
-    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));  
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));  
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
   }
 }

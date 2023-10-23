@@ -9,7 +9,10 @@
         @include text-gradient($blue__logo,$purpole__logo);
         font-size: 100px;
         font-weight: 700;
-        
+        @media(max-width:991px){
+            font-size: 50px;
+            width: 100%;
+        }
     }
     p{
         color: $dark__gray;

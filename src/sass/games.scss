@@ -7,6 +7,10 @@
   .game__info__card {
     width: 400px;
     margin-left: 40px;
+    @media(max-width:991px){
+      width: 300px;
+      margin: auto;
+    }
   }
   
   @media (max-width: 991px) {
