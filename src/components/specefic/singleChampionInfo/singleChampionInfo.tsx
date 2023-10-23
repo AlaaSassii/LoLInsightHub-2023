@@ -13,7 +13,7 @@ const SingleChampionInfo = () => {
     const { name } = useParams();
     const { champion, error, loading } = useFetchSingleChampion(name || '')
     if (error) return error;
-    if (loading) return <MainLoadingSpinner />
+    if (loading) return <div> <MainLoadingSpinner /></div>
     return (
         champion !== null
         &&

@@ -15,12 +15,13 @@ body.dark{
     border-radius: 50%;
     display: block;
     margin: auto;
-    display: inline-block;
     position: relative;
     border: 3px solid;
     border-color: $main__black $main__black transparent transparent;
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
+    margin: auto  ;
+    
   }
   .loader::after,
   .loader::before {
